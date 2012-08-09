@@ -1,0 +1,18 @@
+<h1>
+<%= @brand.name %>
+
+</h1>
+
+<div class="award">
+  <div class="title">You have Recieved 100 points for your checkin</div>
+</div>
+
+
+<h2>Today you can earn more points and discounts by completing some of the following activities</h2>
+
+
+<% @brand.brand_actions.each do |brand_action| %>
+
+  <%= render "brand_actions/#{brand_action.url}"%>
+
+<% end %>
