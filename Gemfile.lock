@@ -143,6 +143,7 @@ DEPENDENCIES
   mongoid
   quimby
   rails (= 3.2.6)
+  rest-client
   sass-rails (~> 3.2.3)
   typhoeus
   uglifier (>= 1.0.3)
