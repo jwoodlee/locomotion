@@ -58,6 +58,7 @@ Locomotion::Application.routes.draw do
 match 'brands/:name' => 'brands#show'
 match 'checkin' => 'checkins#create'
 match 'callback' => 'callbacks#auth'
+root :to => "sessions#new"
 
 resource :brand_activies
 

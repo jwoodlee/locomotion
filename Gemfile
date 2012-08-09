@@ -23,6 +23,10 @@ gem 'bson_ext'
 gem 'jquery-rails'
 gem 'mongoid'
 gem 'heroku'
+gem 'json'
+gem 'typhoeus'
+gem 'quimby'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -45,6 +45,7 @@ GEM
     excon (0.15.5)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    ffi (1.1.5)
     heroku (2.30.2)
       heroku-api (~> 0.3.2)
       launchy (>= 0.3.2)
@@ -77,6 +78,9 @@ GEM
     netrc (0.7.5)
     origin (1.0.6)
     polyglot (0.3.3)
+    quimby (0.4.5)
+      json
+      typhoeus
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -119,6 +123,9 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    typhoeus (0.4.2)
+      ffi (~> 1.0)
+      mime-types (~> 1.18)
     tzinfo (0.3.33)
     uglifier (1.2.7)
       execjs (>= 0.3.0)
@@ -132,7 +139,10 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   heroku
   jquery-rails
+  json
   mongoid
+  quimby
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
+  typhoeus
   uglifier (>= 1.0.3)
