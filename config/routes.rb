@@ -56,7 +56,9 @@ Locomotion::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 match 'brands/:name' => 'brands#show'
-match 'checkin' => 'checkins#auth'
+match 'checkin' => 'checkins#create'
+match 'callback' => 'callbacks#auth'
+
 resource :brand_activies
 
 end
