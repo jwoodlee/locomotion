@@ -70,4 +70,5 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: mongodb://heroku:newyork@alex.mongohq.com:10001/app6579860
+      
