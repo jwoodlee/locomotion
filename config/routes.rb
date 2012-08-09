@@ -59,7 +59,7 @@ match 'callback' => "sessions#callback"
 match 'brands/:name' => 'brands#show'
 match 'checkin' => 'checkins#create'
 root :to => "sessions#new"
-
+resources :brands
 resource :brand_activies
 
 end
