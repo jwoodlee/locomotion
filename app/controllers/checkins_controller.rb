@@ -10,8 +10,6 @@ class CheckinsController < ApplicationController
     user = checkin["user"]
 
     logger.info "checkin #{checkin}"
-    logger.info "user #{user}"
-
     logger.info "user id #{user['id']}"
 
     userid  = user["id"]
@@ -21,8 +19,8 @@ class CheckinsController < ApplicationController
 
     response_url = 'http://www.crowdtap.com'
 
-    RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin + '/reply', 
-      :CHECKIN_ID => checkin, 
+    RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin["id"] + '/reply', 
+      :CHECKIN_ID => checkin["id"], 
       :oauth_token => user.access_token ,
       :url => response_url,
       :text => 'Awesome you checked in go here ' + response_url,
