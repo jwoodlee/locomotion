@@ -12,7 +12,7 @@ class CheckinsController < ApplicationController
     logger.info "checkin #{checkin}"
     logger.info "user #{user}"
     logger.info "db user is  " + user.to_json
-    send_reply_to(checkin_id, user)
+    send_reply_to(checkin_id, user, venue_name)
   end
 
   def send_reply_to(checkin_id, user, venue_name)
