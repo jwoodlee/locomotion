@@ -61,7 +61,6 @@ match 'brands/:name' => 'brands#show'
 match 'checkin' => 'checkins#create'
 match 'success' => 'sessions#success'
 root :to => "sessions#new"
-resources :brands
 resource :brand_activies
 resources :action_view
 
