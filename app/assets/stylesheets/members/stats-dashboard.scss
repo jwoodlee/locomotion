@@ -1,0 +1,511 @@
+@import "../_base";
+
+/*MEMBERS STATS PAGE*/
+/*stats tabs*/
+.stats_dashboards-show .nav-tabs .dashboard a,
+.levels-index .nav-tabs .levels a,
+.badges-index .nav-tabs .badges a,
+.awards-index .nav-tabs .history a,
+.homes-show .active a,
+.leaderboards-show .nav-tabs .leaderboard a,
+.brands-show .new-actions a,
+.brand_actions-index .nav-tabs .my-actions a {
+  color: #fff;
+  background: #515154;
+  text-shadow: 0 -1px 0 #333;
+  @include top-rounded-corners(5px);
+}
+
+.tab-navigable {
+  div.stats-dashboard {
+    h2 {
+      color: $blue-header;
+    }
+    p.time-stamp {
+      color: $dark-gray;
+      font-size: 10px;
+      font-weight: normal;
+      margin: 0;
+      padding-top: 7px;
+    }
+  }
+  div.member-stats-dashboard {
+    /*background-color: #d5d5d5;*/
+    border: 0;
+    padding: 5px 1px 5px 0;
+
+    h2 {
+      color: $blue-header;
+    }
+    .member-stats-left {
+      float: left;
+      width: 602px;
+    }
+    .member-stats-right {
+      float: right;
+      margin: 0;
+      padding-right: 0;
+      width: 288px;
+      a {
+        @include red-links-hover;
+      }
+    }
+    .member-totals {
+      height: 225px;
+      @extend .inner-rounded-white;
+      margin-bottom: 10px;
+      padding: 0.3em;
+      text-align: center;
+      width: 602px;
+
+      .members-totals-box {
+        display: block;
+        float: left;
+        height: 180px;
+        margin: 5px 3px;
+        padding: 16px;
+        @include rounded-corners(10px);
+        @include top-down-gradient(#ffbc4d, #ff993f);
+        width: 160px;
+
+        span {
+          color: #794619;
+          font-size: 20px;
+          font-weight: bold;
+          text-shadow: 0 1px 0 #ffcf55;
+        }
+        .stats-point-title {
+          display: block;
+          height: 45px;
+        }
+        .number {
+          color: white;
+          display: block;
+          font-size: 42px;
+          font-weight: bold;
+          margin: 8px 0 0 0;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        }
+        .current-month-actions, .current-month-currency, .current-month-points {
+          background: #ffdc83;
+          margin-top: 20px;
+          padding: 12px 0;
+          width: 100%;
+
+          span {
+            color: #a78b43;
+            font-size: 12px;
+            text-shadow: none;
+          }
+          .number {
+            color: #4e452f;
+            font-size: 18px;
+            margin-top: 3px;
+            text-shadow: none;
+          }
+        }
+      }
+    }
+    .member-insight-influence {
+      padding: 15px 0;
+      width: 282px;
+
+      h2 {
+        color: black;
+        margin-top: 10px;
+        text-shadow: 0 1px 0 white;
+
+        span {
+          font-size: 0.6em;
+          font-weight: normal;
+          @include inline-block;
+          position: relative;
+          top: -2px;
+        }
+      }
+      h3 {
+        color: #000;
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 15px;
+        text-shadow: 0 1px 0 #fff;
+
+        span {
+          font-size: 20px;
+          font-weight: 200;
+        }
+      }
+      p {
+        clear: both;
+        padding: 10px 5px 0;
+        text-shadow: 0 1px 0 #efefef;
+      }
+      #influence-meter, #insight-meter {
+        background: transparent url("images/influence-meter.png") top left no-repeat;
+        float: left;
+        height: 140px;
+        margin-right: 10px;
+        overflow: hidden;
+        width: 145px;
+      }
+      .meter-needle {
+        background: transparent url("images/meter-needle.png") center center no-repeat;
+        height: 127px;
+        left: 8px;
+        position: relative;
+        top: 3px;
+        width: 127px;
+      }
+      .insight-influence-change {
+        font-weight: bold;
+        @extend .inner-rounded-white;
+        margin: 0 auto;
+        padding: 4px 0;
+        position: relative;
+        text-align: center;
+        top: 12px;
+        width: 50%;
+
+        span.change-positive {
+          color: #ff993f;
+        }
+        span.change-negative {
+          color: $blue-header;
+        }
+      }
+      #quality_tips {
+        padding: 15px;
+        @include top-down-gradient(#fff9cc, #fff18b);
+
+        h4 {
+          margin-top: 10px;
+          text-shadow: 0 1px 0 #fff;
+        }
+        ul {
+          list-style-position: outside;
+          margin: 20px;
+        }
+      }
+    }
+    .member-network-stats {
+      @extend .inner-rounded-white;
+      min-height: 160px;
+      padding: 15px;
+      width: 578px;
+
+      h2 {
+        float: left;
+        width: 50%;
+      }
+      .member-network-stats-avatars {
+        clear: both;
+        padding: 15px 0 0 0;
+
+        a {
+          margin-right: 6px;
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+    .info-triptych {
+      padding: 0 40px 20px;
+
+      .info-triptych-item {
+        float: left;
+        text-align: center;
+        width: 50%;
+
+        h5 {
+          color: #b0b0b0;
+          font-size: 1.5em;
+          letter-spacing: -0.05em;
+          text-transform: lowercase;
+        }
+        h4 {
+          font-size: 4em;
+          color: #333;
+          letter-spacing: -1px;
+          line-height: 0.95;
+        }
+      }
+    }
+    .refer-friends {
+      @include red-links;
+      float: right;
+    }
+    .see-all-button {
+      border: none;
+      color: white;
+      float: right;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: -3px;
+      padding: 0.4em 0;
+      @include rounded-corners;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 -1px 0 black;
+      text-transform: lowercase;
+      @include top-down-gradient(#b1b1b1, #666);
+      width: 5.5em;
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        @include top-down-gradient(#CCC, #666);
+      }
+    }
+    .member-latest-badge {
+      height: 145px;
+      @extend .inner-rounded-white;
+      padding: 15px;
+      padding-right: 15px;
+      position: relative;
+
+      a, a.see-all-button {
+        color: white;
+        text-decoration: none;
+      }
+      .brand-badge-icon {
+        @extend .clearfix;
+        float: left;
+      }
+      .badge-icon {
+        float: left;
+        height: 110px;
+        width: 95px;
+
+        img {
+          margin: 0;
+        }
+      }
+      .info {
+        padding-top: 10px;
+        position: absolute;
+        right: 15px;
+        width: 148px;
+      }
+      .no-badges {
+        font-size: 1.1em;
+        line-height: 1.4;
+      }
+    }
+    .member-history {
+      padding: 0;
+      position: relative;
+      width: 608px;
+
+      .feed {
+        margin-bottom: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .see-all-button {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+    .member-leaderboard {
+      @extend .inner-rounded-white;
+      margin-top: 15px;
+      padding: 15px;
+
+      .member-leaderboard-header {
+        padding-right: 15px;
+
+        h2 {
+          float: left;
+          display: inline;
+        }
+        a.active {
+          background: #b0b0b0;
+          color: white;
+          float: right;
+          font-weight: bold;
+          padding: 4px 10px;
+          @include rounded-corners(8px);
+          text-decoration: none;
+        }
+        a.inactive {
+          background: white;
+          color: #b0b0b0;
+          float: right;
+          font-weight: bold;
+          padding: 4px 10px;
+          @include rounded-corners(8px);
+          text-decoration: none;
+        }
+      }
+      ul {
+        padding-right: 15px;
+
+        li {
+          border-bottom: 1px solid #d9d9d9;
+          line-height: 30px;
+          list-style: none;
+          padding: 5px 0;
+          text-decoration: none;
+          vertical-align: middle;
+
+          a {
+            text-decoration: none;
+
+            strong {
+              color: $red;
+              float: left;
+              font-weight: normal;
+              padding: 0 0 0 5px;
+              position: relative;
+              top: 1px;
+            }
+            span {
+              color: #232323;
+              float: right;
+              position: relative;
+              text-decoration: none;
+              top: 1px;
+            }
+          }
+          a:hover {
+            text-decoration: none;
+
+            strong {
+              color: $red;
+              float: left;
+              font-weight: normal;
+              padding: 0 0 0 5px;
+              position: relative;
+              text-decoration: underline;
+              top: 1px;
+            }
+            span {
+              color: #232323;
+              float: right;
+              position: relative;
+              top: 1px;
+            }
+          }
+          img {
+            float: left;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .member-star-power {
+      @extend .inner-rounded-white;
+      margin-bottom: 15px;
+      padding: 15px;
+
+      img {
+        padding: 9px 0 0 18px;
+      }
+    }
+  }
+  .awards-panel, .awards-history {
+    li {
+      border-bottom: 1px solid #d5d5d5;
+      list-style: none;
+      padding: 1em 0;
+
+      p {
+        margin: 0;
+      }
+    }
+    li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+  table.levels {
+    td {
+      border: 0;
+      padding: 2em 0.5em 2.5em 1em;
+    }
+    .point_summary {
+      strong {
+        display: block;
+        padding: 10px;
+        @include rounded-corners(18px);
+        text-align: center;
+        @include top-down-gradient(#fff9cc, #fff18b);
+        width: 100%;
+      }
+      p {
+        color: #595959;
+        font-size: 0.9;
+        padding: 7px 12px 0 12px;
+        text-align: center;
+        text-shadow: 0 0 1px #e1e1e1;
+        width: 100%;
+      }
+    }
+  }
+  div.badges-tab {
+    overflow: visible;
+
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      min-height: 100px;
+
+      .earned-badge, .unearned-badge {
+        display: block;
+        float: left;
+        margin: 0 0.8em;
+        padding-bottom: 0.75em;
+        position: relative;
+        text-align: center;
+        width: 99px;
+
+        img {
+          float: none;
+          margin: 0;
+        }
+      }
+      .unearned-badge {
+        color: gray;
+      }
+    }
+    .brand-badges {
+      li {
+        float: none;
+        @include inline-block;
+        margin: 0.5em;
+        vertical-align: top;
+        width: 104px;
+
+        p.badge-image {
+          background: url(images/brand-badge-bg.png) no-repeat 0 0;
+          padding: 14px;
+
+          img {
+            border: 1px solid rgba(0, 0, 0, .5);
+            float: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .no-actions {
+    @extend .inner-rounded-white;
+  }
+  .leaderboard {
+    td.name {
+      img {
+        margin: 0 5px 0 0;
+      }
+      span {
+        position: relative;
+        top: -10px;
+      }
+    }
+  }
+}

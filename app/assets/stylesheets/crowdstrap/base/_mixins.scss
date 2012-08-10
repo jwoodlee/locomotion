@@ -1,0 +1,186 @@
+//  ...
+//  Mixins.
+//
+//  SASS mixin definitions.
+//  This file should be included after the base variables and before any other 
+//  Crowdstrap module for global availability throughout.
+//  --------------------------------------------------------------------------------
+
+//  Used in Glyphicon spriting
+@mixin sprite_bg_position($x: 0, $y: 0) {
+  background-position: ($icons-offset-x - $icons-step*$x) ($icons-offset-y - $icons-step*$y);
+}
+
+//  Border radius for all corners.
+//  @param $radius Border radius value.
+@mixin rounded-corners($radius: 1em) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+ // Border radius for top or bottom only.
+ // @param $which Half to apply to (top|bottom).
+ // @param $radius Border radius value.
+ @mixin rounded-corners-horizontal($which, $radius: 4px) {
+  -webkit-border-#{$which}-right-radius: $radius;
+  -webkit-border-#{$which}-left-radius: $radius;
+  -moz-border-radius-#{$which}right: $radius;
+  -moz-border-radius-#{$which}left: $radius;
+  border-#{$which}-right-radius: $radius;
+  border-#{$which}-left-radius: $radius;
+}
+
+ // Border radius for a single corner.
+ // @param $vertical Vertical half to apply (top|bottom).
+ // @param $horizontal Horizontal half to apply (left|right).
+ // @param $radius Border radius value.
+@mixin rounded-corner($vertical: top, $horizontal: left, $radius: 1em) {
+  -moz-border-radius-#{$vertical}#{$horizontal}: $radius;
+  -webkit-border-#{$vertical}-#{$horizontal}-radius: $radius;
+  border-#{$vertical}-#{$horizontal}-radius: $radius;
+}
+
+@mixin top-right-both-bottom-rounded-corners($radius: 1em) {
+  -moz-border-radius-topright: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin left-rounded-corners ($radius: 1em) {
+  border-radius: $radius 0 0 $radius;
+  -webkit-border-radius: $radius 0 0 $radius;
+  -moz-border-radius: $radius 0 0 $radius;
+}
+@mixin right-rounded-corners ($radius: 1em) {
+  border-radius: 0 $radius $radius 0;
+  -webkit-border-radius: 0 $radius $radius 0;
+  -moz-border-radius: 0 $radius $radius 0;
+}
+
+@mixin top-down-gradient($from: black, $to: white) {
+  background-color: $from;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -moz-linear-gradient(top, $from, $to);
+}
+
+@mixin left-right-gradient($from: black, $to: white) {
+  background-color: $from;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from($from), to($to));
+  background-image: -moz-linear-gradient(left, $from, $to);
+}
+
+//  CSS3 transition stack.
+//  @param $which Property to transition.
+//  @param $duration Duration of transition.
+//  @param $easing Easing curve of transition.
+@mixin transition($which: all, $duration: 0.5s, $easing: ease-in-out) {
+    -webkit-transition: $which $duration $easing;
+    -moz-transition: $which $duration $easing;
+    transition: $which $duration $easing;
+}
+
+@mixin vertical-gradient($startColor: #555, $endColor: #333) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -ms-linear-gradient(top, $startColor, $endColor); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(top, $startColor, $endColor); // The standard
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=0); // IE9 and down
+}
+
+// Webkit-style focus
+// ------------------
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* Requires Sass 3.1+ */
+@mixin linear-gradient($pos, $G1, $G2: false,
+                       $G3: false, $G4: false,
+                       $G5: false, $G6: false,
+                       $G7: false, $G8: false) {
+  // Detect what type of value exists in $pos
+  $pos-type: type-of(nth($pos, 1));
+
+  // If $pos is missing from mixin, reassign vars and add default position
+  @if $pos-type == color {
+    $G8: $G7; $G7: $G6; $G6: $G5; $G5: $G4;
+    $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
+    $pos: top; // Default position
+  }
+
+  $full: $G1;
+  $gradients: $G2, $G3, $G4, $G5, $G6, $G7, $G8;
+  @each $gradient in $gradients {
+    @if $gradient {
+      $full: $full, $gradient;
+    }
+  }
+  background-color: nth($G1, 1);
+  background-image: -webkit-gradient(linear, left top, left bottom, from($G1), to($G2)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($pos, $full);
+  background-image: -moz-linear-gradient($pos, $full);
+  background-image: -ms-linear-gradient($pos, $full);
+  background-image: -o-linear-gradient($pos, $full);
+  background-image: linear-gradient($pos, $full);
+}
+
+@mixin opacity($ratio) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ratio*100})"; /* IE 8 */
+  filter: alpha(opacity=#{$ratio*100}); /* IE 5-7 */
+  -moz-opacity: $ratio; /* Netscape */
+  -khtml-opacity: $ratio; /* Safari 1.x */
+  opacity: $ratio;
+}
+
+@mixin box-shadow ($x: 0px, $y: 1px, $blur: 5px, $spread: 0px, $color: #ccc) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin inset-box-shadow ($x: 5px, $y: 5px, $blur: 5px, $spread: 0px, $color: #ccc) {
+  -webkit-box-shadow: inset $x $y $blur $spread $color;
+  -moz-box-shadow: inset $x $y $blur $spread $color;
+  box-shadow: inset $x $y $blur $spread $color;
+}
+
+// Inline-block fix for legacy browsers
+@mixin legacy-inline-block {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  vertical-align: baseline;
+  *vertical-align: auto;
+  zoom: 1;
+  *zoom: 1;
+}
+
+//  IE7 likes to collapse whitespace on either side of the inline-block elements.
+//  Ems because we're attempting to match the width of a space character. Left
+//  version is for form buttons, which typically come after other elements, and
+//  right version is for icons, which come before. Applying both is ok, but it will
+//  mean that space between those elements will be .6em (~2 space characters) in IE7,
+//  instead of the 1 space in other browsers.
+@mixin ie7-restore-left-whitespace() {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}

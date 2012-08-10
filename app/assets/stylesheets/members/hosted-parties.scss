@@ -1,0 +1,92 @@
+@import "../_base";
+
+/*HOSTED PARTY PAGE*/
+.hosted-party-info {
+  .inner-rounded-white {
+    overflow: hidden;
+
+    .main-info {
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+    .additional-info {
+      float: right;
+
+      .action-details {
+        float: none;
+        margin-bottom: 10px;
+
+        ul {
+          list-style: none;
+          margin: 8px 40px;
+        }
+        ul#party-items {
+          list-style: disc;
+          margin: 8px 20px;
+        }
+      }
+    }
+  }
+  /*HOSTED PARTY SETUP CONTAINER*/
+  .hosted-party-facebook-event {
+    background: white;
+    border: 1px solid #bcbcbc;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 1.5em;
+    width: 370px;
+
+    h3 {
+      background: #ebebeb;
+      font-size: 1.4em;
+      font-weight: bold;
+      padding: 8px 15px;
+    }
+    p {
+      margin: 10px 15px;
+    }
+    span {
+      margin-left: 0;
+    }
+    #facebook_button {
+      float: right;
+      font-size: small;
+      margin-top: 3px;
+
+      a, a:visited, a:active {
+        color: $blue-header;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+.party-discussion {
+  background: white;
+
+  h3 {
+    background: #EBEBEB;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 8px 15px;
+  }
+  h4 {
+    font-size: 13px;
+  }
+}
+.discussion-media, .hosted-party-details {
+  overflow: hidden;
+  padding-bottom: 25px;
+
+  .action-image {
+    float: none;
+    margin-bottom: 1em;
+  }
+}
+#modal-content{
+  display: none;
+  text-align: center;
+}
+

@@ -1,0 +1,2577 @@
+@import "../_base";
+
+/* custom font mixins */
+@mixin museo-slab($size, $weight) {
+  font-family: "museo-slab",serif;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+}
+@mixin museo-sans($size, $weight) {
+  font-family: "museo-sans",sans-serif;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+}
+
+/*member top info and awards panel*/
+.top-member-info {
+  margin-bottom: 1em;
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+  .status {
+    @extend .clearfix;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* Generic Nameplate Styles */
+#levels-index .inner.stats-dashboard {
+  border: none;
+}
+.levels .inner.stats-dashboard {
+  .status {
+    left: -28px;
+    width: 892px;
+
+    .level-information {
+      img {
+        display: none;
+      }
+      .info {
+        .charity {
+          p {
+            line-height: 13px;
+          }
+        }
+      }
+      .progress {
+        margin: -2px 0 0 0;
+
+        .level-percent-complete {
+          display: none;
+        }
+      }
+    }
+  }
+  .nameplate-stats {
+    .points-cash {
+      .current-points {
+        display: none;
+      } 
+    }
+    .redeem-button {
+      display: none;
+    }
+  }
+  .status.generic {
+    background: url("images/nameplate/ct-next-nameplate.png") 0 0 no-repeat;
+    height: 140px;
+    margin: 0;
+    padding: 40px 34px 0;
+
+    .level-information {
+      display: none;
+    }
+    .nameplate-stats {
+      display: none;
+    }
+    .star-power {
+      display: none;
+    }
+  }
+}
+
+/* LEVELS nameplates */
+.top-member-info {
+  .status {
+    position: relative;
+    height: 140px;
+    margin: 0;
+    padding: 40px 34px 0;
+
+    .level-information {
+      a {
+        text-decoration: none;
+      }
+      img {
+        position: absolute;
+      }
+      .info {
+        left: 124px;
+        line-height: 1;
+        position: absolute;
+        top: 47px;
+      }
+      .member-name {
+        float: left;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+      }
+      .number {
+        display: none;
+      }
+      .progress {
+        float: left;
+        margin-right: 75px;
+        position: relative;
+
+        .bar {
+          .fill {
+            height: 100%;
+          }
+        }
+        .level-percent-complete {
+          position: absolute;
+        }
+        .next-level-up {
+          color: #232323;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+    .nameplate-stats {
+      position: absolute;
+      right: 180px;
+      top: 40px;
+      .points-cash {
+        margin: 10px 0 0 0;
+        vertical-align: top;
+
+        .redeem-button {
+          a {
+            display: block;
+            text-indent: -9999px;
+          }
+        }
+        .points {
+          font-size: 28px;
+          font-weight: bold;
+          vertical-align: top;
+
+          .pts {
+            font-size: 14px;
+            font-weight: normal;
+            vertical-align: baseline;
+          }
+        }
+        p.nameplate-points-labels {
+          color: #281502;
+          font-size: 9px;
+          margin: 0 0 5px 0;
+          text-transform: uppercase;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+    }
+    .star-power {
+      position: absolute;
+
+      span.star-power-score {
+        display: block;
+        line-height: 1em;
+        position: absolute;
+        text-align: center;
+        width: 50px;
+      }
+      span.star-power-label {
+        position: absolute;
+
+        em {
+          font-style: normal;
+        }
+      }
+    }
+  }
+  /* LEVEL 1 CARDBOARD */
+  .status.cardboard {
+    background: url("images/nameplate/ct-nameplate-lvl-1-cardboard.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        left: 50px;
+        top: 54px;
+      }
+      .info {
+        left: 145px;
+      }
+      .member-name {
+        color: $cardboard-brown;
+        font: 30px "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", arial, sans-serif;
+        margin: 0 10px 0 0;
+      }
+      .charity {
+        color: $cardboard-brown;
+        font: 14px "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", arial, sans-serif;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+
+        .donating-to {
+          font: italic 10px Helvetica, Arial, sans-serif;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background-image: url("images/nameplate/ct-progress-bar-lvl-1-cardboard.png");
+          height: 31px;
+          width: 271px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-1-cardboard.png");
+          }
+        }
+        .level-percent-complete {
+          color: #956536;
+          font: 14px "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+          right: 15px;
+          top: 8px;
+        }
+        .next-level-up {
+          color: $cardboard-black;
+          font-size: 11px;
+          font-weight: bold;
+          margin: 5px 0 0 0;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+    }
+    .nameplate-stats {
+      color: #251b0f;
+      font-weight: bold;
+      text-shadow: 0 1px 2px #ffd09a;
+      top: 25px;
+
+      h4 {
+        color: #251b0f;
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $cardboard-black;
+          font-family: "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+          font-size: 20px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $cardboard-black;
+          font-size: 9px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-1-cardboard.png");
+          height: 18px;
+          margin: 3px 0 0 0;
+          width: 59px;
+        }
+      }
+    }
+    .star-power {
+      right: 108px;
+      top: 41px;
+
+      span.star-power-score {
+        color: #b17826;
+        font: 32px "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+        text-shadow: 0px 1px 0px #fff;
+      }
+      span.star-power-label {
+        color: #453c30;
+        font: bold 11px "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+        right: -57px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 90px;
+
+        em {
+          color: #1d1914;
+        }
+      }
+    }
+  }
+  /* END LEVEL 1 CARDBOARD */
+
+  /* LEVEL 2 PLASTIC */
+  .status.plastic {
+    background: url("images/nameplate/ct-nameplate-lvl-2-plastic.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        left: 35px;
+        top: 72px;
+      }
+      .info {
+        left: 120px;
+        top: 74px;
+      }
+      .member-name {
+        color: $plastic-blue;
+        float: left;
+        font: normal 26px "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+        margin: 0 10px 5px 0;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #fff;
+        text-transform: none;
+      }
+      .charity {
+        color: $plastic-gray;
+        font: normal 10px "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+        text-shadow: 0px 1px 0px #fff;
+        text-transform: uppercase;
+
+        .donating-to {
+          font: italic 10px Helvetica, Arial, sans-serif;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background-image: url("images/nameplate/ct-progress-bar-lvl-2-plastic.png");
+          height: 16px;
+          width: 254px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-2-plastic.png");
+          }
+        }
+        .level-percent-complete {
+          color: #fff;
+          font-family: "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 900;
+          right: 22px;
+          text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+          top: 4px;
+        }
+        .next-level-up {
+          color: $plastic-gray;
+          font-family: "Arial", sans-serif;
+          font-size: 10px;
+          font-weight: normal;
+          margin: 3px 0 0 0;
+          text-shadow: 0px 1px 0px #fff;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      color: #251b0f;
+      font-weight: bold;
+      text-shadow: 0 1px 2px #ffd09a;
+      top: 48px;
+
+      p.nameplate-points-labels {
+        color: $plastic-gray;
+        font-family: "Arial",sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 0px #fff;
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $plastic-blue;
+          font-family: "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 200;
+          text-shadow: 0px 1px 0px #fff;
+        }
+        span.pts {
+          color: #451c13;
+          font-size: 9px;
+          text-shadow: 0px 1px 0px #fff;
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-2-plastic.png") 0 0 no-repeat;
+          height: 18px;
+          margin: 3px 0 0 0;
+          width: 58px;
+        }
+      }
+    }
+    .star-power {
+      right: 113px;
+      top: 60px;
+
+      span.star-power-score {
+        color: #fff;
+        font-family: "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 200;
+        text-shadow: none;
+      }
+      span.star-power-label {
+        color: $plastic-gray;
+        font-family: "Marker Felt", "Apple Casual", "Comic Sans", "Comic Sans MS", Arial, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        right: -55px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: $plastic-blue;
+        }
+      }
+    }
+  }
+  /* END LEVEL 2 PLASTIC */
+
+  /* LEVEL 3 BRICK */
+  .status.brick {
+    background: url("images/nameplate/ct-nameplate-lvl-3-brick.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        left: 35px;
+        top: 54px;
+      }
+      .member-name {
+        color: $brick-red;
+        margin: 0 10px 0 0;
+        text-transform: uppercase;
+        @include museo-slab(26px, 900);
+      }
+      .charity {
+        color: $brick-red;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: normal;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+
+        .donating-to {
+          font: 10px Helvetica, Arial, sans-serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background-image: url("images/nameplate/ct-progress-bar-lvl-3-brick.png");
+          height: 35px;
+          width: 270px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-3-brick.png");
+          }
+        }
+        .level-percent-complete {
+          color: $brick-pink;
+          right: 15px;
+          text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+          top: 8px;
+          @include museo-slab(14px, 900);
+        }
+        .next-level-up {
+          color: $brick-red;
+          font-family: "Arial Black", sans-serif;
+          font-size: 10px;
+          font-weight: bold;
+          margin: 3px 0 0 0;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      color: #251b0f;
+      font-weight: bold;
+      text-shadow: 0 1px 2px #ffd09a;
+      top: 25px;
+
+      p.nameplate-points-labels {
+        color: $brick-points;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        @include museo-sans(10px, 700);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $brick-red;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+          @include museo-slab(21px, 900);
+        }
+        span.pts {
+          color: $brick-points;
+          font-size: 9px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-3-brick.png");
+          height: 27px;
+          margin: 3px 0 0 0;
+          width: 66px;
+        }
+      }
+    }
+    .star-power {
+      right: 114px;
+      top: 46px;
+
+      span.star-power-score {
+        color: #7d3a09;
+        text-shadow: 0px 1px 0px #fff;
+        @include museo-slab(36px, 900);
+      }
+      span.star-power-label {
+        color: $brick-points;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        top: 85px;
+
+        em {
+          color: #2d130d;
+        }
+      }
+    }
+  }
+  /* END LEVEL 3 BRICK */
+
+  /* LEVEL 4 SLATE */
+  .status.slate {
+    background: url("images/nameplate/ct-nameplate-lvl-4-slate.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        left: 35px;
+        top: 54px;
+      }
+      .member-name {
+        color: $slate-gray;
+        margin: 0 10px 0 0;
+        text-transform: uppercase;
+        @include museo-slab(26px, 900);
+      }
+      .charity {
+        color: $slate-gray;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: normal;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+
+        .donating-to {
+          color: #525354;
+          font: 10px Helvetica, Arial, sans-serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 1px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-4-slate.png") 0 0 no-repeat;
+          height: 38px;
+          width: 273px;
+
+          .fill {
+            background: url("images/nameplate/ct-progress-fill-lvl-4-slate.png") 0 0 repeat-x;
+          }
+        }
+        .level-percent-complete {
+          color: #c2c4c5;
+          right: 15px;
+          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+          top: 10px;
+          @include museo-slab(14px, 900);
+        }
+        .next-level-up {
+          color: $slate-gray;
+          font-family: "Arial Black", sans-serif;
+          font-size: 10px;
+          font-weight: bold;
+          margin: 3px 0 0 0;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      color: $slate-gray;
+      font-weight: bold;
+      top: 28px;
+
+      p.nameplate-points-labels {
+        color: $slate-gray;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        @include museo-sans(10px, 700);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $slate-gray;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+          @include museo-slab(21px, 900);
+        }
+        span.pts {
+          color: $slate-gray;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        }
+      }
+      .current-points {
+        margin: 10px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-4-slate.png") 0 0 no-repeat;
+          height: 30px;
+          margin: 0;
+          width: 73px;
+        }
+      }
+    }
+    .star-power {
+      right: 114px;
+      top: 46px;
+
+      span.star-power-score {
+        color: #6c6a44;
+        text-shadow: 1px 1px 0px #fff;
+        @include museo-slab(36px, 900);
+      }
+      span.star-power-label {
+        color: $slate-gray;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        top: 83px;
+
+        em {
+          color: #252526;
+        }
+      }
+    }
+  }
+  /* END LEVEL 4 SLATE */
+
+  /* LEVEL 5 BIRCH */
+  .status.birch {
+    background: url("images/nameplate/ct-nameplate-lvl-5-birch.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        left: 35px;
+        top: 54px;
+      }
+      .member-name {
+        color: $birch-brown;
+        font-family: "Arial Black",sans-serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 900;
+        margin: 0 10px 5px 0;
+        text-transform: uppercase;
+      }
+      .charity {
+        color: $birch-brown;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: normal;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+
+        .donating-to {
+          font: 10px Helvetica, Arial, sans-serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background-image: url("images/nameplate/ct-progress-bar-lvl-5-birch.png");
+          height: 35px;
+          width: 270px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-5-birch.png");
+          }
+        }
+        .level-percent-complete {
+          color: #edd347;
+          font-family: "Arial Black",serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 900;
+          right: 15px;
+          text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+          top: 10px;
+        }
+        .next-level-up {
+          color: $birch-black;
+          font-family: "Arial Black", sans-serif;
+          font-size: 11px;
+          font-weight: bold;
+          margin: 5px 0 0 0;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      color: #251b0f;
+      font-weight: bold;
+      text-shadow: 0 1px 2px #ffd09a;
+      top: 30px;
+
+      p.nameplate-points-labels {
+        color: $birch-black;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        @include museo-sans(10px, 700);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $birch-brown;
+          font-family: "Georgia",serif;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 900;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        }
+        span.pts {
+          color: $birch-brown;
+          font-size: 9px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-5-birch.png") 0 0 no-repeat;
+          height: 22px;
+          margin: 3px 0 0 0;
+          width: 86px;
+        }
+      }
+    }
+    .star-power {
+      right: 105px;
+      top: 44px;
+
+      span.star-power-score {
+        color: $birch-brown;
+        font-family: "Georgia",serif;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: bold;
+        text-shadow: 0px 1px 0px #fff;
+      }
+      span.star-power-label {
+        color: $birch-brown;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: #785123;
+        }
+      }
+    }
+  }
+  /* END LEVEL 5 BIRCH */
+
+  /* LEVEL 6 OAK */
+  .status.oak {
+    background: url("images/nameplate/ct-nameplate-lvl-6-oak.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        left: 35px;
+        top: 54px;
+      }
+      .member-name {
+        color: $oak-black;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 900;
+        margin: 0 10px 5px 3px;
+        text-transform: uppercase;
+      }
+      .charity {
+        color: $birch-black;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: normal;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+
+        .donating-to {
+          font: 10px Helvetica, Arial, sans-serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background-image: url("images/nameplate/ct-progress-bar-lvl-6-oak.png");
+          height: 35px;
+          width: 270px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-6-oak.png");
+          }
+        }
+        .level-percent-complete {
+          color: $birch-black;
+          font-family: "Arial Black",serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 900;
+          right: 15px;
+          text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+          top: 11px;
+        }
+        .next-level-up {
+          color: $birch-black;
+          font-family: Palatino, "Palatino Linotype", serif;
+          font-size: 12px;
+          font-style: italic;
+          font-weight: bold;
+          margin: 5px 0 0 0;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      color: #251b0f;
+      font-weight: bold;
+      text-shadow: 0 1px 2px #ffd09a;
+      top: 30px;
+
+      p.nameplate-points-labels {
+        color: $birch-black;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 700;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $oak-black;
+          font-family: "Georgia",serif;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 900;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        }
+        span.pts {
+          color: $oak-black;
+          font-size: 9px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-6-oak.png") 0 0 no-repeat;
+          height: 22px;
+          margin: 3px 0 0 0;
+          width: 86px;
+        }
+      }
+    }
+    .star-power {
+      right: 108px;
+      top: 43px;
+
+      span.star-power-score {
+        color: #a4690a;
+        font-family: "Georgia",serif;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: bold;
+        text-shadow: 0px 1px 0px #fff;
+      }
+      span.star-power-label {
+        color: $birch-black;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: bold;
+        margin: 5px 0 0 0;
+        right: -63px;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        top: 70px;
+
+        em {
+          color: #27100b;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  /* END LEVEL 6 OAK */
+
+  /* LEVEL 7 MAHOGANY - class name intentionally spelled wrong */
+  .status.mahagony {
+    background: url("images/nameplate/ct-nameplate-lvl-7-mahogany.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 64px;
+        left: 40px;
+        top: 60px;
+        width: 65px;
+      }
+      .member-name {
+        color: $slight-gray;
+        font-family: Georgia,serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0 10px 0 0;
+        text-shadow: 0px 1px 1px #000;
+        text-transform: uppercase;
+      }
+      .charity {
+        color: $slight-gray;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 12px;
+        text-shadow: 0px 1px 1px #000;
+        text-transform: uppercase;
+
+        .donating-to {
+          color: $mahagony-silver;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background-image: url("images/nameplate/ct-progress-bar-lvl-7-mahogany.png");
+          height: 35px;
+          width: 270px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-7-mahogany.png");
+          }
+        }
+        .level-percent-complete {
+          color: $mahagony-silver;
+          font-family: Palatino, "Palatino Linotype", serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 15px;
+          text-shadow: 0px 1px 1px #000;
+          top: 10px;
+        }
+        .next-level-up {
+          color: $mahagony-silver;
+          font-family: Palatino, "Palatino Linotype", serif;
+          font-size: 11px;
+          font-weight: bold;
+          margin: 3px 0 0 0;
+          text-shadow: 0px 1px 1px #000;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 34px;
+
+      p.nameplate-points-labels {
+        color: $mahagony-silver;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 10px;
+        font-weight: bold;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 1px #000;
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $slight-gray;
+          font-family: Georgia, serif;
+          font-size: 15px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 0px 1px 1px #000;
+        }
+        span.pts {
+          color: $mahagony-silver;
+          font-size: 9px;
+          text-shadow: 0px 1px 1px #000;
+        }
+      }
+      .current-points {
+        margin: 11px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-7-mahogany.png");
+          height: 18px;
+          margin: 5px 0 0 0;
+          width: 70px;
+        }
+      }
+    }
+    .star-power {
+      right: 112px;
+      top: 45px;
+
+      span.star-power-score {
+        color: #4a4a4b;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: normal;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+      }
+      span.star-power-label {
+        color: $mahagony-silver;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 11px;
+        font-weight: bold;
+        margin: 3px 0 0 0;
+        right: -62px;
+        text-shadow: 0px 1px 1px #000;
+        text-transform: uppercase;
+        top: 73px;
+
+        em {
+          color: #fff;
+        }
+      }
+    }
+  }
+  /* END LEVEL 7 MAHOGANY */
+
+  /* LEVEL 8 GLASS */
+  .status.glass {
+    background: url("images/nameplate/ct-nameplate-lvl-8-glass.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 65px;
+        left: 45px;
+        top: 55px;
+        width: 65px;
+      }
+      .info {
+        left: 128px;
+        top: 44px;
+      }
+      .member-name {
+        color: $glass-gray;
+        margin: 0 10px 0 0;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        @include museo-sans(30px, 100);
+      }
+      .charity {
+        color: $glass-gray;
+        line-height: 14px;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        @include museo-sans(12px, 700);
+
+        .donating-to {
+          color: $glass-gray;
+          font: 10px "museo-sans",sans-serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 0;
+
+        .bar {
+          background-image: url("images/nameplate/ct-progress-bar-lvl-8-glass.png");
+          height: 35px;
+          width: 270px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-8-glass.png");
+          }
+        }
+        .level-percent-complete {
+          color: $glass-gray;
+          right: 15px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+          top: 11px;
+          @include museo-sans(11px, 700);
+        }
+        .next-level-up {
+          color: $glass-gray;
+          margin: 7px 0 0 0;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+          text-transform: uppercase;
+          @include museo-sans(11px, 500);
+        }
+      }
+    }
+    .nameplate-stats {
+      top: 28px;
+
+      p.nameplate-points-labels {
+        color: $glass-gray;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+        @include museo-sans(10px, 700);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $glass-gray;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+          @include museo-sans(20px, 100);
+        }
+        span.pts {
+          color: $glass-gray;
+          font-size: 11px;
+          font-weight: 900;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+        }
+      }
+      .current-points {
+        margin: 11px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-8-glass.png") 0 0 no-repeat;
+          height: 27px;
+          margin-top: 2px;
+          width: 67px;
+        }
+      }
+    }
+    .star-power {
+      right: 104px;
+      top: 57px;
+
+      span.star-power-score {
+        color: $glass-gray;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+        @include museo-sans(36px, 100);
+      }
+      span.star-power-label {
+        color: $glass-gray;
+        margin: 7px 0 0 0;
+        right: -58px;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        @include museo-sans(11px, 500);
+        top: 74px;
+
+        em {
+          color: #404b49;
+        }
+      }
+    }
+  }
+  /* END LEVEL 8 GLASS */
+
+  /* LEVEL 9 MARBLE */
+  .status.marble {
+    background: url("images/nameplate/ct-nameplate-lvl-9-marble.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .info {
+        top: 49px;
+      }
+      .member-name {
+        color: $marble-black;
+        font-family: Georgia,serif;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: bold;
+        margin: 0 10px 0 3px;
+        text-transform: none;
+      }
+      .charity {
+        color: $marble-black;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: $marble-black;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 5px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-9-marble.png") 0 0 no-repeat;
+          height: 33px;
+          width: 268px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-9-marble.png");
+          }
+        }
+        .level-percent-complete {
+          color: $mahagony-silver;
+          font-family: Georgia, serif;
+          font-size: 14px;
+          font-weight: bold;
+          right: 14px;
+          text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+          top: 12px;
+        }
+        .next-level-up {
+          color: $marble-black;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: bold;
+          margin: 5px 0 0 0;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 34px;
+
+      p.nameplate-points-labels {
+        color: #444;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-weight: bold;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $marble-black;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: bold;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $marble-black;
+          font-size: 9px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .current-points {
+        margin: 11px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-9-marble.png") 0 0 no-repeat;
+          height: 20px;
+          margin: 5px 0 0 0;
+          width: 60px;
+        }
+      }
+    }
+    .star-power {
+      right: 109px;
+      top: 46px;
+
+      span.star-power-score {
+        color: #fff;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: none;
+      }
+      span.star-power-label {
+        color: #444;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        margin: 5px 0 0 0;
+        right: -64px;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 75px;
+
+        em {
+          color: $marble-black;
+        }
+      }
+    }
+  }
+  /* END LEVEL 9 MARBLE */
+
+  /* LEVEL 10 COPPER */
+  .status.copper {
+    background: url("images/nameplate/ct-nameplate-lvl-10-copper.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .member-name {
+        color: $copper-brown;
+        font-family: Georgia,serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0 10px 0 0;
+        text-transform: none;
+      }
+      .charity {
+        color: $copper-brown;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: #9e6754;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 5px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-10-copper.png") 0 0 no-repeat;
+          height: 33px;
+          width: 268px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-10-copper.png");
+          }
+        }
+        .level-percent-complete {
+          color: $copper-black;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 15px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+          top: 10px;
+        }
+        .next-level-up {
+          color: $copper-black;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: normal;
+          margin: 5px 0 0 0;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 36px;
+
+      p.nameplate-points-labels {
+        color: $copper-black;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-weight: bold;
+        margin: 0 0 2px 0;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $copper-brown;
+          font-family: Georgia, serif;
+          font-size: 16px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $copper-brown;
+          font-size: 9px;
+          text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .current-points {
+        margin: 11px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-10-copper.png") 0 0 no-repeat;
+          height: 18px;
+          margin: 5px 0 0 0;
+          width: 59px;
+        }
+      }
+    }
+    .star-power {
+      right: 109px;
+      top: 45px;
+
+      span.star-power-score {
+        color: #5b381f;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: normal;
+        text-shadow: none;
+      }
+      span.star-power-label {
+        color: $copper-black;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: normal;
+        margin: 5px 0 0 0;
+        right: -59px;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 75px;
+
+        em {
+          color: #21120d;
+        }
+      }
+    }
+  }
+  /* END LEVEL 10 COPPER */
+
+  /* LEVEL 11 IRON */
+  .status.iron {
+    background: url("images/nameplate/ct-nameplate-lvl-11-iron.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .member-name {
+        color: $iron-gray;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: bold;
+        margin: 0 10px 0 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+      }
+      .charity {
+        color: $iron-gray;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: $iron-gray;
+          font: 10px Palatino, "Palatino Linotype", serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-11-iron.png") 0 0 no-repeat;
+          height: 33px;
+          width: 268px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-11-iron.png");
+          }
+        }
+        .level-percent-complete {
+          color: $iron-gray;
+          font-family: Palatino, "Palatino Linotype", serif;
+          font-size: 12px;
+          font-weight: bold;
+          right: 12px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          top: 11px;
+        }
+        .next-level-up {
+          color: $iron-silver;
+          font-family: Palatino, "Palatino Linotype", serif;
+          font-size: 11px;
+          font-weight: normal;
+          margin: 5px 0 0 0;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 34px;
+
+      p.nameplate-points-labels {
+        color: $iron-silver;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 10px;
+        font-weight: normal;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $iron-silver;
+          font-family: Palatino, "Palatino Linotype", serif;
+          font-size: 17px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $iron-silver;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .current-points {
+        margin: 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-11-iron.png") 0 0 no-repeat;
+          height: 22px;
+          margin: 5px 0 0 0;
+          width: 62px;
+        }
+      }
+    }
+    .star-power {
+      right: 110px;
+      top: 45px;
+
+      span.star-power-score {
+        color: #e5e5e5;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px #000;
+      }
+      span.star-power-label {
+        color: #555;
+        font-family: Palatino, "Palatino Linotype", serif;
+        font-size: 11px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: #111;
+        }
+      }
+    }
+  }
+  /* END LEVEL 11 IRON */
+
+  /* LEVEL 12 STEEL */
+  .status.steel {
+    background: url("images/nameplate/ct-nameplate-lvl-12-steel.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        left: 35px;
+        top: 54px;
+      }
+      .member-name {
+        color: $evil-gray;
+        margin: 0 10px 0 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        @include museo-slab(26px, 900);
+      }
+      .charity {
+        color: $steel-gray;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: normal;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+
+        .donating-to {
+          color: #525354;
+          font: 10px Helvetica, Arial, sans-serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 3px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-12-steel.png") 0 0 no-repeat;
+          height: 38px;
+          width: 273px;
+
+          .fill {
+            background: url("images/nameplate/ct-progress-fill-lvl-12-steel.png") 0 0 repeat-x;
+          }
+        }
+        .level-percent-complete {
+          color: #c2c4c5;
+          right: 15px;
+          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+          top: 8px;
+          @include museo-slab(14px, 900);
+        }
+        .next-level-up {
+          color: $steel-gray;
+          font-family: "Arial Black", sans-serif;
+          font-size: 10px;
+          font-weight: bold;
+          margin: 0;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      color: $steel-gray;
+      font-weight: bold;
+      top: 34px;
+
+      p.nameplate-points-labels {
+        color: #303132;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        @include museo-sans(10px, 700);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $evil-gray;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+          @include museo-slab(16px, 900);
+        }
+        span.pts {
+          color: $evil-gray;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-12-steel.png") 0 0 no-repeat;
+          height: 30px;
+          margin: 0;
+          width: 73px;
+        }
+      }
+    }
+    .star-power {
+      right: 118px;
+      top: 45px;
+
+      span.star-power-score {
+        color: #323233;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        @include museo-slab(36px, 900);
+      }
+      span.star-power-label {
+        color: $steel-gray;
+        font-family: "Arial Black", sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        margin: 0;
+        right: -58px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: #161717;
+        }
+      }
+    }
+  }
+  /* END LEVEL 12 STEEL */
+
+  /* LEVEL 13 TITANIUM */
+  .status.titanium {
+    background: url("images/nameplate/ct-nameplate-lvl-13-titanium.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .info {
+        top: 50px;
+      }
+      .member-name {
+        color: $titanium-gray;
+        font-family: Arial, serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0 10px 4px 2px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+      }
+      .charity {
+        color: $titanium-gray;
+        font-family: Arial, serif;
+        font-size: 11px;
+        font-weight: normal;
+        line-height: 13px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+
+        .donating-to {
+          color: $titanium-gray;
+          font: 10px Palatino, Arial, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-13-titanium.png") 0 0 no-repeat;
+          height: 36px;
+          width: 268px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-13-titanium.png");
+          }
+        }
+        .level-percent-complete {
+          color: #333;
+          font-family: Arial, serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 15px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          top: 12px;
+        }
+        .next-level-up {
+          color: #49494a;
+          font-family: Arial, serif;
+          font-size: 11px;
+          font-weight: normal;
+          margin: 5px 0 0 0;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 34px;
+
+      p.nameplate-points-labels {
+        color: $titanium-gray;
+        font-family: Arial, serif;
+        font-size: 10px;
+        font-weight: normal;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: #777;
+          font-family: Arial, serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: #777;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-13-titanium.png") 0 0 no-repeat;
+          height: 21px;
+          margin-top: 2px;
+          width: 71px;
+        }
+      }
+    }
+    .star-power {
+      right: 118px;
+      top: 45px;
+
+      span.star-power-score {
+        color: #7d7e7f;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px #fff;
+      }
+      span.star-power-label {
+        color: $iron-silver;
+        font-family: Arial, serif;
+        font-size: 11px;
+        font-weight: normal;
+        margin: 5px 0 0 0;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 75px;
+
+        em {
+          color: #111;
+        }
+      }
+    }
+  }
+  /* END LEVEL 13 TITANIUM */
+
+  /* LEVEL 14 BRONZE */
+  .status.bronze {
+    background: url("images/nameplate/ct-nameplate-lvl-14-bronze.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .member-name {
+        color: $bronze-black;
+        font-family: Georgia,serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0 10px 0 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+      }
+      .charity {
+        color: $bronze-black;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: #523c25;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 5px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-14-bronze.png") 0 0 no-repeat;
+          height: 37px;
+          width: 272px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-14-bronze.png");
+          }
+        }
+        .level-percent-complete {
+          color: $bronze-black;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 15px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          top: 10px;
+        }
+        .next-level-up {
+          color: $bronze-black;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: normal;
+          margin: 2px 0 0 0;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 36px;
+
+      p.nameplate-points-labels {
+        color: $bronze-black;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-weight: normal;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $bronze-black;
+          font-family: Georgia, serif;
+          font-size: 16px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $bronze-black;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-14-bronze.png") 0 0 no-repeat;
+          height: 20px;
+          margin-top: 5px;
+          width: 59px;
+        }
+      }
+    }
+    .star-power {
+      right: 118px;
+      top: 45px;
+
+      span.star-power-score {
+        color: #523c25;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      span.star-power-label {
+        color: $bronze-black;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: #140e08;
+        }
+      }
+    }
+  }
+  /* END LEVEL 14 BRONZE */
+
+  /* LEVEL 15 SILVER */
+  .status.silver {
+    background: url("images/nameplate/ct-nameplate-lvl-15-silver.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .member-name {
+        color: $titanium-gray;
+        font-family: Georgia,serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0 10px 0 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+      }
+      .charity {
+        color: $titanium-gray;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: #777;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin-top: 2px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-15-silver.png") 0 0 no-repeat;
+          height: 39px;
+          width: 273px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-15-silver.png");
+          }
+        }
+        .level-percent-complete {
+          color: $titanium-gray;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 15px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          top: 12px;
+        }
+        .next-level-up {
+          color: $titanium-gray;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: normal;
+          margin: 2px 0 0 0;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 36px;
+
+      p.nameplate-points-labels {
+        color: $titanium-gray;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-weight: normal;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $titanium-gray;
+          font-family: Georgia, serif;
+          font-size: 16px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $titanium-gray;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .current-points {
+        margin: 11px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-15-silver.png") 0 0 no-repeat;
+          height: 22px;
+          margin: 5px 0 0 0;
+          width: 62px;
+        }
+      }
+    }
+    .star-power {
+      right: 118px;
+      top: 45px;
+
+      span.star-power-score {
+        color: $titanium-gray;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      span.star-power-label {
+        color: $titanium-gray;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: #111;
+        }
+      }
+    }
+  }
+  /* END LEVEL 15 SILVER */
+
+  /* LEVEL 16 14k GOLD */
+  .status.gold-14k {
+    background: url("images/nameplate/ct-nameplate-lvl-16-gold.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .member-name {
+        color: $gold-orange;
+        font-family: Georgia,serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 2px 10px 0 10px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+      }
+      .charity {
+        color: $gold-orange;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: $gold-orange;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin: -15px 0 0 -9px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-16-gold.png") 0 0 no-repeat;
+          height: 53px;
+          width: 287px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-16-gold.png");
+          }
+        }
+        .level-percent-complete {
+          color: #ffe3a6;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 15px;
+          text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+          top: 24px;
+        }
+        .next-level-up {
+          color: $gold-orange;
+          font-family: Georgia, serif;
+          font-size: 10px;
+          font-weight: normal;
+          margin-left: 7px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 36px;
+
+      p.nameplate-points-labels {
+        color: $gold-orange;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-weight: normal;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $gold-orange;
+          font-family: Georgia, serif;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $gold-orange;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .current-points {
+        margin: 9px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-16-gold.png") 0 0 no-repeat;
+          height: 38px;
+          margin: -10px 0 0 0;
+          width: 62px;
+        }
+      }
+    }
+    .star-power {
+      right: 118px;
+      top: 45px;
+
+      span.star-power-score {
+        color: $gold-brown;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      span.star-power-label {
+        color: $gold-brown;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: #7b4735;
+        }
+      }
+    }
+  }
+  /* END LEVEL 16 14k GOLD */
+
+  /* LEVEL 17 24k GOLD */
+  .status.gold-24k {
+    background: url("images/nameplate/ct-nameplate-lvl-17-gold-24k.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .member-name {
+        color: $gold-orange;
+        font-family: Georgia,serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 2px 10px 0 10px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+      }
+      .charity {
+        color: $gold-orange;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: $gold-orange;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin: -15px 0 0 -9px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-17-gold-24k.png") 0 0 no-repeat;
+          height: 53px;
+          width: 287px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-17-gold-24k.png");
+          }
+        }
+        .level-percent-complete {
+          color: #ffe3a6;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 15px;
+          text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+          top: 24px;
+        }
+        .next-level-up {
+          color: $gold-orange;
+          font-family: Georgia, serif;
+          font-size: 10px;
+          font-weight: normal;
+          margin: 4px 0 0 7px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 36px;
+
+      p.nameplate-points-labels {
+        color: $gold-orange;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-weight: normal;
+        margin: 0 0 2px 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $gold-orange;
+          font-family: Georgia, serif;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $gold-orange;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .current-points {
+        margin: 9px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-17-gold-24k.png") 0 0 no-repeat;
+          height: 38px;
+          margin-top: -10px;
+          width: 62px;
+        }
+      }
+    }
+    .star-power {
+      right: 118px;
+      top: 45px;
+
+      span.star-power-score {
+        color: $gold-brown;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      span.star-power-label {
+        color: $gold-brown;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: #7b4735;
+        }
+      }
+    }
+  }
+  /* END LEVEL 17 24k GOLD */
+
+  /* LEVEL 18 PLATINUM */
+  .status.platinum {
+    background: url("images/nameplate/ct-nameplate-lvl-18-platinum.png") 0 0 no-repeat;
+
+    .level-information {
+      img {
+        height: 63px;
+        left: 41px;
+        top: 60px;
+        width: 63px;
+      }
+      .member-name {
+        color: $platinum-gray;
+        font-family: Georgia,serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 2px 10px 0 10px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+      }
+      .charity {
+        color: $platinum-gray;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 13px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: none;
+
+        .donating-to {
+          color: $platinum-gray;
+          font: 10px Georgia, serif;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+      .progress {
+        margin: -15px 0 0 4px;
+
+        .bar {
+          background: url("images/nameplate/ct-progress-bar-lvl-18-platinum.png") 0 0 no-repeat;
+          height: 53px;
+          width: 287px;
+
+          .fill {
+            background-image: url("images/nameplate/ct-progress-fill-lvl-18-platinum.png");
+          }
+        }
+        .level-percent-complete {
+          color: white;
+          font-family: Georgia, serif;
+          font-size: 11px;
+          font-weight: bold;
+          right: 25px;
+          text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+          top: 24px;
+        }
+        .next-level-up {
+          color: $platinum-gray;
+          font-family: Georgia, serif;
+          font-size: 10px;
+          font-weight: normal;
+          margin: 2px 0 0 -15px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .nameplate-stats {
+      font-weight: bold;
+      top: 36px;
+
+      p.nameplate-points-labels {
+        color: $platinum-gray;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-weight: normal;
+        margin: 0;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      .lifetime-points, .current-points {
+        span.number {
+          color: $platinum-gray;
+          font-family: Georgia, serif;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+        span.pts {
+          color: $platinum-gray;
+          font-size: 9px;
+          text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+      }
+      .current-points {
+        margin: 9px 0 0 0;
+      }
+      .redeem-button {
+        a {
+          background: url("images/nameplate/ct-redeem-btn-lvl-18-platinum.png") 0 0 no-repeat;
+          height: 50px;
+          margin: -10px 0 0 -10px;
+          width: 85px;
+        }
+      }
+    }
+    .star-power {
+      right: 118px;
+      top: 45px;
+
+      span.star-power-score {
+        color: $platinum-gray;
+        font-family: Georgia, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      }
+      span.star-power-label {
+        color: $platinum-gray;
+        font-family: Georgia, serif;
+        font-size: 11px;
+        font-weight: normal;
+        right: -59px;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        top: 80px;
+
+        em {
+          color: $almost-blk;
+        }
+      }
+    }
+  }
+  /* END LEVEL 18 PLATINUM */
+}

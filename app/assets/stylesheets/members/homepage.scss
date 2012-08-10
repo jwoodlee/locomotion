@@ -1,0 +1,187 @@
+@import "../_base";
+
+/*member homepage*/
+#homepage {
+  background: transparent url("images/homepage/homepage-top.png") top left no-repeat;
+  margin: 0 0 15px 0;
+  padding: 14px 0 0 0;
+
+  #homepage-bottom {
+    background: transparent url("images/homepage/homepage-bottom.png") top left no-repeat;
+    height: 14px;
+  }
+  #homepage-content {
+    background: transparent url("images/homepage/homepage-middle.png") top left repeat-y;
+    padding: 8px 38px;
+
+    #homepage-right {
+      float: right;
+      height: 380px;
+      width: 460px;
+
+      img {
+        float: left;
+        position: relative;
+        z-index: 999;
+      }
+    }
+    #homepage-left {
+      float: left;
+      position: relative;
+      width: 382px;
+
+      h2 {
+        @include image-replacement("images/homepage/homepage-copy.png", 382px, 199px);
+        margin: 0 0 15px 0;
+      }
+      p {
+        font-size: 1.4em;
+        line-height: 1.3;
+        margin: 0 0 20px;
+
+        strong {
+          color: $red;
+          font-weight: 800;
+        }
+        &#tutorial {
+          background: #DDD;
+          font-size: 1.0em;
+          font-weight: bold;
+          margin-bottom: 15px;
+          padding: 8px;
+          @include rounded-corners(0.5em);
+          text-align: center;
+
+          a:link, a:active, a:visited {
+            color: $dark-gray;
+          }
+          a:hover {
+            color: $red;
+          }
+        }
+      }
+      .homepage-sign-up {
+        border: 2px solid $red;
+        color: #c1c1c1;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+        padding: 15px;
+        @include rounded-corners(0.5em);
+        text-align: center;
+        text-decoration: none;
+        @include top-down-gradient(#42464d, #34373d);
+        width: 347px;
+
+        &:hover {
+          border-color: #42464d;
+          color: white;
+          @include top-down-gradient(#ff3e00, #c93100);
+        }
+        span {
+          border-bottom: 1px solid rgba(20, 20, 20, 0.4);
+          display: block;
+          padding-bottom: 10px;
+        }
+        strong {
+          border-top: 1px solid rgba(250, 250, 250, 0.1);
+          color: white;
+          display: block;
+          font: 36px "Houschka Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serf;
+          padding-top: 10px;
+          text-shadow: 0 1px 2px #18191c;
+        }
+      }
+      .learn-more {
+        bottom: 13px;
+        position: absolute;
+        right: 75px;
+      }
+      .learn-more a {
+        @include image-replacement("images/red-learnmore.png", 23px, 23px);
+      }
+    }
+  }
+}
+
+#homepage-secondary {
+  background: transparent url("images/homepage/homepage-secondary-top.png") top left no-repeat;
+  margin: 0 0 15px 0;
+  padding: 12px 0 0 0;
+
+  #homepage-secondary-content {
+    background: transparent url("images/homepage/homepage-secondary-bottom.png") bottom left no-repeat;
+    padding: 3px 15px 15px 15px;
+  }
+  h6 {
+    float: left;
+    @include image-replacement("images/homepage/homepage-secondary-content.png", 162px, 100px);
+    margin: 0 15px 0 0;
+  }
+  ul {
+    float: right;
+    margin: 0;
+    width: 755px;
+
+    li {
+      background-color: #efefef;
+      float: left;
+      @include image-replacement("images/homepage/homepage-secondary-content.png", 142px, 100px);
+      margin: 0 0 0 8px;
+    }
+    #homepage-houseparties {
+      background-position: -179px 0;
+    }
+    #homepage-polls {
+      background-position: -331px 0;
+    }
+    #homepage-products {
+      background-position: -484px 0;
+    }
+    #homepage-opinions {
+      background-position: -635px 0;
+    }
+    #homepage-brainstorm {
+      background-position: -786px 0;
+    }
+  }
+}
+
+/*removes backround for hompage*/
+.home-index, .homes-show, .sessions-new {
+  .primary-content {
+    background: 0;
+    left: -2px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    @include rounded-corners(12px);
+    width: 964px;
+  }
+}
+body.sessions-new footer.primary {
+  margin-top: 15px;
+}
+body.members-new {
+  fieldset.member, .buttons {
+    display: none;
+  }
+}
+/*removes email signup*/
+body.sessions-new .primary-content {
+  form {
+    display: none;
+  }
+}
+/*shows client email signup*/
+body.clients.sessions-new .primary-content {
+  form, ul {
+    display: inherit;
+  }
+}
+
+body.homes .primary-content form {
+  display: none;
+}
+/*end of homepage*/

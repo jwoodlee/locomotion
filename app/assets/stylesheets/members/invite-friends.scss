@@ -1,0 +1,407 @@
+@import "../_base";
+
+
+/*Members invite friends page*/
+.invite-friends {
+  #invite-friends-mailto a img {
+    margin: 0 0 10px;
+  }
+  h2 {
+    font-size: 2em;
+    margin: 0; }
+  h4 {
+    color: #5e5e5e;
+    font-weight: normal;
+  }
+  .share-invite-code {
+    margin: 1.75em 0;
+
+    label {
+      margin-bottom: 0.25em;
+    }
+    #invite_code_url {
+      width: 300px;
+    }
+  }
+  .share-invite-ads {
+    ul {
+      li {
+        clear: both;
+        list-style: none;
+        margin: 10px 0 0 0;
+
+        img {
+          float: left;
+          margin: 0 10px 10px 0;
+        }
+        input {
+
+        }
+      }
+    }
+  }
+  a.share-twitter {
+    @include image-replacement("images/tweet-the-invite.jpg", 284px, 46px);
+    margin: 0 0 12px;
+  }
+  a.share-facebook {
+    @include image-replacement("images/post-to-facebook.jpg", 284px, 46px);
+    margin: 0 0 12px;
+  }
+}
+
+/* Friend Invite Modal */
+#friend-invite-modal {
+  overflow: hidden;
+
+  .inner {
+    padding: 15px;
+  }
+  .share-invite-code {
+    color: #444444;
+    font-size: 12px;
+  }
+  .promoter-joins-requirement{
+    color: #626262;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+  }
+  h2 {
+    color: $almost-blk;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+  #invite-links {
+    margin: 30px 0 50px 0;
+    width: 700px;
+
+    a {
+      display: block;
+      float: left;
+      height: 48px;
+      margin: 0 10px;
+      text-indent: -9999px;
+
+      &#mailto-friends {
+        background: url("images/email-your-friends-button.png") 0 0 no-repeat;
+        margin-left: 70px;
+        width: 188px;
+      }
+      &.open-facebook-share.share-facebook {
+        background: url("images/post-to-facebook-button.png") 0 0 no-repeat;
+        width: 175px;
+      }
+      &.share-twitter {
+        background: url("images/post-to-twitter-button.png") 0 0 no-repeat;
+        width: 165px;
+      }
+    }
+    .share-invite-code {
+      clear: both;
+      display: none;
+      padding-top: 30px;
+
+      #invite-code-url {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.2);
+        color: $almost-blk;
+        display: block;
+        font-size: 22px;
+        padding: 10px;
+        width: 300px;
+      }
+    }
+  }
+  .rewards-group {
+    margin: 10px auto;
+    width: 380px;
+  }
+  .rewards-description {
+    @include inline-block;
+    width: 270px;
+    margin: 0 0 0 10px;
+
+    p {
+      color: $almost-blk;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+  .rewards-icon {
+    @include inline-block;
+    vertical-align: middle;
+
+    .points {
+      background: url("images/missions-points-bg.png") 0 0 no-repeat;
+      color: #fff;
+      float: left;
+      font-size: 18px;
+      font-weight: bold;
+      height: 55px;
+      line-height: 10px;
+      margin: 0;
+      padding: 36px 20px 0 0;
+      text-align: right;
+      text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+      width: 70px;
+
+      span.pts {
+        font-size: 10px;
+        font-weight: normal;
+      }
+    }
+  }
+  a.button {
+    background: #f71a0b url("images/gloss.png") 0 center repeat-x;
+    border: 1px solid #a00a00;
+    color: #fff;
+    display: block;
+    float: right;
+    font-family: "Houschka Pro", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    height: 32px;
+    margin: 10px 0 10px 5px;
+    padding: 10px 10px 0 10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+    
+    @include rounded-corners(4px);
+
+    &:hover {
+      background: #fa2214 url("images/gloss.png") 0 center repeat-x;
+      @include box-shadow(0, 2px, 8px, 0, rgba(0,0,0,0.5));
+    }
+
+    &:active {
+      background: #fa2214 url("images/gloss.png") 0 center repeat-x;
+      @include inset-box-shadow(0, 1px, 4px, 0, rgba(0,0,0,0.5));
+    }
+  }
+}
+
+/* MEMBER ONBOARDING STYLES */
+.onboarding_invitations {
+  background: url("images/body-background-gradient.png") repeat-x fixed left bottom #787A7E;
+
+  .container {
+    margin: 100px auto 0;
+    
+    .primary-content {
+      background: $lt-gray;
+      margin: 1em 0 1.5em;
+      padding: 1em 19px;
+      position: relative;
+      @include rounded-corners(10px);
+
+      p {
+        line-height: 1.4em;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  header.primary {
+    background: url("images/header-noise-bkg.png") 0 0 repeat-x;
+    margin-bottom: 20px;
+    padding: 2px 0 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    .container {
+      margin: 0;
+
+      h1 {
+        float: left;
+        margin-left: 30px;
+        padding: 5px 0 0;
+
+        a {
+          @include image-replacement("images/member-logo-new.png", 161px, 39px);
+        }
+      }
+    }
+  }
+}
+/* Friend Invite Onboarding */
+#invite-friends {
+  li {
+    list-style-type: none;
+    margin-bottom: 7px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    color: #868686;
+    font-size: 40px;
+    font-weight: bold;
+    margin: -15px 0 15px;
+  }
+  form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #facebook-post-preview {
+    background-color: #EDEFF4;
+    border: 1px solid #BDC7D8;
+    font-family: "Lucida Grande", Verdana, sans-serif;
+    font-size: 11px;
+    @include inline-block;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 505px;
+
+    form {
+      width: 100%;
+    }
+  }
+  #share-prompt {
+    h3 {
+      color: #68BEAF;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.2em;
+      padding: 6px 0 0 0;
+      width: 525px;
+    }
+    img {
+      float: left;
+      height: 68px;
+    }
+  }
+  #facebook_post_message {
+    border: 1px solid #BEC8D9;
+    color: #7b7b7b;
+    height: 3em;
+    width: 370px;
+  }
+  #profile-pic {
+    @include inline-block;
+    vertical-align: top;
+  }
+  .facebook-container {
+    color: #808080;
+    @include inline-block;
+    margin: 0 0 0 7px;
+    width: 400px;
+
+    textarea#facebook_post_message {
+      height: 60px;
+    }
+  }
+  #facebook-thumb {
+    border: 1px solid #E0E0E0;
+    @include inline-block;
+    margin-right: 5px 5px 0 0;
+  }
+  #facebook-meta-text {
+    @include inline-block;
+    margin: 2px 0 0 8px;
+    vertical-align: top;
+    width: 230px;
+  }
+  .blue-bold-text {
+    color: #3b5998;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  #disclaimer-text {
+    margin: 0 0 5px;
+  }
+  .submit-buttons {
+    @include inline-block;
+    margin: 91px 0 0 20px;
+    vertical-align: top;
+
+    input {
+      margin-right: 5px;
+    }
+  }
+}
+/* MEMBER ONBOARDING STYLES END */
+
+/* SQUARE TABS */
+.square-tabs {
+  .square-tabs-nav {
+    a {
+      border: 1px solid #c1c1c1;
+      border-bottom: none;
+      float: left;
+      display: block;
+      margin-right: 3px;
+      position: relative;
+      top: 2px;
+
+      span {
+        background-color: #dedede;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 1px solid white;
+        border-bottom: none;
+        display: block;
+        height: 30px;
+        padding: 8px 10px;
+        text-indent: -5000px;
+        width: 30px;
+      }
+      &:hover span {
+        background-color: #ebebeb;
+      }
+    }
+    .current {
+      border-bottom: 1px solid #ebebeb;
+
+      span {
+        background-color: #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+      }
+    }
+    #invite-email span {
+      background-image: url("images/invite-email.png");
+    }
+    #invite-facebook span {
+      background-image: url("images/invite-facebook.png");
+    }
+    #invite-gmail span {
+      background-image: url("images/invite-gmail.png");
+    }
+  }
+  .square-tabs-content {
+    border: 1px solid #c1c1c1;
+
+    .square-tabs-content-inner {
+      background: #ebebeb;
+      border: 1px solid white;
+      border-top: none;
+      padding: 20px 0 0 0;
+
+      form {
+        width: 100%;
+
+        .label-holder {
+          padding: 0 0 4px 0;
+        }
+        label {
+          display: inline;
+          font-weight: bold;
+        }
+        span {
+          color: #6f6f6f;
+        }
+        textarea {
+          height: 120px;
+          margin: 0 0 15px 0;
+        }
+      }
+    }
+  }
+}
+

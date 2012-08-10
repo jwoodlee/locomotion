@@ -1,0 +1,138 @@
+@import "../_base";
+
+body#new-member-index {
+  background: white url("images/new-member-index/mainBg.jpg") top left repeat-x;
+
+  .container {
+    margin: 0 auto;
+    width: 1016px;
+
+    .primary-content {
+      width: 1016px;
+
+      header {
+        margin: 10px 0;
+
+        a#header-logo {
+          @include image-replacement ("images/new-member-index/logo-gradient.png", 233px, 62px);
+          @include inline-block;
+          margin-left: 30px;
+        }
+        a#client-site-link {
+          @include image-replacement ("images/client-site-link-sprite.png", 236px, 33px);
+          @include inline-block;
+          margin: 17px 0 0 15px;
+          vertical-align: top;
+        }
+        a#client-site-link:hover {
+          background: url("images/client-site-link-sprite.png") 0px -37px no-repeat;
+        }
+        a#hiring-button {
+          @include image-replacement ("images/new-member-index/we-are-hiring.png", 159px, 80px);
+          display: inline-block;
+          zoom: 1;
+          margin: 0 0 0 56px; 
+        }
+        a#facebook-header {
+          @include image-replacement ("images/new-member-index/facebook-header.png", 22px, 22px);
+          @include inline-block;
+          float: right;
+          margin: 23px 5px 0 0;
+        }
+        a#twitter-header {
+          @include image-replacement ("images/new-member-index/twitter-header.png", 22px, 22px);
+          @include inline-block;
+          float: right;
+          margin: 23px 0 0 0px;
+        }
+        a#login-header {
+          @include image-replacement ("images/new-member-index/login-header.png", 154px, 22px);
+          @include inline-block;
+          float: right;
+          margin: 23px 36px 0 25px;
+        }
+      }
+      div#hero {
+        background: url("images/new-member-index/hero-bg.png") 0px 0px no-repeat;
+        height: 694px;
+        width: 1016px;
+
+        div#features-detail-text {
+          @include inline-block;
+          margin: 480px 0 0 52px;
+          vertical-align: top;
+
+          div#earn-status, div#support-your, div#score-products {
+            color: #949BA6;
+            font-size: 11px;
+            @include inline-block;
+            width: 145px;
+            line-height: 16px;
+          }
+          div#earn-status {
+            margin-right: 70px;
+          }
+          div#support-your {
+            margin-right: 48px;
+          }
+        }
+        div#calls-to-action {
+          @include inline-block;
+
+          a#tap-in-now {
+            @include image-replacement ("images/new-member-index/tap-in-now-sprite.png", 286px, 86px);
+            margin: 340px 0 0 57px;
+          }
+          a#tap-in-now:hover {
+            background: url("images/new-member-index/tap-in-now-sprite.png") 0px -85px no-repeat;
+          }
+          a#marketer-link {
+            @include image-replacement ("images/new-member-index/client-site-main-link-sprite.png", 260px, 71px);
+            margin: 15px 0 0 72px;
+          }
+          a#marketer-link:hover {
+            background: url("images/new-member-index/client-site-main-link-sprite.png") 0px -69px no-repeat;
+          }
+        }
+      }
+    }
+    div#secondary-content {
+      margin-top: 40px;
+
+      div#four-steps {
+        @include image-replacement ("images/new-member-index/just-four-steps.png", 405px, 297px);
+        @include inline-block;
+        margin-left: 50px;
+        width: 450px;
+      }
+      div#vertical-rule {
+        @include image-replacement ("images/new-member-index/vertical-rule.png", 1px, 297px);
+        @include inline-block;
+      }
+      div#recently-on-crowdtap {
+        @include image-replacement ("images/new-member-index/recently-on-crowdtap.png", 403px, 305px);
+        @include inline-block;
+        margin-left: 50px;
+      }
+    }
+    footer.primary {
+      margin: 100px 0 70px;
+
+      ul li {
+        color: #7B818B;
+
+        &.jobs a {
+          color: $red;
+        }
+
+        a {
+          color: #7B818B;
+          font-weight: bold;
+        }
+      }
+    }
+    div.error, div.notice, div.success, #flash_failure, #flash_success, #flash_notice {
+      margin: 10px auto;
+    }
+  }
+}

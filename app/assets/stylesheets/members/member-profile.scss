@@ -1,0 +1,213 @@
+@import "../_base";
+
+/*members public profile*/
+.public-profile {
+  /*background-color: #ebebeb;*/
+
+  .profile-heading {
+    float: left;
+
+    h1 {
+      background-color: #515154;
+      color: #fff;
+      font-size: 18px;
+      @include inline-block;
+      margin: 0;
+      padding: 8px 25px;
+      text-shadow: 0px -1px 0px #333;
+      @include top-rounded-corners(12px);
+    }
+    .profile-heading-inverted-corner {
+      /*background-color: #d5d5d5;
+      height: 12px;
+      @include inline-block;
+      line-height: 12px;
+      margin-left: -4px;
+      vertical-align: bottom;
+      width: 15px;*/
+      display: none;
+
+      span {
+        /*background-color: #ebebeb;
+        @include bottom-left-rounded-corner(12px);
+        height: 12px;
+        @include inline-block;
+        vertical-align: baseline;
+        width: 50px;*/
+        display: none;
+      }
+    }
+  }
+  #edit-profile-link {
+    float: left;
+    margin-left: 10px;
+    margin-top: 13px;
+
+    a, a:link, a:active, a:visited {
+      color: #ff3d0d;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  #profile-outer {
+    background: #515154;
+    padding: 5px;
+    @include top-right-both-bottom-rounded-corners(12px);
+
+    a {
+      color: #ff3d0d;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    #profile-inner {
+      background: #e3e5e6;
+      border: 1px solid #fff;
+      @include rounded-corners(12px);
+
+      #profile-left-column {
+        float: left;
+        @include left-rounded-corners (12px);
+        padding: 20px;
+        width: 196px;
+
+        img.profile-photo {
+          border: 2px solid white;
+          @include box-shadow (0, 0, 10px, 0, #BBBBBB);
+          margin: 0 1px 10px;
+          width: 105px;
+        }
+        .level {
+          @include box-shadow (0, 1px, 4px, 0, #888888);
+          margin: 10px 0;
+          position: relative;
+        }
+        .plate-1 {
+          @include image-replacement ("images/level-plates/plate-1.png", 94px, 24px);
+        }
+        .plate-2 {
+          @include image-replacement ("images/level-plates/plate-2.png", 94px, 24px);
+        }
+        .plate-3 {
+          @include image-replacement ("images/level-plates/plate-3.png", 94px, 24px);
+        }
+        .plate-4 {
+          @include image-replacement ("images/level-plates/plate-4.png", 94px, 24px);
+        }
+        .plate-5 {
+          @include image-replacement ("images/level-plates/plate-5.png", 94px, 24px);
+        }
+        .plate-6 {
+          @include image-replacement ("images/level-plates/plate-6.png", 94px, 24px);
+        }
+        .plate-7 {
+          @include box-shadow (0, 0, 0, 0, #fff);
+          @include image-replacement ("images/level-plates/plate-7.png", 96px, 26px);
+        }
+        img.charity-logo {
+          border: 1px solid white;
+          @include box-shadow (0, 0, 2px, 0, #BBBBBB);
+          margin: 6px 0 0;
+          width: 77px;
+        }
+        h2 {
+          color: #3f5f7f;
+          font-size: 18px;
+        }
+        h3 {
+          color: #3f5f7f;
+          font-size: 12px;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+        p {
+          color: #6f8090;
+          font-size: 12px;
+          line-height: 16px;
+          margin: 0;
+        }
+        a {
+          img {
+            float: left;
+            margin: 0;
+          }
+          span {
+            @include inline-block;
+            padding: 4px 0 0 8px;
+          }
+        }
+        a.share-link {
+          clear: left;
+          display: block;
+          margin-top: 10px;
+        }
+      }
+      #profile-right-column {
+        background: #fff;
+        float: right;
+        @include right-rounded-corners (12px);
+        width: 660px;
+
+        h2 {
+          margin: 0 0 6px 20px;
+        }
+        table {
+          margin: 0;
+
+          thead th {
+            padding: 20px 0 6px 20px;
+          }
+          td {
+            border: none;
+            color: #3f5f7f;
+            font-size: 40px;
+            font-weight: bold;
+            height: 90px;
+            padding: 10px 0 0 20px;
+            vertical-align: top;
+          }
+          .table-spacer {
+            width: 100px;
+          }
+        }
+        .no-badge {
+          padding: 10px 20px;
+        }
+        .content-legend {
+          color: #afb8c2;
+          font-size: 18px;
+        }
+        .profile-content-area {
+          background: #fff url(images/profile-content-gradient.png) repeat-x;
+        }
+        .award-tally {
+          @include inline-block;
+          margin-bottom: 20px;
+          min-width: 90px;
+          padding: 15px 20px;
+
+          .icon-count-group {
+            text-align: center;
+
+            img {
+              @include inline-block;
+              margin-bottom: 1px;
+            }
+            p.tally {
+              color: #788a9b;
+              font-size: 20px;
+              font-weight: bold;
+              @include inline-block;
+              margin: 5px 0 0;
+              vertical-align: top;
+            }
+          }
+          p.identifier {
+            color: #9a9a9a;
+            font-size: 12px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

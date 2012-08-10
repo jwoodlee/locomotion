@@ -1,0 +1,123 @@
+@import "../_base";
+
+/*warning for older browsers*/
+#browser-warning {
+  h4 {
+    font-size: 2em;
+    line-height: 1.1;
+    margin: 0;
+  }
+  h5 {
+    color: #7d7d7d;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  #good-browsers {
+    padding: 10px 0 0 0;
+    text-align: left;
+
+    a {
+      display: block;
+      float: left;
+      line-height: 1.1;
+      min-height: 50px;
+      padding: 5px 0 0 55px;
+      text-decoration: none;
+      width: 135px;
+
+      strong {
+        display: block;
+        font-size: 1.4em;
+      }
+      span {
+        color: #7d7d7d;
+      }
+    }
+    #firefox-is-good {
+      background: transparent url("images/icons/firefox-sm.png") left center no-repeat;
+      font-size: 12px;
+
+      strong {
+        color: #e6860f;
+      }
+    }
+    #ie-is-acceptable {
+      background: transparent url("images/icons/ie-sm.png") left center no-repeat;
+
+      strong {
+        color: #034074;
+      }
+    }
+    #safari-is-good {
+      background: transparent url("images/icons/safari-sm.png") left center no-repeat;
+
+      strong {
+        color: #0696dc;
+      }
+    }
+    #chrome-is-good {
+      background: transparent url("images/icons/chrome-sm.png") left center no-repeat;
+
+      strong {
+        color: #e62000;
+      }
+    }
+  }
+}
+.browser-warning-close-btn {
+  float: right;
+  margin: 0;
+  padding: 0;
+
+  form.formtastic {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+.unsupported-browser-close-btn {
+  margin: 15px auto 0 auto;
+
+  form {
+    margin: 0;
+    padding: 15px 0 0 0;
+    width: 100%;
+  }
+}
+#unsupported-browser {
+  margin: 0 auto;
+  text-align: center;
+  width: 73%;
+
+  p {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+#unsupported-browser-options {
+  @extend .inner-rounded-white;
+  margin: 10px auto 20px auto;
+  text-align: center;
+  width: 85%;
+
+  h5 {
+    font-size: 14px;
+    margin: 15px 0;
+  }
+}
+#brands-show {
+  #ajax-loader {
+    margin-left: 70px;
+    text-align: center;
+    width: 460px;
+  }
+ #no-more-content {
+   color: #7A7881;
+   display: block;
+   text-align: center;
+  }
+}
+

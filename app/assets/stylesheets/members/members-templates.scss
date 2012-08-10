@@ -1,0 +1,646 @@
+@import "../_base";
+
+section, header, article, footer, nav {
+  border: 0;
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+h2 {
+  font-size: 1.7em;
+}
+h3 {
+  color: $blue-header;
+  display: block;
+  font-weight: normal;
+  font-size: 90%;
+}
+small {
+  color: $dark-gray;
+  display: block;
+  font-size: smaller;
+}
+thead th {
+  border-bottom: none;
+  color: $blue-header;
+}
+tbody th, tbody td {
+  border-bottom: 1px solid #ddd;
+}
+.feed table {
+  margin-bottom: 0;
+}
+tr.buttons td {
+  border-bottom: none;
+  text-align: center;
+
+  a {
+    @include inline-block;
+  }
+}
+
+/*we need this container - tutorial uses it*/
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+/*NEW container*/
+body.new {
+  background: url("images/new-grainy-bkg.png") 0 0 repeat;
+
+  .container{
+    margin: 0 auto;
+    width: 960px;
+  }
+}
+
+/* ROUNDED CONTAINERS */
+.rounded-gray-border {
+  background: #fff url("images/gray-rounded-border.png") bottom left repeat-x;
+  padding: 0.5em;
+  @include bottom-rounded-corners(12px);
+}
+.round-grey-border-inner-round-white {
+  /* background: #d5d5d5 url("images/gray-rounded-border.png") bottom left repeat-x; */
+  background: #fff;
+  padding: 0.5em;
+  @include bottom-rounded-corners(12px);
+
+  > .inner {
+    @extend .inner-rounded-white;
+    margin-bottom: 0.5em;
+    overflow: hidden;
+  }
+
+  > .inner:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* NAV TABS */
+.nav-tabs {
+  clear: right;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+
+  li {
+    display: block;
+    float: left;
+    font-size: 120%;
+    font-weight: bold;
+    margin-right: 4px;
+    overflow: hidden;
+    position: relative;
+    /*@include top-down-gradient(#a6a6a6, #616161); */
+    @include top-rounded-corners(5px);
+    zoom: 1;
+
+    &:hover {
+      background: #bbb;
+    }
+    span {
+      color: #232323;
+      display: block;
+      float: left;
+      padding: 0.5em 0.8em;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #a9a9a9;
+      @include top-down-gradient(#a6a6a6, #616161);
+      @include top-rounded-corners(0.5em);
+    }
+    a {
+      color: #232323;
+      display: block;
+      float: left;
+      padding: 0.5em 0.8em;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+      /*@include top-down-gradient(#a6a6a6, #616161);
+      @include top-rounded-corners(0.5em);*/
+    }
+    a.setup-completed {
+      background: url(images/icons/checked-shadow.png) center left no-repeat;
+      padding-left: 29px;
+    }
+    a.setup-edit-mode {
+      background: url(images/icons/edit-pencil.png) center left no-repeat;
+      padding-left: 29px;
+    }
+  }
+  li.active-nav-tab {
+    background: #515154;
+    cursor: default;
+    text-shadow: 0 -1px 0 #333;
+    @include top-rounded-corners(5px);
+
+    a {
+      /*background: #515154;*/
+      color: #fff;
+      cursor: default;
+      text-shadow: 0 -1px 0 #333;
+    }
+  }
+  #remaining-quickhits, .count {
+    color: white;
+    display: block;
+    font-size: 12px;
+    padding: 0 5px;
+    position: absolute;
+    right: 0px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    top: 3px;
+    @include top-down-gradient(#ff552a, #c72800);
+    @include rounded-corners(20px);
+  }
+  #remaining-quickhits{
+    padding: 0;
+    top: 14px;
+    height: 8px;
+    width: 8px;
+    right: 2px;
+  }
+}
+.tab-navigable {
+  /*-moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;*/
+  border: 1px solid #515154;
+  border-top: 3px solid #515154;
+  border-top-left-radius: 0;
+  margin-bottom: 1em;
+  @include box-shadow(0, 2px, 8px, 0, rgba(0,0,0,0.3));
+  @extend .round-grey-border-inner-round-white;
+}
+.section-with-back-link {
+  margin-bottom: 1em;
+  @extend .round-grey-border-inner-round-white;
+}
+.back-link, .back-link:link {
+  background: url("images/left-arrow.png") no-repeat 0 60%;
+  margin-bottom: 7px;
+  margin-left: 5px;
+  padding-left: 12px;
+  @extend .section-legend;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #eeeeee;
+
+  &:link, &:visited, &:active {
+    color: black;
+  }
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+/* MEMBERS NEW ACTIONS */
+.new-action {
+  @extend .inner-rounded-white;
+  margin-bottom: 0.5em;
+  position: relative;
+
+  .new-action-titles {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+  .new-action-awards {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .new-action-copy {
+    clear: both;
+    padding-left: 65px;
+
+    p {
+      max-width: 58%;
+      padding: 10px 0 0;
+      text-transform: capitalize;
+    }
+  }
+}
+/* MEMBERS ACTIONS */
+.my-actions {
+  .current-participation {
+    margin-bottom: 0.5em;
+
+    a.orange-button {
+      @include inline-block;
+      margin-top: .5em;
+    }
+  }
+  .current-participation:last-child {
+    margin-bottom: 0;
+  }
+  .action-titles {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    a {
+      float: left;
+    }
+    h3 {
+      color: $blue-header;
+      font-size: 1.1em;
+      line-height: 1.25;
+      margin-bottom: 0.25em;
+      text-transform: capitalize;
+    }
+  }
+  .action-awards {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .action-copy {
+    clear: both;
+
+    a.grey-button {
+      color: #f71a0b;
+      padding-left: 65px;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    p {
+      max-width: 58%;
+      padding: 10px 0 0 58px;
+    }
+  }
+}
+
+/* LAYOUT and TEMPLATE ELEMENT STYLES */
+.section-with-secondary-content {
+  @extend .clearfix;
+  margin-bottom: 1em;
+  @extend .rounded-gray-border;
+
+  img.action-image {
+    float: none;
+  }
+  .inner {
+    float: left;
+    @extend .inner-rounded-white;
+    width: 540px;
+
+    form.member {
+      margin-left: 0;
+      width: auto;
+
+      div.error {
+        width: 500px;
+      }
+    }
+  }
+  .inner-secondary {
+    float: right;
+    @extend .inner-rounded-white;
+    width: 281px;
+  }
+}
+
+/* CURRENT PARTICIPATION */
+.current-participation {
+  @extend .inner-rounded-white;
+  overflow: hidden;
+  position: relative;
+
+  a {
+    @include red-links;
+  }
+  #hide-action {
+    background: transparent url("images/ex.png") left center no-repeat;
+    border: 0px;
+    clear: both;
+    color: #666;
+    cursor: pointer;
+    display: block;
+    font: bold 1em "hevetica neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+    padding: 5px 0 5px 30px;
+    text-shadow: none;
+
+    &:hover {
+      color: $red;
+    }
+  }
+  .poll {
+    #hide-action {
+      background-position: 10px 50%;
+      @include inline-block;
+      padding-left: 40px;
+    }
+    img.action-image, object {
+      max-width: 390px;
+    }
+    .poll-options-image {
+      margin: 0 auto;
+      max-width: 425px;
+    }
+  }
+  label.error {
+    padding: 10px 0px;
+    font-weight:bold;
+    color: #900;
+  }
+  div#quick-hit-help-text {
+    padding: 15px 0;
+
+    h4 {
+      font-size: 1.25em;
+      margin-bottom: 1.25em;
+    }
+    a.orange-button {
+      @include inline-block;
+      color: #fff;
+    }
+    a#close-quickhit-prompt, &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Members template brand action style */
+.brand-action .inner object {
+  border: none;
+  float: inherit;
+  padding: 10px 0;
+}
+
+/* MEMBERS HOMEPAGE SPINE APP - global styles */
+.primary-content.new {
+  background: none;
+  margin: 0 0 1.5em;
+  padding: 0;
+  position: relative;
+  @include rounded-corners(5px);
+
+  p {
+    line-height: 1.4em;
+    margin-bottom: 10px;
+  }
+  .no-quickhits p {
+    font-size: 16px;
+  }
+  #member-home-app {
+    @include box-shadow(0, 2px, 8px, 0, rgba(0,0,0,0.4));
+    @include rounded-corners(4px);
+    background-color: #f9f9fb;
+    border: 3px solid #fff;
+
+    .stack > * {
+      display: none;
+    }
+    .stack > .active {
+      display: block;
+    }
+    .list-stack > * {
+      display: none;
+    }
+    .list-stack > .active {
+      display: block;
+    }
+  }
+  /* BRAND INFO CONTAINER */
+  .brand-info {
+    margin: 0 auto 15px;
+    width: 760px;
+  }
+  /* NEW MEMBER HOMEPAGE tab global styles */
+  .new-member-homepage-actions.new, .new-member-homepage-quickhits.new, .new-member-homepage-missions.new  {
+    @extend .clearfix;
+  }
+  .new-member-right-pane {
+    float: right;
+    margin-right: -3px;
+    width: 700px;
+    @include top-left-rounded-corner(4px);
+    @include inset-box-shadow (3px, 0px, 10px, 0px, rgba(0,0,0,0.2));
+
+    .current-participation {
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 20px;
+      top: -5px;
+      width: 660px;
+
+      .poll-results {
+        h2 {
+          margin-bottom: 1em;
+          padding-left: 5px;
+          width: 600px;
+        }
+      }
+      #earned-points-cash {
+        right: 0;
+        left: auto;
+      }
+      .poll, .feedback_question {
+        .quickhit-points {
+          position: absolute;
+          right: 0;
+          top: 5px;
+
+          .random-cash-award {
+            display: none;
+          }
+          .earnable-points, .earnable-points-above-random-cash {
+            background: url("images/quickhits-points-bg.png") 15px 0 no-repeat;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: #fff;
+            display: block;
+            float: none;
+            height: 91px;
+            margin: 0;
+            padding: 12px 15px 12px 0;
+            text-align: right;
+            text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+            width: 92px;
+
+            .pts-label {
+              display: block;
+              font-size: 11px;
+              font-weight: normal;
+              text-transform: lowercase;
+            }
+          }
+          .random-points-award {
+            background: url("images/bonus-points-bg.png") 0 0 no-repeat;
+            color: #fff;
+            font-weight: bold;
+            height: 47px;
+            padding: 10px 0 0 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+            width: 84px;
+
+            .award-probability {
+              font-size: 11px;
+            }
+            .pts-label {
+              display: inline;
+            }
+            .earnable-points.randomized-points {
+              background: none;
+              display: block;
+              height: auto;
+              margin: 5px 0 0 0;
+              text-align: center;
+              width: auto;
+              padding: 0;
+            }
+          }
+        }
+      }
+      .web-share {
+        .random-cash-award {
+          display: none;
+        }
+        .earnable-points, .earnable-points-above-random-cash {
+          background: url("images/quickhits-points-bg.png") 15px 0 no-repeat;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          color: #fff;
+          height: 91px;
+          margin: 0;
+          padding: 12px 15px 12px 0;
+          position: absolute;
+          right: -20px;
+          text-align: right;
+          text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+          top: -20px;
+          width: 92px;
+
+          .pts-label {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            text-transform: lowercase;
+          }
+        }
+      }
+      .poll-options-wrapper {
+        form {
+          margin-left: 20px;
+        }
+      }
+      .not-verified {
+        margin: 10px 0;
+
+        .inner {
+          border: none;
+
+          h2 {
+            padding: 0;
+          }
+        }
+      }
+    }
+    .brand-page-content {
+      #brand-header-text {
+        width: 400px !important;
+      }
+      .poll-options-image {
+        max-width: 200px !important;
+        float: left !important;
+        margin: 0 !important;
+
+        img {
+          max-width: 200px !important;
+        }
+      }
+      .poll-options-wrapper {
+        margin: 0 !important;
+        float: left !important;
+      }
+      .poll-results {
+        .option {
+          width: 25% !important;
+        }
+      }
+      .poll-options {
+        .options {
+          button {
+            width: 400px !important;
+          }
+        }
+      }
+    }
+    .brand-activity-title {
+      @include top-down-gradient(#ededf0, #d5d5dc);
+      @include top-rounded-corners(4px);
+      box-shadow: inset 4px 0 7px 0 rgba(0,0,0,0.2);
+      height: 57px;
+      width: 100%;
+
+      h1 {
+        color: $almost-blk;
+        float: left;
+        font: 36px "Houschka Pro Demibold", Helvetica, Arial, sans-serif;
+        margin: 6px 10px 10px 19px;
+        text-shadow: 0 1px 0 #fff;
+      }
+      ul.toggle-filters {
+        float: right;
+        font-size: 12px;
+        list-style: none;
+        margin: 13px 15px 0 0;
+        @include rounded-corners(5px);
+
+        li {
+          box-shadow: 0px 1px 0px rgba(255,255,255,0.9), inset 0px 1px 1px rgba(0,0,0,0.6);
+          color: $almost-blk;
+          float: left;
+          font-weight: bold;
+          line-height: 10px;
+          @include top-down-gradient(#e6e6e7, #c3c3c6);
+
+
+          &.active {
+            @include top-down-gradient(#727277, #313133);
+
+            a {
+              color: #fff;
+              text-shadow: 0px -1px 0px #000;
+            }
+          }
+          &:first-child {
+            @include left-rounded-corners(4px);
+          }
+          &:last-child {
+            @include right-rounded-corners(4px);
+          }
+          a {
+            color: #2a2a2b;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #fff;
+
+            span {
+              font-size: 12px;
+              line-height: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* MEMBERS HOMEPAGE SPINE APP - global styles END */

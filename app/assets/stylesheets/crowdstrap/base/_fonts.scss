@@ -1,0 +1,36 @@
+//  ...
+//  Fonts.scss
+//
+//  Crowdstrap custom fonts, @font-face definitions.
+//  ------------------------------------------------------------
+
+//  Fonts
+@font-face {
+  font-family: 'Houschka Pro Medium';
+  src: url('../houschkapro-medium-webfont.eot');
+  src: url('../houschkapro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../houschkapro-medium-webfont.woff') format('woff'),
+       url('../houschkapro-medium-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Houschka Pro Demibold';
+  src: url('../houschkapro-demibold-webfont.eot');
+  src: url('../houschkapro-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../houschkapro-demibold-webfont.woff') format('woff'),
+       url('../houschkapro-demibold-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'HouschkaProBold';
+  src: url('../houschkapro-bold-webfont.eot');
+  src: url('../houschkapro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../houschkapro-bold-webfont.woff') format('woff'),
+       url('../houschkapro-bold-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}

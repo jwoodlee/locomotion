@@ -1,0 +1,290 @@
+//  ...
+//  Forms.scss
+//
+//  Forms, input types, etc.
+//
+//  Note: File name temporarily prepended with 'cs_' to avoid 
+//  conflict with existing members/forms.scss file.
+//  ------------------------------------------------------------
+
+//  Base styles
+
+/*  Uncomment after Crowdstrapping forms.
+input, select {
+  vertical-align: middle; 
+}
+*/
+
+//  Remove inner padding and border in FF3/4
+//  www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+input[type="submit"]::-moz-focus-inner {
+  border: 0;
+  padding: 0; 
+}
+
+//  Starting Crowdstrap forms
+//  ----------------------------------------
+
+// Base styles
+
+form {
+  margin: 0 0 $base-line-height;
+
+  & .btn.pull-right {
+    margin-right: 0;
+  }
+}
+
+fieldset {
+  margin: 0;
+  margin-bottom: $base-line-height;
+  padding: 0;
+  border: 0;
+}
+
+legend, .legend {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $base-font-size * 1.5;
+  font-weight: normal;
+  line-height: $base-line-height * 2;
+  margin-bottom: $base-line-height;
+  padding: 0;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: $white;
+  border: 1px solid #ccc;
+  display: inline-block;
+  font-size: $base-font-size;
+  height: $base-line-height;
+  line-height: $base-line-height;
+  margin-bottom: 9px;
+  padding: 4px;
+  @include inset-box-shadow(0px, 1px, 1px, rgba(0,0,0,0.075));
+  @include rounded-corners(4px);
+  @include transition(border, .2s, linear);
+  @include transition(box-shadow, .2s, linear);
+
+  &:focus {
+    border-color: rgba(#149ed3, 0.8);
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075),
+                0 0 6px rgba(#149ed3, 0.6);
+    outline: 0;
+    outline: thin dotted \9;
+  }
+
+  // General classes for quick sizes
+  &.input-mini       { width: 60px; }
+  &.input-small      { width: 90px; }
+  &.input-medium     { width: 150px; }
+  &.input-large      { width: 210px; }
+  &.input-xlarge     { width: 270px; }
+  &.input-xxlarge    { width: 530px; }
+}
+
+// Clear grid properties
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+// Set form fonts
+input,
+button,
+select,
+textarea {
+  font-family: $base-font-family;
+
+  &, label {
+    font-size: $base-font-size;
+    font-weight: normal;
+    line-height: $base-line-height;
+  }
+}
+
+$default-input-width: $column-width*3 + $column-margin*2 - 10px;
+
+// Reset appearance properties for textual inputs and textarea
+// Declare width for legacy
+input,
+textarea {
+  width: $default-input-width;
+}
+
+// Reset height since textareas have rows
+textarea {
+  height: $base-line-height * 6;
+}
+
+// Fixes collapsed margin on legend elements in Webkit
+fieldset > label:first-of-type,
+fieldset > div.input:first-of-type
+{
+  margin-top: $base-line-height;
+  -webkit-margin-top-collapse: separate;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 3px 5px 3px 0;
+  *margin-top: 0; /* IE7 */
+  line-height: normal;
+  cursor: pointer;
+}
+
+// Reset width of input buttons, radios, checkboxes
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; // Override of generic input selector
+}
+
+// Make uneditable textareas behave like a textarea
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+// Set the height of select and file controls to match text inputs
+select,
+input[type="file"] {
+  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
+  line-height: 28px;
+}
+
+// Make select elements obey height by applying a border
+select {
+  width: $default-input-width + 10; // default input width + 10px of padding that doesn't get applied
+  border: 1px solid #bbb;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Focus for select, file, radio, and checkbox
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  @include tab-focus();
+}
+
+// Checkboxes and radios
+// -------------------
+
+// Move the options list down to align with labels
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 5px; // has to be padding because margin collaspes
+}
+
+// Radios and checkboxes on same line
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px; // space out consecutive inline controls
+}
+
+// Grid style input sizes
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+// Grid sizing
+// --------------------
+
+@for $i from 1 through $num-columns {
+  input[class="span#{$i}"] {
+    width: ($column-width*$i)+($i - 1)*$column-margin - 10;
+  }
+}
+
+// Disabled state
+// --------------------
+
+// Disabled and read-only inputs
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: $slight-gray;
+  border-color: #ddd;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: default;
+}
+
+// Explicitly reset the colors here
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+// Adjust form action btns
+.actions > .btn {
+  margin-left: 0;
+  margin-right: 2px;
+
+  &.pull-right {
+    margin-left: 2px;
+    margin-right: 0;
+  }
+}
+
+.hint {
+  margin-left: 5px;
+}

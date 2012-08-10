@@ -1,0 +1,223 @@
+@import "../_base";
+
+
+/*view and rate pages WEBSHARES*/
+@mixin thumb-button() {
+  border: none;
+  float: left;
+  @include inline-block;
+  margin-top: 1em;
+}
+@mixin circle-step-indent {
+  left: 29px;
+  position: relative;
+}
+#webshare-thumb-wrapper {
+  float: left;
+  font-size: 68px;
+  font-weight: bold;
+  margin: 5% 0;
+  text-align: center;
+
+  #web-share-site-thumb {
+    border: 1px solid $med-gray;
+    display: block;
+    margin: 0 auto 50px;
+  }
+  a.view-external-button {
+    background: #222;
+    background: url('images/buttons/button-icons/external-site-icon-large.png') 0% 100% no-repeat;
+    background: -moz-linear-gradient(0% 100% 90deg, #FFFFFF, #000000,
+                rgba(20, 20, 20, 0.9) 0%,
+                rgba(40, 40, 40, 0.9) 50%,
+                rgba(50, 50, 50, 0.9) 50%,
+                rgba(70, 70, 70, 0.9) 100%);
+    background: -webkit-gradient(linear, 0 0, 0 100%,
+                color-stop(0, rgba(70, 70, 70, 0.9)),
+                color-stop(0.5, rgba(50, 50, 50, 0.9)),
+                color-stop(0.5, rgba(40, 40, 40, 0.9)),
+                color-stop(1, rgba(20, 20, 20, 0.9)));
+    border: 1px solid #999;
+    color: #fff;
+    font-size: 50px;
+    @include inline-block;
+    padding: 15px 30px;
+    @include rounded-corners(6px);
+    text-decoration: none;
+
+    &:hover {
+      background: #222;
+      background: -moz-linear-gradient(0% 100% 90deg, #FFFFFF, #000000,
+                  rgba(20, 20, 20, 0.9) 0%,
+                  rgba(40, 40, 40, 0.9) 50%,
+                  rgba(50, 50, 50, 0.9) 50%,
+                  rgba(70, 70, 70, 0.9) 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%,
+                  color-stop(0, rgba(85, 85, 85, 0.9)),
+                  color-stop(0.5, rgba(60, 60, 60, 0.9)),
+                  color-stop(0.5, rgba(45, 45, 45, 0.9)),
+                  color-stop(1, rgba(30, 30, 30, 0.9)));
+      color: #fff;
+    }
+    &:active, &:visited {
+      background: #111;
+      background: -moz-linear-gradient(0% 100% 90deg, #FFFFFF, #000000,
+                  rgba(0, 0, 0, 0.9) 0%,
+                  rgba(20, 20, 20, 0.9) 50%,
+                  rgba(30, 30, 30, 0.9) 50%,
+                  rgba(50, 50, 50, 0.9) 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%,
+                  color-stop(0, rgba(50, 50, 50, 0.9)),
+                  color-stop(0.5, rgba(30, 30, 30, 0.9)),
+                  color-stop(0.5, rgba(20, 20, 20, 0.9)),
+                  color-stop(1, rgba(0, 0, 0, 0.9)));
+      color: $med-gray;
+    }
+    .button-icon {
+      height: 44px;
+      @include inline-block;
+      margin-left: 5px;
+      position: relative;
+      top: 5px;
+      width: 43px;
+
+      &.external-icon {
+        background: url("images/buttons/button-icons/external-site-icon-large.png") no-repeat;
+      }
+      &.check-icon {
+        background: url("images/buttons/button-icons/check.png") no-repeat;
+      }
+    }
+  }
+  .challenge-return {
+    color: white;
+    margin: 50px 0;
+  }
+}
+/* WEBSHARES */
+.quick-hits .current-participation .web-share #webshare-action-info-wrapper {
+  float: left;
+  margin: 13px 0 10px 15px;
+  width: 300px;
+}
+#webshare-action-info-wrapper {
+  float: left;
+  margin: 13px 0 100px 15px;
+  width: 300px;
+
+  #web-share-link {
+    @include circle-step-indent();
+    @include inline-block;
+    left: 0;
+    margin: 0 0 0 30px;
+    padding: 10px 70px 8px 13px;
+    text-align: left;
+    text-transform: none;
+    vertical-align: middle;
+  }
+  a#re-open-link {
+    padding: 0 0 0 10px;
+  }
+  .button-icon {
+    @include button-icon-image-replacement("images/buttons/button-icons/external-site-icon.png", 19px, 19px);
+    right: -64px;
+    top: -3px;
+  }
+}
+.quick-hits .current-participation #webshare-thumb-wrapper {
+  clear: left;
+  float: left;
+  margin: 10px 0 0;
+}
+.quick-hits #webshare-action-info-wrapper {
+  margin: 0 0 0 1.5em;
+
+  h2#challenge-heading {
+    margin: -5px 0 0 0;
+    padding-left: 0;
+  }
+  #prefilled-facebook-share {
+    a {
+      text-decoration: none;
+    }
+  }
+  #view-step {
+    a#web-share-link {
+      color: #fff;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  form {
+    padding: 5px 0;
+  }
+  #prefilled-twitter-share {
+    a {
+      text-decoration: none;
+    }
+  }
+  #view-step {
+    a#web-share-link {
+      color: #fff;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  form {
+    padding: 5px 0;
+  }
+}
+#circle1 {
+  @include image-replacement("images/number-circles/1.png", 23px, 23px);
+  @include inline-block;
+  height: 23px;
+  padding-top: 4px;
+  width: 23px;
+}
+#circle2 {
+  @include image-replacement("images/number-circles/2.png", 23px, 23px);
+  @include inline-block;
+  height: 23px;
+  padding-top: 4px;
+  width: 23px;
+}
+.quick-hit-prompt{
+  color: #5D5D5D;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: bold;
+  left: 6px;
+  margin-top: 5px;
+  position: relative;
+  top: 4px;
+}
+#rate-step {
+  margin-top: 30px;
+}
+#webshare-description {
+  @include circle-step-indent();
+  width: 236px;
+}
+#thumbs-up-submit[disabled="disabled"] {
+  @include disabled-button();
+  @include image-replacement("images/web-share/thumbs-up-disabled.jpg", 70px, 53px);
+}
+#thumbs-down-submit[disabled="disabled"] {
+  @include disabled-button();
+  @include image-replacement("images/web-share/thumbs-down-disabled.jpg", 70px, 53px);
+}
+#thumbs-up-submit {
+  @include circle-step-indent();
+  @include image-replacement("images/web-share/thumbs-up-enabled.jpg", 70px, 53px);
+  @include thumb-button();
+}
+#thumbs-down-submit {
+  @include circle-step-indent();
+  @include image-replacement("images/web-share/thumbs-down-enabled.jpg", 70px, 53px);
+  @include thumb-button();
+}
+#thumbs-down-submit {
+  margin-left: .75em;
+}

@@ -1,0 +1,103 @@
+@import "../_base";
+
+body.member-onboarding {
+  background: #dcdcde;
+
+  .primary-content.new {
+    background: white;
+    margin: 30px auto;
+    padding: 20px;
+    position: relative;
+    width: 800px;
+    @include rounded-corners(5px);
+
+    .formtastic {
+      width: 95%;
+    }
+
+    button.submit {
+      background: url("images/button-bg-orange-26px.png") 0 0 repeat-x;
+      border: 1px solid #c20d00;
+      color: #fff;
+      cursor: pointer;
+      float: right;
+      font-family: "Houschka Pro Bold", Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      height: 26px;
+      padding: 0 20px;
+      text-align: center;
+      text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+      @include box-shadow(0, 1px, 3px, 0, rgba(0,0,0,0.6));
+      @include rounded-corners(4px);
+
+      &:disabled {
+        color: #fff;
+        opacity: 0.5;
+      }
+    }
+  }
+  #step-2-active {
+    display: none;
+  }
+  div.modal-medium {
+    background: #f8f8f8;
+    background: -moz-linear-gradient(top, #e1e0e3 0%, #f8f8f8 18%); /* FF3.6+ */
+    background: -webkit-linear-gradient(top, #e1e0e3 0%,#f8f8f8 18%); /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, #e1e0e3 0%,#f8f8f8 18%); /* IE10+ */
+    background: linear-gradient(top, #e1e0e3 0%,#f8f8f8 18%); /* W3C */
+    border: 2px solid #fff;
+    margin-top: 20px;
+    overflow: visible;
+    @include box-shadow (0, 2px, 12px, 0, rgba(0,0,0,0.5));
+
+    #real-facebook-dialog {
+      padding: 20px 15px;
+    }
+    div.ui-dialog-titlebar, .ui-widget-header span.ui-dialog-title {
+      display: none;
+    }
+    p {
+      color: $evil-gray;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 18px;
+      padding-left: 10px;
+    }
+  }
+}
+/* eventually replace with crowdstrap buttons */
+.orange-button-glossy {
+  background: #f71a0b url("images/gloss.png") 0 center repeat-x;
+  border: 1px solid #a00a00;
+  @include rounded-corners(4px);
+  color: #fff !important;
+  display: block;
+  float: left;
+  font-family: "Houschka Pro", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: 26px;
+  margin: 10px 8px 0;
+  padding: 15px 5px 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 0px rgba(0,0,0,0.30);
+  width: 217px;
+
+  &:hover {
+    color: #fff;
+    @include box-shadow(0, 2px, 8px, 0, rgba(0,0,0,0.50));
+  }
+}
+
+.spinner {
+  background: white url("images/loading.gif") no-repeat center center;
+  @include opacity(0.75);
+  height: 100%;
+  margin: 0;
+  padding: 0 !important;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}

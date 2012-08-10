@@ -1,0 +1,303 @@
+//  ...
+//  Custom.scss
+//
+//  Custom styles for specific Crowdtap elements.
+//  ------------------------------------------------------------
+
+@import "base/variables";
+@import "base/mixins";
+@import "base/extends";
+
+#social-links {
+  iframe {
+    margin-top: 15px;
+  }
+}
+
+#facebook-log-in {
+  padding: 14px 5px;
+
+  a {
+    background: url('../facebook_login.png');
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    width: 154px;
+    text-indent: -9999em;
+    vertical-align: middle;
+  }
+}
+
+.members {
+  legend, .legend {
+    color: #3470B6;
+  }
+
+  img.profile-photo-preview {
+    display: block;
+    margin: 4px 0;
+  }
+
+  // Styles member social settings
+  .social-media-connections {
+    list-style: none;
+
+    li {
+      @extend .clearfix;
+
+      .connection-status {
+        background: url("../members/images/API-logo-sprite.png") 0 0 no-repeat;
+        float: left;
+        height: 50px;
+        width: 150px;
+
+        &.twitter-off { background-position: 0 0; }
+        &.twitter-on { background-position: 0 -50px; }
+      }
+      a.twitter-handle {
+        float: left;
+        margin: 18px 0 0 20px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Styles member charity list
+  #edit-charity .charity {
+    border: 1px solid #aaaaaf;
+    cursor: pointer;
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+    @include top-down-gradient(#f1f1f4, #d1d1d5);
+    @include rounded-corners(4px);
+    @extend .clearfix;
+
+    &:hover {
+      @include box-shadow(0, 2px, 8px, 0, rgba(0,0,0,0.3));
+    }
+    &:active {
+      @include inset-box-shadow(0, 1px, 6px, 0, rgba(0,0,0,0.4));
+    }
+    &.selected {
+      @include top-down-gradient(#c2c2c6, #e1e1e4);
+      @include inset-box-shadow(0, 1px, 3px, 0, rgba(0,0,0,0.4));
+    }
+
+    img {
+      display: block;
+      float: left;
+      height: 75px;
+      margin: 0 20px 0 0;
+      width: 75px;
+    }
+    h4 {
+      color: $almost-blk;
+      margin: 0;
+    }
+    span.selected-indicator {
+      background-color: green;
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 4px 6px;
+      position: absolute;
+      right: 10px;
+      text-transform: uppercase;
+      top: 10px;
+      @include rounded-corners(10px);
+    }
+    p {
+      color: $almost-blk;
+      margin: 5px 0 0 0;
+    }
+  }
+}
+
+ul.results-list li {
+  line-height: 1.4
+}
+
+.top-member-info {
+  p {
+    line-height: 1;
+  }
+}
+
+// Used to highlight current section in nav-tab on the brand actions page
+// TODO: Use .active class on li elements dynamically instead
+.member_filters-show .cs-nav-tabs li #manage_action_link_target,
+.member_filters-new .cs-nav-tabs li #manage_action_link_target,
+.brand_actions-edit .cs-nav-tabs li #manage_action_link_setup,
+.moderated_discussions-show .cs-nav-tabs li #manage_action_link_discussion,
+.results-show .cs-nav-tabs li #manage_action_link_results,
+.participants-index .cs-nav-tabs li #manage_action_link_participants,
+.feedback_questions-show .cs-nav-tabs li #manage_action_link_results {
+  background-color: $nav-tabs-highlight-bg;
+  color: $nav-tabs-highlight-color;
+  cursor: default;
+}
+
+form#brand_action_new {
+  background: #fff;
+  margin-left: 18%;
+  padding: 10px 20px;
+}
+
+//  Old form styles
+//  Delete after forms are crowdstrapped
+form ol {
+  list-style: none;
+  margin: 0 0 12px 0; 
+}
+
+.brand_actions {
+
+  form {
+    legend {
+      color: #145D85;
+    }
+  }
+
+  .poll-options-form ul {
+    list-style: none;
+
+    li {
+      margin-top: $base-line-height;
+
+      input {
+        margin-bottom: 0;
+      }
+
+      &:first-of-type {
+        -webkit-margin-top-collapse: separate;
+      }
+    }
+  }
+
+  /*list-style-position fixes IE label margin bug*/
+  form ol ol li {
+    list-style-position: outside;
+    margin: 0 0 4px 0; 
+  }
+
+  form ol li.error input {
+    background: #FBE3E4; 
+  }
+
+  p.inline-errors {
+    color: #D12F19; 
+  }
+
+  form ol li.file {
+    background: #e1e1e1;
+    border: 1px solid #c8c8c8;
+    padding: 10px; 
+  }
+
+  form abbr {
+    border-bottom: 0; 
+  }
+
+  .required label {
+    font-weight: bold; 
+  }
+
+  .checkbox_field label, .radio_field label {
+    font-weight: normal; 
+  }
+
+  a.cancel {
+    color: #7d0d0d; 
+  }
+
+  .inline-hints {
+    color: #666;
+    font-size: 11px;
+    margin-bottom: 4px; 
+  }
+
+  .ie6 legend, .ie7 legend {
+    margin-left: -7px; 
+  }
+
+  fieldset.buttons {
+    background: inherit;
+    border: 0;
+    padding: 0; 
+  }
+
+  fieldset.buttons li {
+    display: inline; 
+  }
+
+  .radio fieldset {
+    margin: 0;
+    padding: 0; 
+  }
+
+  .ie6 input {
+    vertical-align: text-bottom; 
+  }
+
+  input[disabled='disabled'] {
+    background-color: #fcfcfc;
+    cursor: default; 
+  }
+
+  .ie7 input[type="checkbox"] {
+    vertical-align: baseline; 
+  }
+
+  input[type="radio"] {
+    margin: 0 3px 0 0;
+    position: relative;
+    top: -2px;
+    vertical-align: middle; 
+  }
+
+  .check_boxes label {
+    display: inline;
+    padding: 0;
+    vertical-align: middle; 
+  }
+
+  .radio label {
+    padding: 0; 
+  }
+
+  /* Textareas */
+  textarea {
+    font-size: inherit;
+    height: 200px;
+    margin: 0 6px 6px 0;
+    padding: 5px;
+    width: 440px;
+    overflow: auto; 
+  }
+
+  /* Select fields */
+  fieldset .select select {
+    width: 200px;
+    font-size: 11px; 
+  }
+
+  optgroup {
+    margin: 0 0 6px 0; 
+  }
+
+  /* Date & Time */
+  form ol li.date select, form ol li.time select, form ol li.datetime select {
+    display: inline;
+    width: auto; 
+  }
+
+  form ol li.date ol li, form ol li.time ol li, form ol li.datetime ol li {
+    display: inline-block; 
+  }
+}
+// End old form styles

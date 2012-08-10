@@ -1,0 +1,197 @@
+@import "../_base";
+
+/* Mandatory password form */
+#modal_background {
+  background: transparent url("images/client-onboarding/modal-background.png") top left repeat;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1336;
+}
+
+.onboarding-modal {
+  background: #f5f4f6;
+  border: none;
+  @include box-shadow(0px, 1px, 10px, 0, #000);
+  left: 83px;
+  padding: 25px 57px;
+  position: absolute;
+  @include rounded-corners(10px);
+  top: -40px;
+  width: 680px;
+}
+
+#confirmation-password-modal {
+  display: inline;
+
+  h3 {
+    background: transparent url("images/client-onboarding/welcome-to-crowdtap.png") top center no-repeat;
+    height: 48px;
+    margin: 0 0 5px 0;
+    text-indent: -5000px;
+    width: 680px;
+  }
+  p {
+    border-bottom: 2px solid #c7c7c7;
+    color: #898989;
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    padding: 0 0 15px 0;
+    text-align: center;
+  }
+  p.inline-errors {
+    border: none;
+    color: red;
+  }
+  form {
+    fieldset {
+      background: transparent;
+      border: 0;
+      padding: 0;
+
+      ol {
+        background: transparent url("images/client-onboarding/lock.png") left center no-repeat;
+        margin: 0;
+        padding-left: 50px;
+
+        li {
+          float: left;
+          padding-left: 12px;
+          position: relative;
+          top: 2px;
+          width: 303px;
+
+          label {
+            color: #898989;
+            font-size: 18px;
+          }
+          input[type="text"], input[type="password"] {
+            background: #fff;
+            border: 2px solid #c7c7c7;
+            font-size: 18px;
+            padding: 6px;
+            width: 285px;
+          }
+        }
+      }
+    }
+    fieldset.buttons {
+      margin: 0;
+
+      ol {
+        background: none;
+        padding: 0;
+
+        li {
+          display: block;
+          float: none;
+          text-align: center;
+          width: 100%;
+
+          input[type="submit"] {
+            background: $red;
+            background-image: none;
+            border: none;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: normal;
+            min-width: 200px;
+            padding: 16px 20px;
+            @include rounded-corners(10px);
+            text-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MODALS? */
+.ui-dialog, .segmenting_polls .ui-dialog-content, .segmenting_polls .ui-dialog, .member_look_ups .ui-dialog {
+  background: white;
+  border: 0.5em solid #d5d5d5;
+  font-weight: bold;
+  padding: 1em;
+  @include rounded-corners;
+
+  p {
+    line-height: 1.4em;
+  }
+  .ui-dialog-titlebar {
+    background: transparent;
+    border: none;
+    color: $blue-header;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    @include rounded-corners(0);
+
+    .ui-dialog-titlebar-close {
+      height: 26px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: -4px;
+      top: -4px;
+      width: 26px;
+
+      &:hover {
+        background: inherit;
+        border: 0;
+      }
+      .ui-icon-closethick {
+        background: transparent url("images/ex.png") no-repeat 0 0;
+        display: block;
+        height: 26px;
+        padding: 0;
+        width: 26px;
+      }
+    }
+    .ui-state-hover {
+      margin: 0;
+    }
+  }
+  dl {
+    @extend .clearfix;
+
+    dd {
+      margin-left: 10em;
+    }
+    dt {
+      float: left;
+      margin: 0;
+    }
+  }
+  .ui-dialog .ui-dialog-content {
+    padding: 0.5em 0;
+  }
+  .buttons {
+    margin: 2em 0;
+    text-align: center;
+  }
+  .buttons button {
+    @include inline-block;
+    text-align: center;
+    text-transform: none;
+  }
+  .buttons button, .buttons button.cancel {
+    width: 85px;
+  }
+  p {
+    margin: 1em 0;
+  }
+  .buttons {
+    @extend .clearfix;
+  }
+  .formtastic.segmenting_poll fieldset.inputs {
+    width: 430px;
+  }
+}
+
+.modal {
+  z-index: 2;
+}

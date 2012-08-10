@@ -1,0 +1,223 @@
+@import "../_base";
+
+/*New members form*/
+.member-new-wizard {
+  background-image: url("images/new-member-wizard.png");
+  background-repeat: no-repeat;
+  height: 63px;
+  margin:  0 0 12px 84px;
+  width: 760px;
+
+  div span {
+    color: #1b1b1b;
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 60px;
+    padding: 0 0 0 18px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  .step1 {
+    float: left;
+    height: 63px;
+    width: 247px;
+  }
+  .step2 {
+    float: left;
+    height: 63px;
+    padding-left: 5px;
+    width: 249px;
+  }
+  .step3 {
+    float: left;
+    height: 63px;
+    padding-left: 5px;
+    width: 254px;
+  }
+}
+#step-1-active .member-new-wizard {
+  background-position: 0 0;
+
+  .step1 span {
+    color: #22525f;
+  }
+}
+#step-2-active .member-new-wizard {
+  background-position: 0 -63px;
+
+  .step2 span {
+    color: #22525f;
+  }
+}
+#step-3-active .member-new-wizard {
+  background-position: 0 -126px;
+
+  .step3 span {
+    color: #22525f;
+  }
+}
+#choose-charity {
+  padding: 15px 0;
+
+  .charity-summary {
+    background: #dfdfdf;
+    border: 1px solid #b7b7b7;
+    float: left;
+    margin: 0 19px 20px 0;
+    width: 268px;
+
+    &:nth-child(3n) {
+      margin: 0 0 20px;
+    }
+    .charity-summary-inner {
+      border: 1px solid white;
+      padding: 10px 15px;
+
+      .charity-logo {
+        float: left;
+        height: 50px;
+        width: 50px;
+      }
+      .charity_summary_info {
+        float: right;
+        height: 100px;
+        padding-bottom: 10px;
+        width: 176px;
+
+        h2 {
+          color: $blue-header;
+          font-size: 1.2em;
+        }
+        .charity-description {
+          font-size: 0.85em;
+          line-height: 1.3;
+        }
+      }
+      button {
+        clear: both;
+        width: 100%;
+      }
+    }
+    form {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+.selected-signup-step,
+.profiles .complete-profile,
+.members-new .signup,
+.charity_selections .select-charity {
+  background-color: #408aa4;
+}
+
+.members-new .brand-action form.formtastic {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  legend span {
+    display: none;
+  }
+  fieldset {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    ol {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+/*styles for the new user tutorial*/
+#tutorial-wiz.wizard {
+  h2 {
+    color: $blue-header;
+  }
+  ol.steps, form.formtastic {
+    float: left;
+  }
+  ol.steps {
+    margin: 0.5em 0 0 0;
+    width: 28%;
+  }
+  .steps {
+    li {
+      font-size: 1.1em;
+      text-transform: none;
+    }
+    .setup-select {
+      background: none repeat scroll 0 0 #43464d;
+      border: none;
+      text-shadow: none;
+
+      .text {
+        color: white;
+      }
+    }
+  }
+  .wizard-content {
+    background-color: white;
+    float: right;
+    font-size: 1.2em;
+    margin: 0;
+    overflow: hidden;
+    padding: 1.5em;
+    @include rounded-corners(0.5em);
+    width: 64%;
+
+    h2.blue-header {
+      color: $blue-header;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+    img {
+      float: right;
+      padding: 5px;
+    }
+    b {
+      color: $red;
+    }
+    ul li {
+      list-style: none;
+    }
+    table {
+      thead {
+        border-left: 1px solid silver;
+      }
+      tbody {
+        .tutorial-money {
+          text-align: right;
+          width: 20%;
+
+          span {
+            background: #33a047;
+            color: white;
+            padding: 4px 8px;
+            @include rounded-corners(5px);
+          }
+        }
+        .tutorial-points {
+          text-align: right;
+          width: 20%;
+
+          span {
+            background: #1e73b7;
+            color: white;
+            padding: 4px 8px;
+            @include rounded-corners(5px);
+          }
+        }
+      }
+    }
+  }
+}

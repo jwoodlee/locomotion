@@ -1,0 +1,44 @@
+//  ...
+//  Scaffolding.scss
+//
+//  Layout styles and the grid system.
+//  ----------------------------------------
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: $container-width;
+
+  .row {
+    @extend .clearfix;
+    margin-left: -($column-margin);  
+
+    // Prevent margins for nested rows
+    > .row {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+//  Span, grid
+[class*="span"] {
+  display: inline-block;
+  float: left;
+  margin-left: $column-margin;
+}
+
+//  Set span widths
+@for $i from 1 through $num-columns {
+  .span#{$i} {
+    width: ($column-width*$i)+($i - 1)*$column-margin;
+  }
+}
+
+//  Set offsets
+@for $i from 1 through $num-columns - 1 {
+  .offset#{$i} {
+    margin-left: ($column-width*$i)+($i+1)*$column-margin;
+  }
+}

@@ -1,0 +1,70 @@
+//  ...
+//  Utils.scss
+// 
+//  Special utility and miscellaneous classes.
+//  ------------------------------------------------------------
+
+//  Cloaks
+//  --------------------
+
+//  Hide for both screenreaders and browsers.
+//  css-discuss.incutio.com/wiki/Screenreader_Visibility
+.hidden {
+  display: none;
+  visibility: hidden; 
+}
+
+.hide {
+  display: none;
+}
+
+//  Hide only visually, but have it available for screenreaders.
+//  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.visually-hidden {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
+  position: absolute !important; 
+}
+
+//  Hide visually and from screenreaders, but maintain layout.
+.invisible {
+  visibility: hidden; 
+}
+
+//  Clears
+//  --------------------
+
+.clear {
+  clear: both;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-left {
+  clear: left;
+}
+
+//  Aligners
+//  --------------------
+
+.text-align-center { 
+  text-align: center; 
+}
+
+.pull-left, .left { 
+  float: left; 
+}
+.pull-right, .right { 
+  float: right; 
+}
+
+.center { margin: 10px auto; }
+
+//  Misc
+//  --------------------
+
+.no-bullets { 
+  list-style: none; 
+}

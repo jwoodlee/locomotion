@@ -1,0 +1,73 @@
+@import "../_base";
+
+/*Clients brands page*/
+.clients {
+  .brands-header {
+    border-bottom: 1px solid #8d8d8d;
+    margin: -1em -1.4em 1.25em;
+    overflow: hidden;
+    padding: 1em 1.4em;
+    @include top-down-gradient(white, #f5f5f5);
+    @include top-rounded-corners;
+
+    h2 {
+      margin: 0.25em 0;
+    }
+    .btn {
+      float: right;
+    }
+  }
+  ul#brands {
+    list-style: none;
+    padding: 0;
+
+    li {
+      background: #d5d5d5 url("images/gray-rounded-border.png") bottom left repeat-x;
+      float: left;
+      margin: 1%;
+      padding: 0.5em;
+      @include rounded-corners(0.8em);
+      width: 46%;
+
+      &:nth-child(odd) {
+        margin-left: 0;
+        width: 47%;
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+        width: 47%;
+      }
+      &:hover {
+        background: $red;
+      }
+      a {
+        background-color: white;
+        border: 1px solid #ddd;
+        color: $blue-header;
+        display: block;
+        font-size: 1.8em;
+        font-weight: bold;
+        overflow: hidden;
+        padding: 1em;
+        @include rounded-corners(0.3em);
+        text-decoration: none;
+
+        img {
+          float: left;
+          margin-bottom: 0;
+          vertical-align: middle;
+        }
+        span.name {
+          color: $blue-header;
+          display: table-cell;
+          padding: 1em 0 0 1em;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+body.previews .primary-content {
+  background: transparent;
+}
+

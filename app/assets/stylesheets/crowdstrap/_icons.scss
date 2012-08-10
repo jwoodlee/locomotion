@@ -1,0 +1,306 @@
+//  ...
+//  Icons.scss
+//
+//  Glyphicons.
+//  --------------------
+
+[class^="glyph-"], [class~="glyph-"] {
+  background: url($icons-sprite-path);
+  background-position: $icons-offset-x $icons-offset-y;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  vertical-align: text-top;
+
+  .navbar & {
+    vertical-align: baseline;
+  }
+}
+
+[class~="glyph-white"] {
+  background: url($icons-white-sprite-path);
+}
+
+//  Define the 400 Glyphicons available on the sprite
+//  ------------------------------------------------------------
+
+//  1st row
+$col: 0;
+@each $name in glass, leaf, dog, user, girl, car, user_add, user_remove, film, magic {
+  .glyph-#{$name} { @include sprite_bg_position($col, 0); }
+  $col: $col + 1;
+}
+
+//  2nd row
+$col: 0;
+@each $name in envelope, camera, heart, umbrella, train, print, bin, music, note, cog {
+  .glyph-#{$name} { @include sprite_bg_position($col, 1); }
+  $col: $col + 1;
+}
+
+//  3rd row
+$col: 0;
+@each $name in home, snowflake, fire, cogs, parents, binoculars, road, search, cars, notes {
+  .glyph-#{$name} { @include sprite_bg_position($col, 2); }
+  $col: $col + 1;
+}
+
+//  4th row
+$col: 0;
+@each $name in pencil, bus, wifi_alt, luggage, old_man, woman, file, credit, airplane, notes_alt {
+  .glyph-#{$name} { @include sprite_bg_position($col, 3); }
+  $col: $col + 1;
+}
+
+//  5th row
+$col: 0;
+@each $name in stats, charts, pie_chart, group, keys, calendar, router, video_cam, dislikes, star {
+  .glyph-#{$name} { @include sprite_bg_position($col, 4); }
+  $col: $col + 1;
+}
+
+//  6th row
+$col: 0;
+@each $name in chain, eye, eye_closed, alarm, clock, stopwatch, projector, history, truck, cargo {
+  .glyph-#{$name} { @include sprite_bg_position($col, 5); }
+  $col: $col + 1;
+}
+
+//  7th row
+$col: 0;
+@each $name in compass, keynote, attach, power, lightbulb, tag, tags, cleaning, ruler, gift {
+  .glyph-#{$name} { @include sprite_bg_position($col, 6); }
+  $col: $col + 1;
+}
+
+//  8th row
+$col: 0;
+@each $name in umbrella, book, bookmark, wifi, cup, stroller, headphones, headset, warning, signal {
+  .glyph-#{$name} { @include sprite_bg_position($col, 7); }
+  $col: $col + 1;
+}
+
+//  9th row
+$col: 0;
+@each $name in retweet, refresh, roundabout, random, heat, repeat, display, log_book, address_book, magnet {
+  .glyph-#{$name} { @include sprite_bg_position($col, 8); }
+  $col: $col + 1;
+}
+
+//  10th row
+$col: 0;
+@each $name in table, contrast, tint, crop, vector_square, vector_circle, vector_pentagon, vector_path_line, vector_path_curve, vector_path_all {
+  .glyph-#{$name} { @include sprite_bg_position($col, 9); }
+  $col: $col + 1;
+}
+
+//  11th row
+$col: 0;
+@each $name in font, italic, bold, text_underline, text_strike, text_height, text_width, text_resize, left_indent, right_indent {
+  .glyph-#{$name} { @include sprite_bg_position($col, 10); }
+  $col: $col + 1;
+}
+
+//  12th row
+$col: 0;
+@each $name in align_left, align_center, align_right, justify, list, text_smaller, text_bigger, embed, embed_close, adjust {
+  .glyph-#{$name} { @include sprite_bg_position($col, 11); }
+  $col: $col + 1;
+}
+
+//  13th row
+$col: 0;
+@each $name in message_full, message_empty, message_in, message_out, message_plus, message_minus, message_ban, message_flag, message_lock, message_new {
+  .glyph-#{$name} { @include sprite_bg_position($col, 12); }
+  $col: $col + 1;
+}
+
+//  14th row
+$col: 0;
+@each $name in inbox, inbox_plus, inbox_minus, inbox_lock, inbox_in, inbox_out, computer_locked, computer_service, computer_process, phone {
+  .glyph-#{$name} { @include sprite_bg_position($col, 13); }
+  $col: $col + 1;
+}
+
+//  15th row
+$col: 0;
+@each $name in db_lock, db_plus, db_minus, db_ban, folder_open, folder_plus, folder_minus, folder_lock, folder_flag, folder_new {
+  .glyph-#{$name} { @include sprite_bg_position($col, 14); }
+  $col: $col + 1;
+}
+
+//  16th row
+$col: 0;
+@each $name in check, edit, new_window, more_windows, show_big_thumbnails, show_thumbnails, show_thumbnail_lines, show_lines, playlist, picture {
+  .glyph-#{$name} { @include sprite_bg_position($col, 15); }
+  $col: $col + 1;
+}
+
+//  17th row
+$col: 0;
+@each $name in imac, macbook, ipad, iphone, iphone_transfer, iphone_exchange, ipod, ipod_shuffle, earplugs, albums {
+  .glyph-#{$name} { @include sprite_bg_position($col, 16); }
+  $col: $col + 1;
+}
+
+//  18th row
+$col: 0;
+@each $name in step_backward, fast_backward, rewind, play, pause, stop, forward, fast_forward, step_forward, eject {
+  .glyph-#{$name} { @include sprite_bg_position($col, 17); }
+  $col: $col + 1;
+}
+
+//  19th row
+$col: 0;
+@each $name in facetime, download_alt, mute, volume_down, volume_up, screenshot, move, more, brightness_reduce, brightness_increase {
+  .glyph-#{$name} { @include sprite_bg_position($col, 18); }
+  $col: $col + 1;
+}
+
+//  20th row
+$col: 0;
+@each $name in circle_plus, circle_minus, circle_remove, circe_ok, circle_question, circle_info, circle_exclamation, remove, ok, ban {
+  .glyph-#{$name} { @include sprite_bg_position($col, 19); }
+  $col: $col + 1;
+}
+
+//  21st row
+$col: 0;
+@each $name in download, upload, shopping_cart, lock, unlock, electricity, ok_alt, remove_alt, cart_out, cart_in {
+  .glyph-#{$name} { @include sprite_bg_position($col, 20); }
+  $col: $col + 1;
+}
+
+//  22nd row
+$col: 0;
+@each $name in left_arrow, right_arrow, down_arrow, up_arrow, resize_small, resize_full, circle_arrow_left, circle_arrow_right, circle_arrow_up, circle_arrow_down {
+  .glyph-#{$name} { @include sprite_bg_position($col, 21); }
+  $col: $col + 1;
+}
+
+//  23rd row
+$col: 0;
+@each $name in play_button, unshare, share, thin_right_arrow, thin_left_arrow, bluetooth, euro, usd, bp, retweet_alt {
+  .glyph-#{$name} { @include sprite_bg_position($col, 22); }
+  $col: $col + 1;
+}
+
+//  24th row
+$col: 0;
+@each $name in moon, sun, cloud, direction, brush, pen, zoom_in, zoom_out, pin, riflescope {
+  .glyph-#{$name} { @include sprite_bg_position($col, 23); }
+  $col: $col + 1;
+}
+
+//  25th row
+$col: 0;
+@each $name in rotation_lock, flash, google_maps, anchor, conversation, chat, male, female, asterisk, divide {
+  .glyph-#{$name} { @include sprite_bg_position($col, 24); }
+  $col: $col + 1;
+}
+
+//  26th row
+$col: 0;
+@each $name in snorkel, scuba, oxygen, fins, fish, boat, delete_point, sherriff, qr_code, barcode {
+  .glyph-#{$name} { @include sprite_bg_position($col, 25); }
+  $col: $col + 1;
+}
+
+//  27th row
+$col: 0;
+@each $name in pool, buoy, spade, bank, vcard, plug, flag, credit_card, keyboard, keyboard_wired {
+  .glyph-#{$name} { @include sprite_bg_position($col, 26); }
+  $col: $col + 1;
+}
+
+//  28th row
+$col: 0;
+@each $name in shield, ring, cake, drink, beer, fast_food, cutlery, pizza, cake, tablet {
+  .glyph-#{$name} { @include sprite_bg_position($col, 27); }
+  $col: $col + 1;
+}
+
+//  29th row
+$col: 0;
+@each $name in settings, bullets, cardio, tshirt, pants, sweater, fabric, leather, scissors, podium {
+  .glyph-#{$name} { @include sprite_bg_position($col, 28); }
+  $col: $col + 1;
+}
+
+//  30th row
+$col: 0;
+@each $name in skull, celebration, tea_kettle, french_press, coffee_cup, pot, grater, kettle, hospital, hospital_h {
+  .glyph-#{$name} { @include sprite_bg_position($col, 29); }
+  $col: $col + 1;
+}
+
+//  31st row
+$col: 0;
+@each $name in microphone, webcam, temple_christianity, temple_islam, temple_hindu, temple_buddhist, socket_eu, socket_us, bomb, comments {
+  .glyph-#{$name} { @include sprite_bg_position($col, 30); }
+  $col: $col + 1;
+}
+
+//  32nd row
+$col: 0;
+@each $name in flower, baseball, rugby, axe, ping_pong, bowling, tree, tree_alt, more_items, sort {
+  .glyph-#{$name} { @include sprite_bg_position($col, 31); }
+  $col: $col + 1;
+}
+
+//  33rd row
+$col: 0;
+@each $name in filter, game_controller, dice, calculator, tie, wallet, share, sampler, piano, browser {
+  .glyph-#{$name} { @include sprite_bg_position($col, 32); }
+  $col: $col + 1;
+}
+
+//  34th row
+$col: 0;
+@each $name in  blog, dashboard, certificate, bell, candle, pushpin, iphone_shake, pin_flag, turtle, rabbit {
+  .glyph-#{$name} { @include sprite_bg_position($col, 33); }
+  $col: $col + 1;
+}
+
+//  35th row
+$col: 0;
+@each $name in globe, briefcase, hdd, thumbs_up, thumbs_down, hand_right, hand_left, hand_up, hand_down, fullscreen {
+  .glyph-#{$name} { @include sprite_bg_position($col, 34); }
+  $col: $col + 1;
+}
+
+//  36th row
+$col: 0;
+@each $name in shopping_bag, book_open, nameplate, nameplate_alt, vases, announcement, dumbbell, suitcase, file_import, file_export {
+  .glyph-#{$name} { @include sprite_bg_position($col, 35); }
+  $col: $col + 1;
+}
+
+//  37th row
+$col: 0;
+@each $name in pinterest, dropbox, google_plus, jolicloud, yahoo, blogger, picasa, amazon, tumblr, wordpress {
+  .glyph-#{$name} { @include sprite_bg_position($col, 36); }
+  $col: $col + 1;
+}
+
+//  38th row
+$col: 0;
+@each $name in instapaper, evernote, xing, zootool, dribbble, deviantart, read_it_later, linked_in, forrst, pinboard {
+  .glyph-#{$name} { @include sprite_bg_position($col, 37); }
+  $col: $col + 1;
+}
+
+//  39th row
+$col: 0;
+@each $name in behance, github, youtube, skitch, foursquare, quora, google_plus_alt, spotify, stumbleupon, readability {
+  .glyph-#{$name} { @include sprite_bg_position($col, 38); }
+  $col: $col + 1;
+}
+
+//  40th row
+$col: 0;
+@each $name in facebook, twitter_t, twitter, buzz, vimeo, flickr, last_fm, rss, skype, email {
+  .glyph-#{$name} { @include sprite_bg_position($col, 39); }
+  $col: $col + 1;
+}

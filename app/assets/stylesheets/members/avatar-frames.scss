@@ -1,0 +1,58 @@
+@import "../_base";
+
+div.no-frame {
+  @include inline-block;
+}
+
+/** Member Avatar Frames **/
+.frame-wrapper {
+  @include inline-block;
+  height: 76px;
+  margin-right: 10px;
+  position: relative;
+  width: 76px;
+
+  img.profile-photo {
+    height: 65px;
+    left: 5px;
+    margin: 0px;
+    position: absolute;
+    top: 4px;
+    width: 65px;
+    z-index: 0;
+  }
+  div.level {
+    height: 76px;
+    position: absolute;
+    width: 76px;
+    z-index: 1;
+    &.cardboard { background: url('images/avatar-frames/1-cardboard-frame.png') no-repeat; }
+    &.plastic { background: url('images/avatar-frames/2-plastic-frame.png') no-repeat; }
+    &.oak { background: url('images/avatar-frames/3-oak-frame.png') no-repeat; }
+    &.bronze { background: url('images/avatar-frames/4-bronze-frame.png') no-repeat; }
+    &.silver { background: url('images/avatar-frames/5-silver-frame.png') no-repeat; }
+    &.gold { background: url('images/avatar-frames/6-gold-frame.png') no-repeat; }
+    &.platinum { background: url('images/avatar-frames/7-platinum-frame.png') no-repeat; }
+    &.cardboard-medium { background: url('images/avatar-frames/1-cardboard-frame-medium.png') no-repeat; }
+    &.plastic-medium { background: url('images/avatar-frames/2-plastic-frame-medium.png') no-repeat; }
+    &.oak-medium { background: url('images/avatar-frames/3-oak-frame-medium.png') no-repeat; }
+    &.bronze-medium { background: url('images/avatar-frames/4-bronze-frame-medium.png') no-repeat; }
+    &.silver-medium { background: url('images/avatar-frames/5-silver-frame-medium.png') no-repeat; }
+    &.gold-medium { background: url('images/avatar-frames/6-gold-frame-medium.png') no-repeat; }
+    &.platinum-medium { background: url('images/avatar-frames/7-platinum-frame-medium.png') no-repeat; }
+    &.cardboard-small { background: url('images/avatar-frames/1-cardboard-frame-small.png') no-repeat; }
+    &.plastic-small { background: url('images/avatar-frames/2-plastic-frame-small.png') no-repeat; }
+    &.oak-small { background: url('images/avatar-frames/3-oak-frame-small.png') no-repeat; }
+    &.bronze-small { background: url('images/avatar-frames/4-bronze-frame-small.png') no-repeat; }
+    &.silver-small { background: url('images/avatar-frames/5-silver-frame-small.png') no-repeat; }
+    &.gold-small { background: url('images/avatar-frames/6-gold-frame-small.png') no-repeat; }
+    &.cardboard-small { background: url('images/avatar-frames/1-cardboard-frame-small.png') no-repeat; }
+    &.plastic-medium { background: url('images/avatar-frames/2-plastic-frame-medium.png') no-repeat; }
+    &.oak-medium { background: url('images/avatar-frames/3-oak-frame-medium.png') no-repeat; }
+    &.bronze-medium { background: url('images/avatar-frames/4-bronze-frame-medium.png') no-repeat; }
+    &.silver-medium { background: url('images/avatar-frames/5-silver-frame-medium.png') no-repeat; }
+    &.gold-medium { background: url('images/avatar-frames/6-gold-frame-medium.png') no-repeat; }
+    &.platinum-medium { background: url('images/avatar-frames/7-platinum-frame-medium.png') no-repeat; }
+    &.platinum-medium { background: url('images/avatar-frames/7-platinum-frame-medium.png') no-repeat; }
+  }
+}

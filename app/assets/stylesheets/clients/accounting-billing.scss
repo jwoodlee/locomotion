@@ -1,0 +1,167 @@
+@import "../_base";
+
+/************************************************************************/
+// My Account
+/************************************************************************/
+body#clients-accounts-edit {
+
+  #info-tab, #info-tab a {
+    background: #D5D5D5;
+    cursor: default;
+    text-shadow: #D6D6D6 0 1px 0;
+  }
+  div.account {
+    h2 {
+      border-bottom: 1px solid #D5D5D5;
+      color: $blue-header;
+      margin-bottom: 0.25em;
+    }
+    form.client {
+      > li {
+        list-style: none;
+        margin: 8px 0;
+      }
+      label {
+        font-weight: bold;
+        @include inline-block;
+        margin-right: 12px;
+        text-align: right;
+        width: 115px;
+      }
+      input {
+        @include inline-block;
+      }
+      fieldset.buttons {
+        margin-left: 125px;
+      }
+    }
+  }
+}
+
+/************************************************************************/
+// Billing history - we can get rid of this too?
+/************************************************************************/
+.billing_histories-show {
+  ol.nav-tabs li.billing-history a {
+    background: #D5D5D5;
+    text-shadow: #D6D6D6 0 1px 0;
+  }
+  a.print-statement {
+    float: right;
+    margin-bottom: 30px;
+
+  }
+  div#date-range {
+    @extend .clearfix;
+    float: left;
+
+    p {
+      line-height: 1.0em;
+    }
+    > form {
+      margin-top: 60px;
+    }
+    div.date-range-input {
+      margin-bottom: 15px;
+      width: 400px;
+    }
+    form {
+      width: 400px;
+
+      label {
+        font-weight: bold;
+        @include inline-block;
+        margin-right: 10px;
+        text-align: right;
+        width: 40px;
+      }
+      input {
+        @include inline-block;
+        width: 140px;
+      }
+    }
+  }
+  table#billing_summary {
+    border: 1px solid $med-gray;
+    float: right;
+    margin-bottom: 30px;
+    width: 40%;
+
+    th {
+      border-right: 1px solid #DDD;
+    }
+    th, td {
+      padding: 6px 4px;
+      text-align: right;
+    }
+  }
+  table#billing_history {
+    border-left: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+
+    thead {
+      background: $lt-gray;
+    }
+    th, td {
+      border-right: 1px solid #CCC;
+      padding: 10px 4px;
+    }
+    .negative_amount {
+      color: #666;
+    }
+  }
+  #billing-addresses {
+    margin-bottom: 15px;
+
+    div#bill-from, div#bill-to {
+      @include inline-block;
+      margin: 15px 0 0;
+      vertical-align: top;
+      width: 30%;
+
+      p {
+        line-height: 1.0em;
+      }
+    }
+  }
+}
+
+/************************************************************************/
+// New Purchases
+/************************************************************************/
+#clients-purchases-new {
+  h5 {
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 6px;
+  }
+  tr {
+    background: none;
+  }
+  tr td {
+    border-bottom: 1px solid #DDD;
+    padding: 8px 0;
+  }
+  tr:last-child td {
+  border-bottom: 0;
+  }
+}
+div.purchase-action #brand_action_submit {
+  margin-top: 10px;
+}
+div#debit_job_code_input {
+  border-top: 1px solid hsl(0, 0%, 80%);
+  padding-top: 12px;
+}
+div.job-code-input div#debit_job_code_input {
+  border: 0;
+  list-style: none;
+  padding: 1.5em;
+  a {
+    @include red-links-hover;
+  }
+}
+label[for="debit_job_code"] {
+  font-weight: bold;
+  line-height: 1.4em;
+}
+

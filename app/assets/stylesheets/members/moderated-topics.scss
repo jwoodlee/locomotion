@@ -1,0 +1,65 @@
+@import "../_base";
+
+.moderated_topics {
+  clear: both;
+
+  .moderated_topic {
+    overflow: hidden;
+    padding: 0;
+
+    .moderated-topic-title {
+      margin-bottom: 8px;
+    }
+    .moderated-topic-url {
+      padding: 5px 0 10px;
+    }    
+    .inner {
+      @extend .clearfix;
+    }
+    h3 {
+      float: none;
+      font-size: 1.7em;
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+    .response-wrapper.focus-text-input-to-reveal-form a.profile-link {
+      .frame-wrapper {
+        @include inline-block;
+        height: 50px;
+        margin-right: 10px;
+        position: relative;
+        width: 50px;
+
+        img.profile-photo {
+          height: 50px;
+          left: 0;
+          margin: 0px;
+          position: absolute;
+          top: 4px;
+          width: 50px;
+          z-index: 0;
+        }
+        div.level {
+          height: 76px;
+          position: absolute;
+          width: 76px;
+          z-index: 1;
+          &.cardboard { background: url('images/avatar-frames/1-cardboard-frame.png') no-repeat; }
+          &.plastic { background: url('images/avatar-frames/2-plastic-frame.png') no-repeat; }
+          &.oak { background: url('images/avatar-frames/3-oak-frame.png') no-repeat; }
+          &.bronze { background: url('images/avatar-frames/4-bronze-frame.png') no-repeat; }
+          &.silver { background: url('images/avatar-frames/5-silver-frame.png') no-repeat; }
+          &.gold { background: url('images/avatar-frames/6-gold-frame.png') no-repeat; }
+          &.platinum { background: url('images/avatar-frames/7-platinum-frame.png') no-repeat; }
+        }
+      }
+    }
+    .one-response-warning {
+      color: red;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 13px;
+      margin-top: 15px;
+    }
+  }
+}

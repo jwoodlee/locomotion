@@ -1,0 +1,57 @@
+// This file is for styles that are needed to faciliate the transition between
+// different page designs
+// These should be removed ASAP
+
+
+// The following is for the new brand page
+// Jonathon Storer
+// https://www.pivotaltracker.com/story/show/19598151
+
+#brands-show {
+  .earnable-points-above-random-cash {
+    display:none !important;
+  }
+}
+
+body.brands-show .container .primary-content .brand-page-content .left-column .brand-available-long-actions .brand-actions .current-long-participation .new-action-awards {
+  display: none !important;
+}
+
+.brand-page-content {
+  .left-column {
+    #brand-header-text {
+      width: 460px !important;
+    }
+
+    .poll-options-image {
+      max-width: 200px !important;
+      float: left !important;
+      margin: 0 !important;
+
+      img {
+        max-width: 200px !important;
+      }
+    }
+
+    .poll-options-wrapper {
+      margin: 0 !important;
+      float:left !important;
+    }
+
+    .poll-results {
+      .option {
+        width: 25% !important;
+      }
+    }
+
+    .poll-options {
+      .options {
+        button {
+          width: 400px !important;
+        }
+      }
+    }
+  }
+}
+
+// End of styles for new brand page

@@ -1,0 +1,63 @@
+@import "../_base";
+
+/* client table updated styles - FEED */
+.primary-content-client .feed {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.feed {
+  @extend .inner-rounded-white;
+  margin: 1em 0;
+  padding: 1em 1.5em;
+
+  li:last-child {
+    border-bottom: 0;
+  }
+  a {
+    @include red-links-hover;
+    font-weight: bold;
+  }
+  li {
+    color: #43464d;
+  }
+  h2 {
+    color: $blue-header;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0.5em 0;
+
+    .feed-items {
+      @include inline-block;
+      max-width: 695px;
+      vertical-align: top;
+
+      p {
+        margin-bottom: 0px;
+      }
+      abbr {
+        border: 0;
+        cursor: text;
+      }
+    }
+  }
+  img {
+    float: left;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  .datestamp {
+    color: #858585;
+    font-size: 0.85em;
+  }
+}
+body.quick_hits .feed .feed-items {
+  max-width: 830px;
+}
+

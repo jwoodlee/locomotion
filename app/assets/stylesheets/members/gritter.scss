@@ -1,0 +1,66 @@
+/* GROWL NOTIFICATIONS */
+#gritter-notice-wrapper {
+  .gritter-item-wrapper {
+    .gritter-item {
+      background-color: black\9;
+      background-color: rgba(0,0,0,0.8);      
+      background-position: 10px center;
+      background-repeat: no-repeat;
+      padding: 10px 10px 10px 54px;
+
+
+      .gritter-close {
+        background: url('images/tiny-white-x-close-button.png') center center no-repeat;
+      }
+    }
+    &.stars-growl {
+      .gritter-item {
+        background-image: url('images/icon-notification-stars.png');
+      }
+    }
+    &.points-growl {
+      .gritter-item {
+        background-image: url('images/icon-notification-points.png');
+      }
+    }
+    &.flag-growl, &.shame-growl {
+      .gritter-item {
+        background-color: rgba(255,0,0,0.7);
+
+        .gritter-title {
+          text-shadow: 0px 1px 0px rgba(0,0,0,0.7);
+        }
+      }
+    }
+    &.flag-growl {
+      .gritter-item {
+        background-image: url('images/icon-notification-flag.png');
+      }
+    }
+    &.unflag-growl {
+      .gritter-item {
+        background-color: rgba(#149ed3, 0.7);
+      }
+
+      .gritter-title {
+          text-shadow: 0px 1px 0px rgba(0,0,0,0.7);
+      }
+    }
+    &.shame-growl {
+      .gritter-item {
+        background-image: url('images/icon-notification-lost-points.png');
+      }
+    }
+    &.mission-growl {
+      .gritter-item {
+        background-image: url('images/icon-notification-mission-complete.png');
+      }
+    }
+    &.level-growl {
+      .gritter-item {
+        background-image:url('images/icon-notification-level-up.png');
+      }
+    }
+  }
+}
+

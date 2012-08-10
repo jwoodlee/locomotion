@@ -1,0 +1,888 @@
+@import "../_base";
+
+body.admin, body.dashboards, body.screenable_actions, body.member_look_ups, body.reports, body.screenable_members, body.members-edit, body.moderator {
+  background: #787a7e url("images/body-background-gradient.png") repeat-x fixed bottom left;
+  -webkit-text-stroke: 1px transparent;
+
+  h2.screener-approved-title {
+    margin-bottom: 15px;
+
+    span#screener-approved-count {
+      padding-left: 10px;
+    }
+    span.blue {
+      color: $blue-header;
+      font-size: 14px;
+      font-weight: normal;
+      padding-left: 0;
+    }
+  }
+}
+
+body.admin {
+  background: #787a7e url("images/body-background-gradient.png") repeat-x fixed bottom left;
+    -webkit-text-stroke: 1px transparent;
+
+  .primary-content {
+    background: $lt-gray;
+    margin: 1em 0 1.5em;
+    padding: 1em 19px;
+    position: relative;
+    @include rounded-corners(10px);
+    
+    h2.left + .btn {
+      margin-left: 10px;
+    }
+    form#admin-brand-search-form{
+      input#brand_name{
+        float: left;
+        width: 200px;
+        margin-right: 10px;
+      }
+      input[type="submit"]{
+        font-size: 1em;
+        padding: .3em .7em;
+        margin-top: -2px;
+      }
+    }
+    .profile-question {
+      .inner {
+        background: white;
+        @include rounded-corners(12px);
+        padding: 20px;
+      }
+    }
+    .brand-action {
+      border: none;
+      width: 900px;
+
+      .inner {
+        border: none;
+        margin: 0 0 20px 0;
+        padding: 10px;
+
+        .demographics {
+          float: none;
+          padding: 10px 0 0 20px;
+        }
+        .poll-results-summary {
+          padding-left: 20px;
+        }
+        form {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+.clients, .members-edit, .brand_actions, .segmenting_polls, .crowds, .dashboards, .screenable_actions, .member_look_ups, .reports, .screenable_members, .onboarding_invitations, .moderator, .clients-public-brand_actions, .clients-public-discussions, .packages-show {
+  .primary-content {
+    background: $lt-gray;
+    margin: 1em 0 1.5em;
+    padding: 1em 19px;
+    position: relative;
+    @include rounded-corners(10px);
+
+    p {
+      line-height: 1.4em;
+      margin-bottom: 10px;
+    }
+    #mod-search-member {
+      background: $slight-gray;
+      padding: 20px 10px;
+
+      h2 {
+        margin: 0 18px;
+      }
+      form {
+        input#member_look_ups_submit {
+          margin: 15px 0;
+        }
+        li {
+          list-style: none;
+          padding: 5px 0;
+
+          label {
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+}
+
+#moderator-members-edit{
+  #mod-edit-member{
+    .member-action-buttons{
+      width: 640px;
+      @extend .clearfix;
+
+      form.button_to{
+        display: block;
+        float: left;
+        width: auto;
+        padding: 10px 0 10px 20px;
+      }
+    }
+  }
+}
+
+/*used for admin and brand actions*/
+.actions-list {
+  margin-bottom: 1em;
+  @extend .rounded-gray-border;
+
+  .inner {
+    background: white;
+    padding: 20px;
+    @include rounded-corners(0.5em);
+  }
+  table#brand_actions {
+    .brand_action_targeting_form label {
+      display: inline;
+    }
+    td {
+      font-size: 12px;
+    }
+    td.name {
+      width: 400px;
+    }
+    td.links {
+      text-align: right;
+    }
+  }
+  p {
+    color: #676f71;
+    font-size: 90%;
+    padding-right: 5em;
+  }
+  a {
+    &:link, &:active, &:visited {
+      color: $red;
+      margin: 0px 5px;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $red-hover;
+      text-decoration: underline;
+    }
+  }
+  p {
+    padding-left: 62px;
+  }
+}
+/*end of actions list*/
+
+/*New charity button on admin charity*/
+#new-charity {
+  float: right;
+}
+.tbd {
+  @include opacity(0.75);
+}
+
+/*admin brands page*/
+table.brands {
+  tr {
+    &:nth-child(even) {
+      background: #efefef;
+      text-shadow: 0 -1px 0 #fff;
+    }
+    th {
+      font-size: 1.2em;
+    }
+    .name {
+      font-weight: bold;
+    }
+    td {
+      padding: 1em 0;
+
+      img {
+        margin-bottom: 0;
+      }
+      a {
+        color: $red;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          color: $red-hover;
+        }
+      }
+    }
+  }
+}
+
+/*Moderators*/
+#screenable_actions_table, #screener_polls, #screenable_members_table, #moderator-reports-table, #member-reports-table {
+  color: #444;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 10px;
+
+  th {
+    background-color: $med-gray;
+    border: 1px solid #c4c4c4;
+    color: #666666;
+    padding: 10px;
+    text-transform: capitalize;
+  }
+  tr:nth-child(even) {
+    background: #EFEFEF;
+  }
+  td {
+    border: 1px solid #ccc;
+    padding-left: 10px;
+
+    a.toggle-link {
+      @include red-links;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  img {
+    margin: 10px 0;
+  }
+}
+
+#reports-container {
+  .filter-options {
+    display: inline-block;
+    width: 100%;
+  }
+  .pagination{
+    margin-top: 20px;
+  }
+}
+
+.reports-list, .screenable-list, .report {
+  .reports-list-table, .screenable-list-table, .report-info, .screenable-members-list {
+    .report-nav-links {
+      @include inline-block;
+      width: 100%;
+
+      a {
+        color: white;
+        display: block;
+        text-decoration: none;
+      }
+      #previous-navigation {
+        float:left;
+      }
+      #next-navigation {
+        float: right;
+      }
+      &.top {
+        border-bottom: 1px solid $lt-gray;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+      }
+      &.bottom {
+        border-top: 0 solid $lt-gray;
+        margin-top: 15px;
+        padding-top: 15px;
+      }
+    }
+  }
+}
+#moderator-reports-user-info, #screenable_members_table, #member-reports-table {
+  .report-member-photo {
+    float:left;
+
+    img {
+      margin-bottom: 1em;
+      margin-right: 1em;
+    }
+    .frame-wrapper {
+      @include inline-block;
+      height: 70px;
+      margin-right: 10px;
+      position: relative;
+      vertical-align: baseline;
+      width: 55px;
+
+      img.profile-photo {
+        height: 50px;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        top: 2px;
+        width: 50px;
+        z-index: 0;
+      }
+    }
+  }
+  .report-member-info {
+    float: left;
+    width: 65%;
+    padding-top: 5px;
+
+    .report-member-name {
+      font-size: 1.1em;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+
+      a {
+        @include red-links;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* edit screeners */
+form.screener_poll {
+  select {
+    float: right;
+  }
+  .option input[type="text"] {
+    width: 60%;
+  }
+}
+#screener_poll_title_input {
+  label {
+    color: $blue-header;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+ul.screener_polls {
+  list-style: none;
+
+  > li {
+    background-color: #efefef;
+    margin-bottom: 1em;
+    padding: 1em;
+    @include rounded-corners(0.5em);
+  }
+  a.edit_question {
+    margin-top: 20px;
+  }
+  ul {
+    margin: 0 0 20px 15px;
+
+    li .quality {
+      float: right;
+      font-size: 0.8em;
+    }
+  }
+  h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+#standard-report-quickhits ul li {
+  padding-bottom: 5px;
+
+  h3 {
+    color: #000;
+    font-size: 13px;
+    display:inline;
+  }
+}
+
+/* Custom Report Questions*/
+#custom-report-quickhits {
+  .subhead {
+    color: $dark-gray;
+    font-size: 0.88em;
+    position: relative;
+    top: -15px;
+  }
+  label {
+    color: $blue-header;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+ul.report-quickhits {
+  list-style: none;
+
+  > li {
+    background-color: #efefef;
+    margin-bottom: 1em;
+    padding: 1em;
+    @include rounded-corners(0.5em);
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+
+    li {
+      background-color: #cecece;
+      margin: 0 auto 0.5em auto;
+      padding: 0.5em;
+      @include rounded-corners(0.5em);
+      text-align: center;
+      width: 70%;
+
+      .value {
+        font-weight: bold;
+      }
+
+      .quality {
+        float: right;
+        font-size: 0.8em;
+      }
+    }
+  }
+  h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+#new-report-feedback-fields #report_feedback_question_answer_type_input {
+  legend {
+    padding: 5px 0;
+
+    label {
+      font-weight: bold;
+      padding: 0;
+    }
+  }
+  ol li label {
+    color: black;
+    font-size: 1.0em;
+    font-weight: normal;
+  }
+}
+
+/* ADMIN charity stuff*/
+.donation-info {
+  @extend .inner-rounded-white;
+  overflow: hidden;
+
+  .set-up-charity-description {
+    line-height: 1.4;
+  }
+}
+.charities-list {
+  .inner {
+    @extend .inner-rounded-white;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 0;
+
+    li {
+      margin: 0 0 10px 0;
+      @extend .rounded-gray-border;
+
+      .charity-logo {
+        float: left;
+        width: 100px;
+
+        img {
+          margin: 0;
+        }
+      }
+      h2 {
+        color: $blue-header;
+      }
+      .charity-content {
+        float: left;
+        padding-left: 15px;
+        width: 450px;
+      }
+      .more-info {
+        padding: 20px 0 0 0;
+      }
+      .charity-right {
+        float: right;
+        width: 292px;
+
+        strong, span {
+          color: white;
+          display: block;
+          font-size: 1.8em;
+          font-weight: bold;
+          margin: 8px 0 0 0;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        }
+        .charity-supporters, .charity-donations {
+          color: #794619;
+          float: left;
+          font-size: 1.2em;
+          font-weight: bold;
+          margin: 5px 3px;
+          padding: 10px;
+          @include rounded-corners(10px);
+          text-align: center;
+          text-shadow: 0 1px 0 #ffcf55;
+          @include top-down-gradient(#ffbc4d, #ff993f);
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+#new_charity_colors {
+  padding: 15px 0;
+
+  h5 {
+    margin-bottom: 10px;
+  }
+  .color_pickers {
+    background: #e1e1e1;
+    border: 1px solid #c8c8c8;
+    padding: 10px 0 0 10px;
+  }
+  .color_picker {
+    float: left;
+    height: 40px;
+    width: 35%;
+
+    .color_picker_color {
+      background: white;
+      border: 1px solid #bdbdbd;
+      float: left;
+      padding: 3px;
+
+      &:hover {
+        border: 1px solid #a3a3a3;
+      }
+      a {
+        display: block;
+        height: 20px;
+        text-indent: -5000px;
+        width: 20px;
+      }
+    }
+    span {
+      display: block;
+      float: left;
+      font-size: 0.9em;
+      font-weight: bold;
+      height: 12px;
+      padding: 8px 0 0 5px;
+    }
+  }
+}
+#charity_page {
+  #charity_left {
+    float: left;
+    width: 540px;
+
+    .charity-description {
+      line-height: 1.4;
+      margin: 0 0 15px 0;
+
+      .charity-logo {
+        float: left;
+        margin: 0 10px 10px 0;
+
+        img {
+          margin: 0;
+        }
+      }
+    }
+  }
+  #charity_right {
+    float: right;
+    width: 300px;
+
+    form input[type="submit"] {
+      display: block;
+      text-align: center;
+      width: 300px;
+    }
+  }
+}
+.brand-action.redeem {
+  #change-charity-form form.formtastic {
+    background-color: #e5edf6;
+    border: 1px solid #cfdcea;
+    margin: 4px 0 8px 0;
+    padding: 8px 10px;
+    @include rounded-corners(4px);
+    width: auto;
+
+    li {
+      list-style: none;
+
+      select {
+        margin: 0 0 5px 0;
+      }
+    }
+  }
+  .donation-info {
+    width: 200px;
+  }
+}
+/*end of charity stuff*/
+
+/* Results Tables - DO WE NEED THIS ON CLIENT SIDE? */
+#screenable_members_table .report-member-photo img {
+  margin: 0 5px 0 0;
+}
+#results.tab-navigable, #results.tab-navigable .content-wrap {
+  padding: 0;
+
+  #reports-container {
+    border: none;
+    padding: 20px 0 0 0;
+
+    h3 {
+      background: none;
+      color: $blue-header;
+      font-size: 1.7em;
+      padding: 0;
+    }
+
+    .filter-options {
+      float: right;
+    }
+
+    .content-wrap {
+      padding: 10px 0 0;
+
+      table#member-reports-table, #moderator-reports-table {
+        th.hed-lg {
+          font-size: 18px;
+        }
+        thead th {
+          background: none;
+          border: none;
+          padding: 0;
+          text-align: left;
+        }
+        tr.border-btm {
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 3px;
+        }
+        td.report-sm {
+          color: #999;
+          font-size: 11px;
+          font-weight: normal;
+        }
+        td {
+          padding: 10px 0 0 1px;
+        }
+        thead, tr, th, tbody, tr, td {
+          background: none;
+          border: none;
+          color: $blue-header;
+          font-weight: bold;
+          text-align: left;
+        }
+        .report-member-info {
+          h4.report-member-name {
+            font-weight: bold;
+            padding-bottom: 3px;
+            padding-top: 2px;
+
+            a:link {
+              color: $red;
+            }
+          }
+          p {
+            color: #666;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: capitalize;
+          }
+        }
+
+        th {
+          border-bottom: 1px solid #ccc;
+          color: #9fa8b1;
+          padding-bottom: 4px;
+        }
+      }
+    }
+  }
+  .outer {
+    .inner {
+      h2 {
+        color: $blue-header;
+      }
+      p {
+        color: #666;
+      }
+    }
+  }
+}
+
+// TODO: Delete this once glyphicons in place
+.member_filters-new #manage-action-tabs .nav-tabs li #manage_action_link_target,
+.member_filters-edit #manage-action-tabs .nav-tabs li #manage_action_link_target,
+.brand_actions-new #manage-action-tabs .nav-tabs li #manage_action_link_setup,
+.brand_actions-edit #manage-action-tabs .nav-tabs li #manage_action_link_setup {
+  background: url(images/icons/edit-pencil.png) center left no-repeat #ddd;
+  padding-left: 29px;
+  text-shadow: none;
+}
+
+/************************************************************************/
+// Clients Advanced Targeting Summary
+/************************************************************************/
+body#clients-member_filters-show {
+  span.title {
+    font-weight: normal;
+  }
+  .poll-result {
+    margin-left: 20px;
+  }
+  div.targeted-action-and {
+    color: green;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  div#member-filter-basic-targeting div.inner > p {
+    margin-left: 0;
+  }
+  div#basic-targeting, div#recruitment, div#member-filter-previous-action-targeting {
+    clear: both;
+    padding-bottom: 20px;
+    width: 100%;
+
+    h2 {
+      color: $blue-header;
+      margin-bottom: 3px;
+    }
+    hr {
+      color: $blue-header;
+      margin-bottom: 10px;
+      width: 436px;
+    }
+    form {
+      margin-bottom: 24px;
+      margin-left: 6px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .inner {
+      h2 {
+        border-bottom: 1px solid #ddd;
+        color: $blue-header;
+        padding-bottom: 4px;
+        width: 436px;
+      }
+      h4 {
+        color: #000;
+        font-size: 13px;
+        padding-top: 6px;
+
+        span.title {
+          color: #666;
+        }
+      }
+      ul.poll-result, p.poll-result {
+        font-size: 13px;
+        margin-left: 0;
+        padding: 5px 0 0 0;
+
+        &:before {
+          color: #000;
+          content: "Answer:";
+          font-weight: bold;
+          padding-right: 3px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+/* ADMIN ACTIONS */
+.big-list-with-icons {
+  .inner ul {
+    li {
+      border-bottom: 1px solid gray;
+      list-style: none;
+      padding: 10px 0 10px 5px;
+
+      h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#member-reports-table {
+  margin: 0;
+
+  thead th {
+    background: #f0f0f0;
+    border-color: #DEDEDE;
+    padding: 5px;
+    text-align: center;
+  }
+  td {
+   padding: 10px;
+  }
+  .member-info {
+    width: 34%;
+
+    img {
+      margin: 0 5px 0 0;
+    }
+  }
+  .member-data {
+    text-align: center;
+    width: 11%;
+  }
+  .member-data-no-report {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    width: 11%;
+  }
+}
+#moderator-reports-responses {
+  dt {
+    background-color: $lt-gray;
+    border: 1px solid $lt-gray;
+    margin-top: 1em;
+    padding: 5px 10px;
+  }
+  dd {
+    margin: 0;
+    padding: 5px 26px;
+  }
+}
+#moderator-reports-photos {
+  margin-bottom: 10px;
+
+  img {
+    border: 1px solid $lt-gray;
+    margin: 5px 5px 5px 0;
+    padding: 5px;
+  }
+}
+.report-info .checkbox {
+  margin: 0 0 15px;
+
+  label {
+    @include inline-block;
+  }
+}
+
+#reports-summary {
+  .reports-summary, .reports-tallies {
+    display: inline-block;
+    float: left;
+    width: 50%;
+
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .reports-tallies {
+    text-align: center;
+    dl { width: 100%; }
+    dt { width: 15em; }
+    dd { margin-left: 16.5em; }
+  }
+}
+
+

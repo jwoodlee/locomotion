@@ -1,0 +1,362 @@
+$blue-header:   #145d85;
+$bright-blue:   #149ed3;
+$points-blue:   #3470b6;
+
+$red:           #f71a0b;
+$red-hover:     #761800;
+$orange-hover:  #f71a0b;
+
+$gray-border:   #BCBCBC;
+$lt-gray:       #d3d3d5;
+$slight-gray:   #eee;
+$med-gray:      #D5D5D5;
+$gray:          #999999;
+$dark-gray:     #868686;
+$darker-gray:   #353535;
+$evil-gray:     #515154;
+$warm-gray:     #ddd;
+$cool-grey:     #9FA8B1;
+$blue-gray:     #eaeaf3;
+
+$cash-green:    #3FA448;
+$almost-blk:    #2a2a2b;
+$almost-white:  #fafafb;
+
+/* Level Colors */
+$cardboard-brown:   #5c5347;
+$cardboard-black:   #503f29;
+
+$plastic-blue:      #64abc7;
+$plastic-gray:      #96989b;
+
+$brick-red:         #53241a;
+$brick-pink:        #D79A86;
+$brick-points:      #451c13;
+
+$slate-gray:        #3f4041;
+
+$birch-brown:       #a16c2e;
+$birch-black:       #451C13;
+
+$oak-black:         #5f3412;
+
+$mahagony-silver:   #ccc;
+
+$glass-gray:        #7b8c89;
+
+$marble-black:      #000;
+
+$copper-brown:      #7b4735;
+$copper-black:      #5a3427;
+
+$iron-gray:         #595a5a;
+$iron-silver:       #49494a;
+
+$steel-gray:        #3f4041;
+
+$titanium-gray:     #555;
+
+$bronze-black:      #302213;
+
+$gold-orange:       #7b4735;
+$gold-brown:        #a87942;
+
+$platinum-gray:     #636363;
+
+
+
+@font-face {
+  font-family: 'Houschka Pro Medium';
+  src: url('../houschkapro-medium-webfont.eot');
+  src: url('../houschkapro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../houschkapro-medium-webfont.woff') format('woff'),
+       url('../houschkapro-medium-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Houschka Pro Demibold';
+  src: url('../houschkapro-demibold-webfont.eot');
+  src: url('../houschkapro-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../houschkapro-demibold-webfont.woff') format('woff'),
+       url('../houschkapro-demibold-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'HouschkaProBold';
+  src: url('../houschkapro-bold-webfont.eot');
+  src: url('../houschkapro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../houschkapro-bold-webfont.woff') format('woff'),
+       url('../houschkapro-bold-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin dimple($height: 16px) {
+  background: url(images/comment-dimple.png) no-repeat;
+  @include inline-block;
+  height: $height;
+  left: 6px;
+  margin-top: 18px;
+  position: relative;
+  vertical-align: top;
+  width: 11px;
+}
+
+@mixin rounded-corners($radius: 1em) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin bottom-rounded-corners($radius: 1em) {
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin top-rounded-corners($radius: 1em) {
+  -moz-border-radius-topright: $radius;
+  -moz-border-radius-topleft: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin top-right-rounded-corner($radius: 1em) {
+  -moz-border-radius-topright: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin top-left-rounded-corner($radius: 1em) {
+  -moz-border-radius-topleft: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin bottom-left-rounded-corner($radius: 1em) {
+  -moz-border-radius-bottomleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin bottom-right-rounded-corner($radius: 1em) {
+  -moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin top-right-both-bottom-rounded-corners($radius: 1em) {
+  -moz-border-radius-topright: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin left-rounded-corners ($radius: 1em) {
+  border-radius: $radius 0 0 $radius;
+  -webkit-border-radius: $radius 0 0 $radius;
+  -moz-border-radius: $radius 0 0 $radius;
+}
+@mixin right-rounded-corners ($radius: 1em) {
+  border-radius: 0 $radius $radius 0;
+  -webkit-border-radius: 0 $radius $radius 0;
+  -moz-border-radius: 0 $radius $radius 0;
+}
+
+@mixin top-down-gradient($from: black, $to: white) {
+  background-color: $from;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -moz-linear-gradient(top, $from, $to);
+}
+
+@mixin left-right-gradient($from: black, $to: white) {
+  background-color: $from;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from($from), to($to));
+  background-image: -moz-linear-gradient(left, $from, $to);
+}
+
+/* Requires Sass 3.1+ */
+@mixin linear-gradient($pos, $G1, $G2: false,
+                       $G3: false, $G4: false,
+                       $G5: false, $G6: false,
+                       $G7: false, $G8: false) {
+  // Detect what type of value exists in $pos
+  $pos-type: type-of(nth($pos, 1));
+
+  // If $pos is missing from mixin, reassign vars and add default position
+  @if $pos-type == color {
+    $G8: $G7; $G7: $G6; $G6: $G5; $G5: $G4;
+    $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
+    $pos: top; // Default position
+  }
+
+  $full: $G1;
+  $gradients: $G2, $G3, $G4, $G5, $G6, $G7, $G8;
+  @each $gradient in $gradients {
+    @if $gradient {
+      $full: $full, $gradient;
+    }
+  }
+  background-color: nth($G1, 1);
+  background-image: -webkit-gradient(linear, left top, left bottom, from($G1), to($G2)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($pos, $full);
+  background-image: -moz-linear-gradient($pos, $full);
+  background-image: -ms-linear-gradient($pos, $full);
+  background-image: -o-linear-gradient($pos, $full);
+  background-image: linear-gradient($pos, $full);
+}
+
+/* Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.*/
+/*
+div.linear {
+  @include linear-gradient(#1e5799, #2989d8);
+  @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
+  @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+}
+*/
+
+@mixin image-replacement($image: "", $width: 0px, $height: 0px) {
+  background: url($image) 0px 0px no-repeat;
+  display: block;
+  height: $height;
+  text-indent: -9999px;
+  width: $width;
+}
+
+@mixin button-icon-image-replacement($image: "", $width: 0px, $height: 0px) {
+  background: url($image) 0px 0px no-repeat;
+  display: block;
+  height: $height;
+  @include inline-block;
+  position: relative;
+  text-indent: -9999px;
+  width: $width;
+}
+
+@mixin opacity($ratio) {
+  opacity: $ratio;
+  filter: alpha(opacity=($ratio*100));
+  -moz-opacity: $ratio;
+  -khtml-opacity: $ratio;
+}
+@mixin transition($ratio: 0.15s) {
+  -webkit-transition: all $ratio ease-out;
+  -moz-transition: all $ratio ease-out;
+  -o-transition: all $ratio ease-out;
+  transition: all $ratio ease-out;
+}
+@mixin origin ($posx: center, $posy: bottom) {
+  -webkit-transform-origin: $posx $posy;
+  -moz-transform-origin: $posx $posy;
+  -o-transform-origin: $posx $posy;
+  transform-origin: $posx $posy;
+}
+@mixin scale ($ratio: 1.1) {
+  -moz-transform: scale($ratio);
+  -webkit-transform: scale($ratio);
+  transform: scale($ratio);
+}
+@mixin box-shadow ($x: 5px, $y: 5px, $blur: 5px, $spread: 5px, $color: #ccc) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+@mixin inset-box-shadow ($x: 5px, $y: 5px, $blur: 5px, $spread: 0px, $color: #ccc) {
+  -webkit-box-shadow: inset $x $y $blur $spread $color;
+  -moz-box-shadow: inset $x $y $blur $spread $color;
+  box-shadow: inset $x $y $blur $spread $color;
+}
+
+@mixin disabled-button() {
+  cursor: default;
+}
+
+@mixin section-header() {
+  color: gray;
+  border-bottom: 1px solid #CCC;
+  font-size: 12px;
+  margin-bottom: 15px;
+  padding-bottom: 2px;
+}
+@mixin dimple($height: 16px) {
+  background: url(images/comment-dimple.png) no-repeat;
+  @include inline-block;
+  height: $height;
+  left: 6px;
+  margin-top: 18px;
+  position: relative;
+  vertical-align: top;
+  width: 11px;
+}
+
+@mixin red-links() {
+  color: $red;
+  text-decoration: none;
+}
+
+@mixin red-links-hover() {
+  color: $red;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.clear { clear: both; }
+.no-bullets { list-style: none; }
+.left { float: left; }
+.right { float: right; }
+.center { margin: 10px auto; }
+.text-align-center { text-align: center; }
+.clearleft { clear: left; }
+.clearright { clear: right; }
+
+.inner-rounded-white {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  @include rounded-corners(0.5em);
+  overflow: hidden;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.clearfix {
+  display: block;
+}
+
+// Inline-block fix legacy browsers
+@mixin inline-block {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+.no-bullets {
+  list-style: none;
+}

@@ -1,0 +1,233 @@
+@import "../_base";
+
+nav.inner {
+  border-bottom: 1px solid #8d8d8d;
+  margin: -1em -1.4em 1.25em;
+  padding: 0 1.4em;
+  @include top-down-gradient(white, #f5f5f5);
+  @include top-rounded-corners;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+  }
+  li {
+    @include inline-block;
+    margin-right: 2.5em;
+    padding: 1.15em 0;
+  }
+  a {
+    font-size: 115%;
+    font-weight: bold;
+  }
+  a:link, a:visited, a:hover, a:active {
+    color: #575757;
+    text-decoration: none;
+  }
+  li.dashboard {
+    background-image: url("images/nav-arrow-divider.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: 1em 0;
+    padding-right: 1.75em;
+
+    a {
+      font-size: 175%;
+    }
+    a:link, a:visited, a:active {
+      color: $darker-gray;
+    }
+    a:hover {
+      color: $red;
+    }
+  }
+  li.moderator-actions, li.brands {
+    a {
+      color: $red;
+
+      &:hover {
+        color: $darker-gray;
+      }
+    }
+  }
+  li.new-action-link, li.new-brand {
+    float: right;
+
+    a {
+      background: $red;
+      border: 1px solid #761800;
+      color: white;
+      font: bold 1.15em "Houschka Pro", "Helvetica Neue";
+      letter-spacing: 1px;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 0;
+      text-transform: lowercase;
+
+      &:visited, &:active, &:hover {
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+  li:last-child {
+    margin-right: 0;
+    padding: 1.4em 0 0.7em 0;
+  }
+  li.balance {
+    background-color: #42a94e;
+    color: white;
+    float: right;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 0.6em 2em;
+    @include rounded-corners(0.5em);
+    text-shadow: 0 -1px 0 #245c2b;
+  }
+}
+
+.brand-page-banner#brand-header {
+  margin: 0 0 0.33em;
+  overflow: hidden;
+  @include rounded-corners(0.5em);
+
+  h2 {
+    margin: 0;
+    padding: 30px 10px;
+  }
+  img {
+    margin: 0;
+  }
+}
+/*NEW header for members end*/
+
+
+/* BRAND HEADERS for JOIN ACTIONS PAGES */
+.inner-rounded-white, .inner {
+  div#brand-action-header, div.action-titles {
+    float: left;
+    margin-bottom: 20px;
+    width: 500px;
+
+    #brand-image-thumb {
+      float: left;
+
+      img.brand-action-icon {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    #brand-header-text {
+      float: left;
+      width: 425px;
+
+      h2 {
+        float: left;
+        font-size: 20px;
+        margin: 0;
+        padding-left: 0;
+      }
+      h4.quick-hit-meta-info {
+        color: $blue-header;
+        font-size: 13px;
+        font-weight: normal;
+
+        .brand-action-type {
+          text-transform: capitalize;
+        }
+      }
+    }
+    h4 {
+      color: $evil-gray;
+      font-weight: normal;
+    }
+    h2 {
+      padding-left: 55px;
+    }
+  }
+}
+
+
+/* template styles for extensions */
+.section-with-back-link {
+  margin-bottom: 1em;
+  @extend .round-grey-border-inner-round-white;
+}
+.inner-rounded-white {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  @include rounded-corners(0.5em);
+  overflow: hidden;
+}
+.rounded-gray-border {
+  background: #fff url("images/gray-rounded-border.png") bottom left repeat-x;
+  padding: 0.5em;
+  @include bottom-rounded-corners(12px);
+}
+.round-grey-border-inner-round-white {
+  /* background: #d5d5d5 url("images/gray-rounded-border.png") bottom left repeat-x; */
+  background: #fff;
+  padding: 0.5em;
+  @include bottom-rounded-corners(12px);
+
+  > .inner {
+    @extend .inner-rounded-white;
+    margin-bottom: 0.5em;
+    overflow: hidden;
+  }
+
+  > .inner:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*Join Action Global Styles*/
+.participations.participations-new {
+  .rounded-gray-border.brand-info, .brand-info {
+    @extend .round-grey-border-inner-round-white;
+    margin: 0 auto 15px;
+    width: 760px;
+    
+    /*Styles for brand header*/
+    #brand-header {
+      margin: 0 0 7px;
+      overflow: hidden;
+      text-align: center;
+      @include rounded-corners(0.5em);
+
+      h2 {
+        color: inherit;
+        height: auto;
+        margin: 0;
+        padding: 10px;
+      }
+      img {
+        margin: 0;
+      }
+    }
+    .brand-detail {
+      float: left;
+      @extend .inner-rounded-white;
+      line-height: 0;
+      padding: 10px;
+      width: 126px;
+
+      img {
+        margin: 0;
+      }
+    }
+    .brand-description {
+      float: right;
+      @extend .inner-rounded-white;
+      line-height: 1.4;
+      min-height: 106px;
+      width: 567px;
+    }
+  }
+}/*Join Action Global Styles end*/

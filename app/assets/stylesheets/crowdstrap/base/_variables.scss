@@ -1,0 +1,136 @@
+//  ...
+//  Variables.
+//
+//  Crowdstrap global variables. 
+//  This file should be the first file included in crowdstrap.scss
+//  to provide global availability to all Crowdstrap modules.
+//  ---------------------------------------------------------------
+
+//  Color variables
+//  --------------------
+
+//  Grays
+$slight-gray:   #eee;
+$light-gray:    #d3d3d5;
+$medium-gray:   #D5D5D5;
+$gray:          #999999;
+$dark-gray:     #868686;
+$darker-gray:   #353535;
+$evil-gray:     #515154;
+
+//  Base colors
+$red:           #f71a0b;
+$yellow:        #fad100;
+$white:         #fff;
+$blue:          #149ed3;
+$green:         #3fa448;
+$black:         #000;
+
+//  Other colors
+$blue-header:   #145d85;
+$bright-blue:   #149ed3;
+$points-blue:   #3470b6;
+
+$red-hover:     #761800;
+$orange-hover:  #f71a0b;
+
+$cash-green:    #3FA448;
+$almost-blk:    #2a2a2b;
+$almost-white:  #fafafb;
+
+//  Layout variables
+//  --------------------
+
+$container-width:   940px;
+$num-columns:       12;
+$column-margin:     20px;
+
+//  We can determine column widths
+$column-width:  ($container-width - ($num-columns - 1)*$column-margin)/$num-columns;
+
+//  Font stacks
+//  --------------------
+
+$sans-font-family: "Houschka Pro Medium", "Helvetica Neue", Helvetica, arial, sans-serif;
+$serif-font-family: Georgia, "Times New Roman", Times, serif;
+$mono-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$base-font-family: $sans-font-family;
+$headings-font-family: "Houschka Pro Demibold", $base-font-family;
+
+//  Font variables
+//  --------------------
+
+$base-font-size:    14px;
+$base-line-height:  19px;
+$text-color:        $darker-gray;
+$body-bg-color:     $white;
+$headings-color:    inherit;
+$headings-weight:   bold;
+
+//  Button colors
+//  --------------------
+$btn-default-bgcolor:   #e9230c;
+$btn-default-highlight: adjust-hue($btn-default-bgcolor, 10deg);
+$btn-generic-bgcolor:   #ccc;
+$btn-generic-highlight: lighten($btn-generic-bgcolor, 10%);
+$btn-info-bgcolor:      $bright-blue;
+$btn-info-highlight:    lighten($bright-blue, 10%);
+$btn-success-bgcolor:   lighten($cash-green, 5%);
+$btn-success-highlight: lighten($cash-green, 15%);
+$btn-warning-bgcolor:   $yellow;
+$btn-warning-highlight: lighten($yellow, 10%);
+
+//  Link colors
+//  --------------------
+$link-default-color:  $bright-blue;
+$link-hover-color:    lighten($link-default-color, 12%);
+$link-active-color:   adjust-hue($link-default-color, 15deg);
+
+//  Nav variables
+//  --------------------
+
+//  Navbar
+
+$navbar-color: #ccc;
+$navbar-highlight-color: lighten($navbar-color, 20%);
+$navbar-bg-color: #333;
+$navbar-bg-image: "../header-noise-bkg.png";
+$navbar-height: 50px;
+$navbar-brand-font-size: 20px;
+$navbar-nav-link-font-size: 16px;
+$navbar-brand-logo-margin: 6px;
+
+// Navbar dropdowns
+
+$dd-top-space: 7px;
+$dd-corner-round-radius: 4px;
+$dd-bg-highlight: $white;
+$dd-items-min-width: 140px;
+
+//  Nav tabs
+
+$nav-tabs-color:            $evil-gray;
+$nav-tabs-bg:               none;
+$nav-tabs-highlight-bg:     $evil-gray;
+$nav-tabs-highlight-color:  $white;
+
+//  Icons
+//  --------------------
+
+$icons-sprite-path: "../glyphicons-sprite_24px.png";
+$icons-white-sprite-path: "../glyphicons-sprite_white_24px.png";
+
+$icons-offset-x: -6px;
+$icons-offset-y: -6px;
+$icons-step: 24px;
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+$z-index-dropdown:        1000;
+$z-index-popover:         1010;
+$z-index-tooltip:         1020;
+$z-index-fixed-navbar:    1030;
+$z-index-modal-backdrop:  1040;
+$z-index-modal:           1050;

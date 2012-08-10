@@ -1,0 +1,50 @@
+@import "../_base";
+
+/*Moderators*/
+#screenable_members_container {
+	span.ideal-candidate-description-label {
+	  color: #333;
+	  font-size: 15px;
+	  font-weight: bold;
+	  margin-bottom: 10px;
+	}
+	#screener_polls_answer_filter_form {
+	  margin: 0;
+	  padding-top: 0;
+	  width: auto;
+
+	  td {
+	    padding: 10px;
+
+	    &.slider table {
+	      margin: 0;
+
+	      .tag {
+	        border: 0;
+	        padding: 0;
+	      }
+	    }
+	  }
+	}
+	form.screener_member_filter {
+		border: 1px solid #C4C4C4;
+		margin: 0;
+    padding: 15px;
+    width: auto;
+
+    ul {
+    	li {
+    		margin: 15px 0;
+
+    		label {
+    			float: left;
+    			padding: 5px 5px 0 0;
+    		}
+    		input {
+    			width: 100px;
+    		}
+    	}
+    }
+	}
+}
+

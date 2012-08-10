@@ -1,0 +1,18 @@
+footer {
+  ul {
+    text-align: center;
+
+    li {
+      display: inline;
+      margin: $base-line-height $base-line-height/2;
+      a {
+        color: $almost-blk;
+
+        &:hover {
+          color: inherit;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+body {
+  background: #ececec url('http://subtlepatterns.com/patterns/tiny_grid.png') repeat;
+
+  & .navbar + .container {
+    margin-top: 20px;
+  }
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.scaffolding {
+  .row {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    [class*="span"] {
+      background: #eaeaea;
+      border-radius: 4px;
+      padding-top: 12px;
+      -webkit-transition: background 0.1s linear;
+
+      &:hover {
+        background: #ddd;
+        cursor: default;
+      }
+    }
+  }
+}
+
+pre, code, tt {
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding: 1px 3px;
+}

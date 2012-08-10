@@ -1,0 +1,552 @@
+@import "../_base";
+
+/* need these for css extensions */
+.section-with-back-link {
+  margin-bottom: 1em;
+  @extend .round-grey-border-inner-round-white;
+}
+.inner-rounded-white {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  @include rounded-corners(0.5em);
+  overflow: hidden;
+}
+.rounded-gray-border {
+  background: #fff url("images/gray-rounded-border.png") bottom left repeat-x;
+  padding: 0.5em;
+  @include bottom-rounded-corners(12px);
+}
+.round-grey-border-inner-round-white {
+  /* background: #d5d5d5 url("images/gray-rounded-border.png") bottom left repeat-x; */
+  background: #fff;
+  padding: 0.5em;
+  @include bottom-rounded-corners(12px);
+
+  > .inner {
+    @extend .inner-rounded-white;
+    margin-bottom: 0.5em;
+    overflow: hidden;
+  }
+  > .inner:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* YELLOW REPORTS status box */
+div.reporting-phase-starting-message {
+  font-weight: bold;
+  padding: 10px 10px 10px 15px;
+}
+
+/* 2012 New Brand Page Stuff */
+#brands-show {
+  a.learn-more-icon {
+    background: url("images/icons/icon-info-dark.png") 0 0 no-repeat;
+    display: block;
+    height: 19px;
+    width: 19px;
+  }
+  .primary-content {
+    padding: 0 10px;
+  }
+  .top-member-info {
+    padding: 0;
+  }
+  .brand-page-banner {
+    @include box-shadow (0, 2px, 8px, 0, rgba(0,0,0,0.4));
+    @include rounded-corners(5px);
+    @include top-down-gradient(#f9f9fa, #f2f1f4);
+    border: 3px solid #fff;
+    margin: 0;
+    position: relative;
+
+    .text-align-center h2 {
+      font-size: 30px;
+    }
+    img {
+      margin: 0;
+    }
+    a#learn-more-icon {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+    ul.brand-stats {
+      list-style: none;
+      margin: 10px 0 10px 15px;
+
+      li {
+        float: left;
+        width: 225px;
+
+        span {
+          color: #a09fa5;
+          display: block;
+          font-size: 10px;
+          font-weight: bold;
+          text-shadow: 0px 1px 0px #fff;
+          text-transform: uppercase;
+        }
+        var {
+          color: #6c6a74;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: bold;
+          line-height: 20px;
+          text-shadow: 0px 1px 0px #fff;
+        }
+      }
+      li:last-child {
+        width: 195px;
+      }
+    }
+  }
+  /* BRANDS page LEFT COLUMN */
+  .left-column {
+    float: left;
+    width: 590px;
+  }
+  /* BRANDS page RIGHT COLUMN */
+  .right-column {
+    float: left;
+    margin: 0 0 0 50px;
+    width: 300px;
+  }
+  .left-column h1, .right-column h1 {
+    color: #1f69b5;
+    font-family: "Houschka Pro","Helvetica Neue", sans-serif;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    text-shadow: 0px 1px 0px #fff;
+    text-transform: uppercase;
+
+    span {
+      font-size: 11px;
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+  .brand-activity {
+    @include box-shadow (0, 2px, 8px, 0, rgba(0,0,0,0.4));
+    @include rounded-corners(5px);
+    @include top-down-gradient(#f9f9fa, #f2f1f4);
+    border: 3px solid #fff;
+    margin: 25px 0 0 0;
+    padding: 15px;
+
+    .action {
+      margin: 0 0 20px 0;
+
+      .logo {
+        display: block;
+        float: left;
+      }
+      .name-date {
+        float: left;
+        font-size: 13px;
+        margin: 0 0 0 20px;
+
+        .brand-name {
+          color: #f71a0b;
+          font-weight: bold;
+          text-decoration: none;
+        }
+        cite {
+          color: #9d9ca0;
+          font-style: normal;
+          font-weight: normal;
+        }
+      }
+      .action-summary {
+        background: url("images/chisel-rule.png") 0 bottom repeat-x;
+        float: left;
+        margin: 10px 0 0 20px;
+        padding: 0 0 20px 0;
+        width: 475px;
+
+        .profile-link {
+          display: inline-block;
+        }
+        .brand-action-feed-item-left {
+          float: left;
+          padding: 0;
+          margin: 0 15px 0 0;
+
+          img {
+            max-width: 100px;
+          }
+        }
+        h2 {
+          color: #47464d;
+          font-size: 20px;
+          font-weight: normal;
+          margin: 0 10px 10px 0;
+          padding: 0;
+        }
+        p {
+          color: #7a7881;
+          font-size: 12px;
+          line-height: 17px;
+          margin: 0;
+        }
+        a.action-image {
+          border: none;
+          margin-right: 0;
+          padding: 0;
+        }
+        a.learn-more {
+          color: #f71a0b;
+          display: block;
+          float: right;
+          font-size: 11px;
+          margin: 10px 0 0 0;
+        }
+        .results {
+          color: #716f7a;
+          font-size: 10px;
+          font-weight: bold;
+          text-shadow: 0px 1px 0px #fff;
+          text-transform: uppercase;
+        }
+        .brand-action-feed-item-right {
+          display: table-cell;
+          width: 10000px;
+        }
+        .members-thumbs-feed {
+          ul {
+            margin: 5px 0 0 0;
+            padding: 0;
+
+            li {
+              float: left;
+              list-style: none;
+              margin: 0;
+              padding-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* TOP VIP leaderboard */
+  .top-vip {
+    @include box-shadow (0, 2px, 8px, 0, rgba(0,0,0,0.4));
+    @include rounded-corners(5px);
+    @include top-down-gradient(#f9f9fa, #f2f1f4);    border: 3px solid #fff;
+    margin: 112px 0 0 0;
+    padding: 30px 0 0 0;
+    position: relative;
+
+    a#rank-learn-more-icon {
+      position: absolute;
+      right: 10px;
+      top: 33px;
+    }
+    .top-vip-banner {
+      background: url("images/top-vip-banner.png") 0 0 no-repeat;
+      height: 143px;
+      left: -25px;
+      position: absolute;
+      top: -120px;
+      width: 344px;
+
+      h3 {
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 100px 0 0 0;
+        text-align: center;
+        text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+      }
+    }
+    h4 {
+      @include inset-box-shadow (0, 1px, 2px, 0, rgba(0,0,0,0.3));
+      @include top-down-gradient(#cac9cf, #a09ea9);
+      color: #fff;
+      font-family: "Houschka Pro","Helvetica Neue", sans-serif;
+      font-size: 14px;
+      padding: 4px 10px;
+      text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+    }
+    .your-rank {
+      margin-left: 46px;
+      padding: 10px;
+
+      a {
+        display: block;
+        float: left;
+      }
+      img {
+        @include box-shadow (0, 1px, 5px, 0, rgba(0,0,0,0.5));
+        border: 1px solid #fff;
+        margin: 0;
+        padding: 0;
+      }
+      .rank {
+        display: block;
+        color: #919192;
+        float: left;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 4px 0 0 10px;
+        text-shadow: 0px 1px 0px #fff;
+      }
+    }
+    ul.vip-list {
+      list-style: none;
+
+      li {
+        background: url("images/chisel-rule.png") 0 bottom repeat-x;
+        clear: both;
+        height: 45px;
+        padding: 0 10px;
+
+        .rank {
+          color: #afadb4;
+          display: block;
+          float: left;
+          font-family: "Houschka Pro","Helvetica Neue", sans-serif;
+          font-size: 18px;
+          font-weight: bold;
+          margin: 10px 0 0 0;
+          text-shadow: 0px 1px 0px #fff;
+          width: 40px;
+
+          sup {
+            font-size: 12px;
+            vertical-align: super;
+          }
+        }
+        .top-vip-avatar {
+          display: block;
+          float: left;
+          height: 46px;
+          margin: 0;
+          width: 46px;
+
+          img {
+            @include box-shadow (0, 1px, 5px, 0, rgba(0,0,0,0.5));
+            border: none;
+            left: 0;
+            margin: 5px 0 0 7px;
+            padding: 0;
+            position: static;
+            top: 0;
+          }
+        }
+        .top-vip-avatar.gold {
+          background: url("images/top-vip-gold.png") 0 0 no-repeat;
+
+          img {
+            @include box-shadow (0, 1px, 1px, 0, rgba(0,0,0,0.6));
+            border: 1px solid rgba(255,255,255,0.5);
+          }
+        }
+        .top-vip-avatar.silver {
+          background: url("images/top-vip-silver.png") 0 0 no-repeat;
+
+          img {
+            @include box-shadow (0, 1px, 1px, 0, rgba(0,0,0,0.6));
+            border: 1px solid rgba(255,255,255,0.5);
+          }
+        }
+        .top-vip-avatar.bronze {
+          background: url("images/top-vip-bronze.png") 0 0 no-repeat;
+
+          img {
+            @include box-shadow (0, 1px, 1px, 0, rgba(0,0,0,0.6));
+            border: 1px solid rgba(255,255,255,0.5);
+          }
+        }
+        .top-vip-name {
+          color: #28282b;
+          display: block;
+          float: left;
+          font-size: 13px;
+          font-weight: bold;
+          margin: 13px 0 0 10px;
+          text-decoration: none;
+          text-shadow: 0px 1px 0px #fff;
+        }
+        .top-vip-name:hover {
+          color: #f71a0b;
+        }
+      }
+      li.top-3 {
+        height: 55px;
+
+        .rank {
+          color: #919192;
+          font-size: 24px;
+          margin: 12px 0 0 0;
+
+          sup {
+            font-size: 14px;
+          }
+        }
+        .top-vip-avatar {
+          margin: 4px 0 0 0;
+
+          img {
+            margin: 6px 0 0 7px;
+          }
+        }
+        .top-vip-name {
+          margin: 18px 0 0 10px;
+        }
+      }
+    }
+    /* Tiny Scrollbar */
+    #vip-scrollbar { width: 290px; margin: 0; }
+    #vip-scrollbar .viewport { width: 260px; height: 485px; overflow: hidden; position: relative; }
+    #vip-scrollbar .overview { width: 260px; list-style: none; position: absolute; left: 0; top: 0; }
+    #vip-scrollbar .scrollbar { position: relative; float: right; width: 8px; }
+    #vip-scrollbar .track { @include left-right-gradient(#c1c0c4, #e0dfe3); box-shadow: inset 0px 0px 5px rgba(0,0,0,0.1), 0px 1px 0px #fff; height: 100%; width: 8px; position: relative; padding: 0 1px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+    #vip-scrollbar .thumb .end,
+    #vip-scrollbar .thumb { @include left-right-gradient(#d8d5e2, #9e9ba6); }
+    #vip-scrollbar .thumb { height: 20px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+    #vip-scrollbar .thumb .end { display: none; border: 1px solid red; overflow: hidden; height: 5px; width: 8px; }
+    #vip-scrollbar .disable{ display: none; }
+  }
+  /* YOUR STATS module */
+  #brand-your-stats {
+    @include box-shadow (0, 2px, 8px, 0, rgba(0,0,0,0.4));
+    @include rounded-corners(5px);
+    @include top-down-gradient(#f9f9fa, #f2f1f4);
+    margin-top: 25px;
+    padding: 10px;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+    ul {
+      color: $evil-gray;
+      list-style: none;
+      margin-bottom: 5px;
+
+      li.grayed {
+        background-color: $lt-gray;
+        padding: 5px 0;
+      }
+      li {
+        font-weight: bold;
+        text-transform: uppercase;
+
+        p {
+          display: block;
+          float: left;
+          font-size: 11px;
+          padding: 9px 0 0 5px;
+        }
+        span {
+          float: right;
+          font-size: 16px;
+          padding: 5px 5px 0 0;
+        }
+      }
+    }
+  }
+  #brand-available-actions {
+    @include box-shadow (0, 2px, 8px, 0, rgba(0,0,0,0.4));
+    @include rounded-corners(5px);
+    @include top-down-gradient(#f9f9fa, #f2f1f4);
+    margin-top: 25px;
+    padding: 10px;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+    ul {
+      color: $evil-gray;
+      margin-bottom: 5px;
+
+      li.grayed {
+        background-color: $lt-gray;
+        padding: 5px 0;
+      }
+      li {
+        clear: both;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        p {
+          display: block;
+          float: left;
+          font-size: 15px;
+          padding: 21px 0 0 5px;
+        }
+        span {
+          float: left;
+          font-size: 30px;
+          padding: 6px 0 0 5px;
+        }
+        img {
+          float: right;
+          margin: 0;
+          padding: 13px 0 0;
+        }
+        ul.inner-list {
+          clear: both;
+          list-style: disc;
+
+          li.inner-list-item {
+            font-weight: normal;
+            list-style: disc;
+
+            p {
+              font-size: 12px;
+              font-weight: normal;
+              padding: 0 0 0 15px;
+              text-transform: none;
+              width: 185px;
+            }
+            img {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.quickhits-brand-page-modal.ui-widget-content {
+  border: none;
+  font-weight: normal;
+  overflow: visible;
+  padding: 0;
+  
+  .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix {
+    padding: 0;
+    right: -20px;
+    top: -20px;
+
+    .ui-dialog-title {
+      display: none;
+    }
+    .ui-dialog-titlebar-close.ui-corner-all {
+      z-index: 10;
+    }
+  }
+  .ui-dialog-content.ui-widget-content {
+    padding: 0;
+
+    .section-title {
+      @include box-shadow (0, 2px, 8px, 0, rgba(0,0,0,0.4));
+    }
+    .points-holder {
+      z-index: -1;
+    }
+    #quickhits_controller .new-member-right-pane {
+      min-height: 400px;
+    }
+  }
+}
+/* Actions in polls, feedback form, image preview, brand action feed item */
+.action-image, object {
+  border: 1px solid #ebebeb;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  padding: 10px;
+}

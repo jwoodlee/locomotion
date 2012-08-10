@@ -1,0 +1,41 @@
+//  ...
+//  Alerts.scss
+//
+//  Success, error, and notice boxes for messages and errors.
+//  ------------------------------------------------------------
+
+//  Error
+div.error, #flash_failure {
+  @extend .alert;
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #D12F19;
+
+  a {
+    color: #D12F19;
+  } 
+}
+
+//  Notice
+div.notice, #flash_notice {
+  @extend .alert;
+  background: #FFF6BF;
+  border-color: #FFD324;
+  color: #817134;
+
+  a {
+    color: #817134;
+  } 
+}
+
+//  Success
+div.success, #flash_success {
+  @extend .alert;
+  background: #E6EFC2;
+  border-color: #C6D880;
+  color: #529214;
+
+  a {
+    color: #529214;
+  } 
+}

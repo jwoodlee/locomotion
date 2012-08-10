@@ -1,0 +1,172 @@
+@import "../_base";
+
+/* SETTINGS TAB */
+#customization-preview {
+  margin: 3em 1.5em;
+  padding: 0em;
+  position: relative;
+  width: 65%;
+
+  #members-brand-page-head {
+    padding: 20px;
+  }
+  #brand-page-background {
+    border: 1px solid #c4c4c4;
+    padding: 30px;
+  }
+  h2 {
+    color: #408a9f;
+    font-size: 2em;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    top: -1.4em;
+  }
+}
+
+/* hosted party schedule */
+#schedule_container {
+  float: right;
+  margin: -65px 0 10px 20px;
+  width: 300px;
+
+  td {
+    padding: 2px;
+  }
+}
+#hosted_party_starts_on {
+  width: 90px;
+}
+#hosted_party_title_input {
+  clear: right;
+}
+
+/*client moderated discussions view results*/
+.csv.download {
+  .sect #csv-download-status {
+    .spinner-bar {
+      span#percent-complete {
+        float: left;
+        font-size: 33px;
+      }
+    }
+    img {
+      float: left;
+      width: 100px;
+    }
+  }
+}
+
+.csv.download:not(.poll) {
+  #csv_request.formtastic.csv, form.formtastic fieldset.buttons { padding: 0; }
+}
+#csv_download {
+    width: auto;
+  span {
+    background: url("images/icon_xls.gif") no-repeat scroll 0 50% transparent;
+    padding-left: 20px;
+  }
+}
+#csv-download-status {
+  div.percentage-bar {
+    margin-top: 10px;
+
+    span#percent-complete {
+      color: $blue-header;
+      float: left;
+      font-size: 23px;
+      font-weight: bold;
+    }
+    span#percent-sign {
+      color: $blue-header;
+      float: left;
+      font-size: 17px;
+      font-weight: normal;
+      padding-top: 3px;
+    }
+  }
+  img {
+    padding: 5px 0 0 3px;
+    width: 150px;
+  }
+}
+#csv-download-error {
+  padding: 15px;
+}
+#results div.csv fieldset.buttons {
+  li a {
+    @include red-links;
+    color: white;
+  }
+}
+
+/* RESULTS SHOW */
+#clients-results-show, .results-show  {
+  .tooltip-sub {
+    background: url(images/icons/info-hover.png) top right no-repeat;
+    padding: 5px 21px 0 0;
+  }
+  .tooltip {
+    background: url(images/icons/info-hover.png) top right no-repeat;
+    padding: 1px 21px 0 0;
+
+    p {
+      color: black;
+    }
+    .member-meta {
+      color: #888;
+      font-size: 11px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+    h2.answer-heading {
+      border-bottom: 1px solid #CCCCCC;
+      color: #9FA8B1;
+      margin: 13px 0 6px;
+      padding-bottom: 2px;
+    }
+    .answer {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  .thumbnail .tooltip-sub {
+    background: none;
+  }
+}
+.public_polls-show .tab-navigable {
+  -moz-border-radius-topleft: .8em;
+}
+
+#clients-results-show, .public_polls-show, .brand_actions.results-show  {
+  .tooltip {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    padding: 10px 20px 20px 10px;
+
+    .member-meta {
+      color: #888;
+      font-size: 11px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+    h2.answer-heading {
+      border-bottom: 1px solid #CCCCCC;
+      color: #9FA8B1;
+      margin: 13px 0 6px;
+      padding-bottom: 2px;
+    }
+    .answer {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+@import "../_base";
+
+/* ROI Polls */
+#roi-questions ul.roi-questions li.roi-poll h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+
+/*polls*/
+body.brands .container .primary-content #members-brand-page-head .brand-quick-hits .brand-actions .current-participation .poll form {
+  .poll-options-image {
+
+    img.action-image {
+      display: block;
+      float: left;
+      margin: 0 15px 0 0;
+      width: 265px;
+    }
+  }
+  .poll-options-wrapper {
+    .poll-options {
+      margin-left: 0 auto;
+      width: 100%;
+    }
+  }
+}
+div.poll, #screener_question, #report_questions {
+  .report-question-description {
+    color: $evil-gray;
+    size: 9px;
+  }
+  .poll-options-wrapper {
+    margin-left: 6%;
+
+    form {
+      margin-left: 13%;
+
+      .poll-options {
+        margin: 0 auto;
+      }
+    }
+  }
+  div.poll-options, div.report-options {
+    clear: left;
+    margin-left: 0;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 0.5em;
+    overflow: hidden;
+    padding: 0;
+  }
+  form ul.options li {
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+  .options li {
+    color: #3d3a3d;
+    float: left;
+    font-size: 120%;
+    font-weight: bold;
+
+    button {
+      background: #e8ebf2 url("images/right-white-arrow-for-orange-bg.png") no-repeat 102% 50%;
+      border: none;
+      color: inherit;
+      font: inherit;
+      display: block;
+      letter-spacing: 0;
+      margin: 8px 5px;
+      padding: 6px;
+      @include rounded-corners(0.5em);
+      text-align: left;
+      text-shadow: none;
+      text-transform: none;
+      @include transition;
+      width: 500px;
+
+      &:hover {
+        background: $red url("images/right-white-arrow-for-orange-bg.png") no-repeat 97% 50%;
+        color: white;
+        cursor: pointer;
+
+        a {
+          color: white;
+        }
+      }
+    }
+    &:nth-child(even) {
+      button {
+        background-color: #d7dbe4;
+
+        &:hover {
+          background: $red url("images/right-white-arrow-for-orange-bg.png") no-repeat 97% 50%;
+        }
+      }
+      button.selected-multi-select-button {
+        background: $red url("images/checked.png") 8px 11px no-repeat;
+
+        &:hover {
+          background: $red url("images/checked.png") 8px 11px no-repeat;
+        }
+      }
+      .multi-select-button {
+        background: #d7dbe4 url("images/unchecked.png") 8px 11px no-repeat;
+
+        &:hover {
+          background: $red url("images/unchecked.png") 8px 11px no-repeat;
+        }
+      }
+    }
+    button.selected-multi-select-button {
+      background: $red url("images/checked.png") 8px 11px no-repeat;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background: $red url("images/checked.png") 8px 11px no-repeat;
+      }
+    }
+    .multi-select-button {
+      background: #e8ebf2 url("images/unchecked.png") 8px 11px no-repeat;
+      padding-left: 30px;
+
+      &:hover {
+        background: $red url("images/unchecked.png") 8px 11px no-repeat;
+      }
+    }
+  }
+}
+
+.poll-results, .web-share {
+  li {
+    list-style-type: none;
+    padding: 0.5em 0;
+
+    .option, .progress, .vote-count {
+      vertical-align: middle;
+    }
+    .option {
+      color: #363636;
+      font-weight: bold;
+      @include inline-block;
+      margin-left: 20px;
+      padding-right: 0.5em;
+      text-align: right;
+      width: 300px;
+    }
+    .progress {
+      background: #9dda32;
+      color: #557320;
+      font-weight: bold;
+      @include inline-block;
+      max-width: 250px;
+      min-width: 22px;
+      padding: 3px 5px 3px;
+      @include rounded-corners(6px);
+      text-align: right;
+      width: 250px;
+    }
+    .vote-count {
+      color: #777777;
+      font-size: 0.8em;
+      margin-left: 0.5em;
+    }
+  }
+  .orange-button {
+    margin-left: 2px;
+  }
+}

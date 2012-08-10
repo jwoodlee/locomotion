@@ -1,0 +1,69 @@
+@import "../_base";
+
+/*----FEEDBACK----*/
+.feedback_question {
+  button {
+    margin: 1em 0;
+  }
+  .action-image, object {
+    margin-right: 14px;
+  }
+  form.new_open_answer {
+    clear: left;
+    float: left;
+
+    .word_field, .line_field {
+      display: block;
+      width: 400px;
+    }
+  }
+}
+.feedback_form {
+  margin-left: 25%;
+}
+/* feedback questions*/
+.section-with-legend {
+  margin-bottom: 1em;
+  @extend .round-grey-border-inner-round-white;
+
+  h2.legend {
+    @extend .section-legend;
+  }
+}
+.nested-section-with-legend {
+  position: relative;
+  width: 100%;
+
+  > .inner {
+    border: 1px solid white;
+    padding: 12px;
+
+    img {
+      margin: 0 10px 0 0;
+    }
+    li {
+      border-bottom: 1px solid $med-gray;
+      margin-bottom: 0px;
+      padding: 10px 8px;
+
+      &:nth-child(odd) {
+        background: $blue-gray;
+      }
+    }
+  }
+  .inner h3 {
+    border-bottom: 1px solid $med-gray;
+    color: black;
+    font-size: 135%;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+  span.only-starred {
+    position: absolute;
+    right: 12px;
+    text-align: right;
+    top: 15px;
+    width: 12em;
+  }
+}

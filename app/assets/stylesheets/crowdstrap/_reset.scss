@@ -1,0 +1,152 @@
+//  ...
+//  Reset.scss
+//
+//  CSS resets and normalizations.
+//  Resets based on 
+//    html5doctor.com Reset Stylesheet v1.6.1
+//    Author:   Richard Clark - http://richclarkdesign.com
+//    Twitter:  @rich_clark
+//  With normalizations adapted from normalize.css
+//    Source:   http://github.com/necolas/normalize.css
+//  ------------------------------------------------------------
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small,
+strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; 
+}
+
+//  Corrects block display not defined in IE6/7/8/9 & FF3
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+//  Corrects inline-block display not defined in IE6/7/8/9 & FF3
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+//  Prevents modern browsers from displaying 'audio' without controls
+//  Remove excess height in iOS5 devices
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+//  Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+//  Known issue: no IE6 support
+[hidden] {
+  display: none;
+}
+
+//  Base
+//  --------------------
+
+//  1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units.
+//     http://clagnut.com/blog/348/#c790
+//  2. Prevents iOS text size adjust after orientation change, without disabling user zoom.
+//     www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+//  Addresses font-family inconsistency between 'textarea' and other form elements.
+html, button, input, select, textarea {
+    font-family: sans-serif;
+}
+
+//  Addresses margins handled incorrectly in IE6/7
+body {
+    *line-height: 1em;
+}
+
+//  Links
+//  --------------------
+
+a {
+  background: transparent; 
+  color: $link-default-color;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-decoration: none; 
+  vertical-align: baseline;
+
+  &:hover {
+    color: $link-hover-color;
+    outline: 0; 
+    //  ^ Improves readability when focused and also mouse hovered in all browsers
+    //  people.opera.com/patrickl/experiments/keyboard/test
+  }
+
+  &:active {
+    color: $link-active-color; 
+    outline: 0;
+  }
+
+  //  Addresses outline displayed oddly in Chrome
+  &:focus {
+    outline: thin dotted;
+  }
+}
+
+nav ul {
+  list-style: none; 
+}
+
+blockquote, q {
+  quotes: none;
+
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; 
+}
+
+mark {
+  @extend ins;
+  font-style: italic;
+  font-weight: bold; 
+}
+
+del {
+  text-decoration: line-through; 
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; 
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+
+img {
+  margin: 0 0 12px; 
+
+  &.ie7 {
+    -ms-interpolation-mode: bicubic;
+  }
+}

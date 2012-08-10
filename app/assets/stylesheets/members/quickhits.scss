@@ -1,0 +1,152 @@
+@import "../_base";
+
+/*----QUICK HITS-----*/
+.non-us, .locked-out {
+  h2 {
+    color: $blue-header;
+  }
+}
+
+.new-member-homepage-quickhits.new.quick-hits {
+  .current-participation {
+    a {
+      @include red-links-hover;
+    }
+    #brand-action-header {
+      #brand-image-thumb {
+        img {
+          height: 75px;
+          width: 75px;
+        }
+      }
+      h2 {
+        float: left;
+        margin-bottom: 1em;
+        width: 400px;
+      }
+    }
+    .poll-options-wrapper {
+      margin-left: 0;
+
+      form {
+        margin-left: 13%;
+
+        .poll-options {
+          margin: 0 auto;
+        }
+      }
+    }
+    h4.quick-hit-meta-info {
+      color: $blue-header;
+      float: left;
+      font-weight: normal;
+      width: 74%;
+
+      .brand-action-type {
+        text-transform: capitalize;
+      }
+    }
+    .brand-action-type {
+      text-transform: capitalize;
+    }
+    .feedback_form {
+      margin-left: 4%;
+    }
+  }
+  div.errorExplanation {
+    h2 {
+      display: none;
+    }
+    p {
+      display: none;
+    }
+    ul {
+      list-style-type: none;
+    }
+  }
+}
+
+/* JOIN POLLS */
+.poll.join-poll {
+  #brand-action-header {
+    #brand-image-thumb {
+      img {
+        height: 126px;
+        width: 126px;
+      }
+    }
+    .brand-join-poll-form {
+      float: left;
+      width: 75%;
+
+      #brand-header-text {
+        h2 {
+          color: $almost-blk;
+          font-size: 24px;
+          line-height: 28px;
+          width: 475px;
+        }
+        p {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 18px;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .poll-options-wrapper {
+        float: left;
+        margin-left: 0;
+        margin-top: 15px;
+        width: 75%;
+
+        form.button_to {
+          font-size: 16px;
+          margin: 30px 0 0 0;
+        }
+        form {
+          margin-left: 0;
+
+          .poll-options {
+            ul.options li {
+              color: #f2f2f2;
+              font-size: 36px;
+
+              button {
+                @include rounded-corners(10px);
+                @include inset-box-shadow(0px, 0px, 1px, 1px, #ffa993);
+                @include top-down-gradient(#fd562c, #f71a0b);
+                border: 1px solid #c12700;
+                margin: 0;
+                padding: 20px 30px;
+                text-shadow: 1px 1px 3px 3px black;
+                width: 300px;
+
+                a {
+                  background: url("go-arrow-big.png") center right no-repeat;
+                  color: white;
+                  font: 36px "Houschka Pro Medium", Helvetica, Arial, sans-serif;
+                  display: block;
+                  text-align: center;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#remaining-quickhits:after {
+  content: ".";
+  display: block;
+  text-indent: -9999px;
+}
+.brand-quick-hits {
+  position: relative;
+}

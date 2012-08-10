@@ -1,0 +1,97 @@
+@import "../_base";
+
+body.quick_hits div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all {
+  background: none repeat scroll 0 0 white;
+  border: 0.5em solid #D5D5D5;
+  border-radius: 1em 1em 1em 1em;
+  font-weight: bold;
+  padding: 1em;
+
+  #earned-points-cash {
+    left: 725px;
+    position: absolute;
+    z-index: 999;
+  }
+}
+
+.ui-dialog {
+  background: white;
+  border: 0.5em solid #d5d5d5;
+  font-weight: bold;
+  padding: 1em;
+  @include rounded-corners;
+
+  p {
+    line-height: 1.4em;
+  }
+  .ui-dialog-titlebar {
+    background: transparent;
+    border: none;
+    color: $blue-header;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    @include rounded-corners(0);
+
+    .ui-dialog-titlebar-close {
+      height: 26px;
+      margin: 0;
+      padding: 10px 10px 0 0;
+      position: absolute;
+      right: -4px;
+      top: -4px;
+      width: 26px;
+
+      &:hover {
+        background: inherit;
+        border: 0;
+        padding: 10px 10px 0 0;
+      }
+
+      .ui-icon-closethick {
+        background: transparent url("images/ex.png") no-repeat 0 0;
+        display: block;
+        height: 26px;
+        padding: 0;
+        width: 26px;
+      }
+    }
+    .ui-state-hover {
+      margin: 0;
+    }
+  }
+  dl {
+    @extend .clearfix;
+
+    dd {
+      margin-left: 10em;
+    }
+    dt {
+      float: left;
+      margin: 0;
+    }
+  }
+  .ui-dialog .ui-dialog-content {
+    padding: 0.5em 0;
+  }
+  .buttons {
+    margin: 2em 0;
+    text-align: center;
+  }
+  .buttons button {
+    @include inline-block;
+    text-align: center;
+    text-transform: none;
+  }
+  .buttons button, .buttons button.cancel {
+    width: 85px;
+  }
+  p {
+    margin: 1em 0;
+  }
+  .buttons {
+    @extend .clearfix;
+  }
+}

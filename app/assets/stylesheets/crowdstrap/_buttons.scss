@@ -1,0 +1,157 @@
+//  ...
+//  Buttons.scss
+//
+//  Buttons including semantic button types.
+//  ----------------------------------------
+
+//  Core default button
+//  --------------------
+.btn {
+	border: 1px solid darken($btn-default-bgcolor, 10%);
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  border-bottom-color: darken($btn-default-bgcolor, 20%);
+	box-shadow: inset 0 2px 0 rgba(255,255,255,.25), 
+				      0 1px 2px rgba(0,0,0,.05);
+	color: $white;
+  cursor: pointer;
+	display: inline-block;
+  font-family: inherit;
+	font-size: $base-font-size;
+	font-weight: bold;
+  line-height: $base-line-height;
+  *line-height: 20px;
+	margin: 10px;
+  margin-bottom: 0px;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8);
+  vertical-align: middle;
+	width: auto;
+  @include ie7-restore-left-whitespace();
+  @include legacy-inline-block();
+	@include rounded-corners(4px);
+  @include vertical-gradient($btn-default-highlight, $btn-default-bgcolor);
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: $btn-default-bgcolor;
+    color: $white;
+  }
+
+  //  Hover
+	&:hover {
+    background-position: 0 -0.5em;
+		text-decoration: none;
+		@include transition(background-position, 0.1s, linear);
+	}
+
+  //  Active
+  &.active, &:active {
+    background-image: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 
+                0 1px 2px rgba(0,0,0,.05);
+    outline: none;
+  }
+
+  // Disabled
+  &.disabled, &[disabled] {
+    background-image: none;
+    box-shadow: none;
+    cursor: default;
+    @include opacity(0.65);
+  }
+}
+
+//	Button sizes
+//	-------------------
+
+.btn-mini {
+	font-size: $base-font-size - 2px;
+  line-height: $base-line-height - 4px;
+  padding: 2px 4px;
+}
+
+.btn-small {
+	font-size: $base-font-size - 2px;
+  line-height: $base-line-height - 2px;
+  padding: 3px 5px;
+}
+
+.btn-large {
+	font-size: $base-font-size + 4px;
+  line-height: $base-line-height + 4px;
+  padding: 8px 16px;
+}
+
+.btn-xlarge {
+	font-size: $base-font-size + 10px; 
+  line-height: $base-line-height + 10px;
+  padding: 12px 20px;
+}
+
+// 	Button types
+// 	--------------------
+
+//  Generic button
+.btn-generic {
+	background-color: darken($btn-generic-highlight, 10%);
+  background-color: darken($btn-generic-highlight, 15%) \9; // Target IE6-9 and match bg color
+  border: 1px solid darken($btn-generic-bgcolor, 10%);
+  border-bottom-color: darken($btn-generic-bgcolor, 20%);
+  @include vertical-gradient($btn-generic-highlight, $btn-generic-bgcolor);
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: $btn-generic-bgcolor;
+  }
+}
+
+//  Info button
+.btn-info {
+  border: 1px solid darken($btn-info-bgcolor, 10%);
+  border-bottom-color: darken($btn-info-bgcolor, 20%);
+  @include vertical-gradient($btn-info-highlight, $btn-info-bgcolor);
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: $btn-info-bgcolor;
+  }
+}
+
+//  Success button
+.btn-success {
+  border: 1px solid darken($btn-success-bgcolor, 10%);
+  border-bottom-color: darken($btn-success-bgcolor, 20%);
+  @include vertical-gradient($btn-success-highlight, $btn-success-bgcolor);
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: $btn-success-bgcolor;
+  }
+}
+
+//  Warning button
+.btn-warning {
+  border: 1px solid darken($btn-warning-bgcolor, 10%);
+  border-bottom-color: darken($btn-warning-bgcolor, 20%);
+  @include vertical-gradient($btn-warning-highlight, $btn-warning-bgcolor);
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: $btn-warning-bgcolor;
+  }
+}
+
+//  Adjust some common colors
+.btn-generic, .btn-generic:hover, .btn-generic:visited, 
+.btn-warning, .btn-warning:hover, .btn-warning:visited {
+  color: darken($btn-generic-bgcolor, 33.333%);
+  color: darken($white, 5%) \9;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+//  For transitioning away from old styles
+.orange-button {
+  @extend .btn;
+}
+
+.gray-button, .grey-button {
+  @extend .btn;
+  @extend .btn-generic;
+}

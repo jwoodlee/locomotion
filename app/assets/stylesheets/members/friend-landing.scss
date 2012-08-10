@@ -1,0 +1,152 @@
+@import "../_base";
+
+/* FEED IFRAME */
+#feed-friend-landing-top {
+  background: transparent url("images/friend-landing/feed-top.png") no-repeat;
+  border: none;
+  height: 8px;
+  margin: 0;
+  padding: 0 10px;
+  width: 334px;
+}
+#feed-friend-landing-middle {
+  background: transparent url("images/friend-landing/feed-middle.png") repeat-y;
+  border: none;
+  margin: 0;
+  max-height: 284px;
+  padding: 0 20px;
+  @include rounded-corners(0);
+  width: 294px;
+
+  .feed-items p {
+    max-width: 257px;
+  }
+}
+#feed-friend-landing-bottom {
+  background: transparent url("images/friend-landing/feed-bottom.png") no-repeat;
+  border: none;
+  height: 8px;
+  margin: 0;
+  padding: 0 10px;
+  width: 334px;
+}
+#feed-wrapper {
+  position: relative;
+}
+#feed-fader {
+  background: transparent url("images/friend-landing/feed-fade-out.png") no-repeat;
+  border: none;
+  bottom: 0;
+  height: 27px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 334px;
+}
+
+/* PROFILE IFRAME */
+#profile-wrapper {
+  background: #fff;
+  border: none;
+  @include rounded-corners(8px);
+  padding: 0 10px;
+  width: 310px;
+}
+#pic-name-date-level {
+  padding-top: 10px;
+
+  img {
+    float: left;
+    margin-bottom: 15px;
+  }
+  #name-date-level {
+    float: left;
+    margin: 5px 0 0 10px;
+
+    h1 {
+      font-size: 1.5em;
+    }
+    .crowdtap-age {
+      color: #797979;
+    }
+    .member-level {
+      color: #797979;
+      margin-top: 18px;
+    }
+  }
+}
+#points-rewards-charity {
+  border-top: 1px solid #CCC;
+  clear: left;
+  padding-top: 10px;
+}
+#points-rewards {
+  float: left;
+  margin-right: 20px;
+  width: 138px;
+}
+.total-points {
+  color: #5cabc0;
+}
+.rewards-earned {
+  color: #41b585;
+  margin: 18px 0;
+}
+.total-points span {
+  left: 45px;
+  position: relative;
+}
+.default-feed-text {
+  color: #888;
+  line-height: 1.2em;
+  padding: 20px 0;
+}
+.rewards-earned span {
+  left: 36px;
+  position: relative;
+}
+.member-charity {
+  color: #797979;
+}
+.member-charity img {
+  float: right;
+  margin: 0 5px 12px 0;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  max-height: 50px;
+  max-width: 50px;
+}
+.badges-earned {
+  clear: both;
+  @extend .clearfix;
+  color: #797979;
+
+  ul {
+    padding-left: 82px;
+
+    li {
+      clear: right;
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+  p {
+    float: left;
+  }
+}
+.earned-badge {
+  list-style-type: none;
+}
+.earned-badge img {
+  float: left;
+  margin: 0;
+  max-width: 25px;
+  padding: 0 4px 0 0;
+}
+
+/* COMMON */
+body.friend-landing {
+  background: transparent;
+}

@@ -1,0 +1,469 @@
+@import "../_base";
+
+
+/* SHARE CHALLENGE PAGES*/
+em.asterisk-bold {
+  font-style: normal;
+  font-weight: bold;
+}
+#challenge-heading {
+  margin-bottom: 0.25em;
+}
+#challenge-text {
+  margin-bottom: 1.25em;
+}
+.reward-info-subhead {
+  color: #222;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+#bt-accept-challenge {
+  margin: 12px 0 3px;
+  width: 238px;
+}
+#bt-decline-challenge {
+  margin-bottom: 10px;
+  width: 238px;
+}
+#big-asterisk {
+  font-size: 3em;
+  padding-right: 4px;
+  position: relative;
+  top: 8px;
+}
+#small-asterisk {
+  font-size: 2em;
+  padding-right: 4px;
+  position: relative;
+  top: 8px;
+}
+#asterisk-text {
+  clear: left;
+  font-size: 0.85em;
+  margin-left: 54px;
+}
+#personalized-share {
+  clear: left;
+  padding: 14px 0 0 59px;
+
+  fieldset {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    width: 313px;
+
+    input {
+      background: #F4F8E5;
+      border: 1px solid #BBB;
+      color: #737373;
+      font-size: 0.8em;
+      width: 292px;
+    }
+  }
+}
+#share-on-left-column {
+  float: left;
+}
+#clippy {
+  display: none;
+}
+.web-share {
+  #webshare-results {
+    left: 16px;
+    position: relative;
+
+    #thanks-message {
+      margin: 15px 0 25px;
+      width: 100%;
+
+      h3 {
+        color: #424242;
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+          margin-right: 105px;
+      }
+      input {
+        width: 140px;
+      }
+    }
+    ul {
+      margin-bottom: 30px;
+
+      > li div.thumb-legend {
+        margin-left: 0;
+        width: 100px;
+      }
+    }
+  }
+  #personalized-share {
+    clear: left;
+    padding: 14px 0 0 0;
+  }
+  .share-facebook {
+    background: none;
+    display: block;
+    height: 100%;
+    margin-top: 7px;
+    text-decoration: none;
+    text-indent: 0;
+    width: 100%;
+
+    #fb-bt {
+      @include image-replacement("images/buttons/facebook-logo-bt.png", 47px, 46px);
+      @include inline-block;
+    }
+    p {
+      color: #485887;
+      font-size: 2em;
+      font-weight: bold;
+      @include inline-block;
+      left: 5px;
+      position: relative;
+      top: 21px;
+    }
+  }
+  .share-twitter {
+    background: none;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    text-indent: 0;
+    width: 100%;
+
+    #tw-bt{
+      @include image-replacement("images/buttons/twitter-logo-bt.png", 47px, 46px);
+      @include inline-block;
+    }
+    p {
+      color: #36b6d9;
+      @include inline-block;
+      font-size: 2em;
+      font-weight: bold;
+      left: 5px;
+      line-height: .8em;
+      position: relative;
+      top: 21px;
+    }
+  }
+  #personalized-share-link-info {
+    color: #444;
+    width: 313px;
+  }
+  #relax-text {
+    margin-bottom: 50px;
+    margin-top: 31px;
+
+    h4 {
+      display: block;
+      float: left;
+      height: 25px;
+      margin-left: 55px;
+      margin-right: 5px;
+      margin-top: -1px;
+      width: 53px;
+    }
+    p {
+      display: inline;
+    }
+  }
+  #next-quickhit {
+    clear: left;
+    float: right;
+    margin: 30px 0 10px;
+
+    p {
+      display: inline;
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+    form {
+      @include inline-block;
+    }
+    #next-bt {
+      margin-left: 4px;
+      width: 87px;
+    }
+  }
+}
+
+/* -- Social Share Widget -- */
+div.social-media-post-form, div#social-media-post-widget, .sample-share-social-media.social-media-post-container, .social-media-post-container.social-media-post-form {
+  margin-bottom: 20px;
+  width: 370px;
+
+  form.formtastic {
+    @include rounded-corners(15px);
+    @include top-down-gradient(#eee, #ccc);
+    border: 1px solid #BCBCBC;
+    margin: 0;
+    padding: 0 0 20px 0;
+    width: auto;
+
+    #share-header-module {
+      padding: 15px 0 0 15px;
+
+      #speech-bubbles {
+        float: left;
+      }
+      #speech-bubbles-header {
+        float: left;
+        padding-left: 10px;
+        width: 80%;
+
+        > h3 {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 2px 0 2px 0;
+        }
+        p {
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 14px;
+        }
+      }
+    }
+    #share-brand-specific {
+      background-color: white;
+      clear: both;
+      margin: 15px;
+      padding: 10px;
+     
+      #share-image {
+        margin-bottom: 5px;
+
+        img.webshare-website-thumbnail {
+          margin: 0 10px 5px 0;
+          width: 25%;
+        }
+        #share-image-info {
+          h4 {
+            color: $blue-header;
+            font-size: 13px;
+          }
+          p {
+            line-height: 13px;
+            margin: 0;
+            padding: 0;
+          }
+          p.subhead {
+            color: black;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 10px 0 5px;
+          }
+          p.link {
+            color: $evil-gray;
+            font-size: 11px;
+          }
+          p.description {
+            color: #333;
+            font-size: 11px;
+            font-weight: normal;
+            padding-top: 10px;
+          }
+        }
+      }
+      #share-online-message {
+        padding-top: 5px;
+
+        h4 {
+          clear: both;
+          color: $evil-gray;
+          font-size: 11px;
+          padding-top: 10px;
+        }
+        textarea#social_media_post_message {
+          border: 1px solid $med-gray;
+          height: 50px;
+          width: 92%;
+
+          a:hover {
+            color: gray;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    #social-share-options {
+      margin: 10px 0 0 15px;
+
+      h4 {
+        color: $evil-gray;
+        font-size: 11px;
+      }
+      #facebook-share {
+        float: left;
+
+        p.shares-value {
+          color: $evil-gray;
+          float: left;
+          font-size: 11px;
+          margin: 0;
+          padding-left: 7px;
+          padding-top: 3px;
+        }
+        img {
+          float: left;
+          padding: 0 3px 0 5px;
+        }
+        label {
+          float: left;
+          font-size: 11px;
+          font-weight: bold;
+          padding-top: 5px;
+        }
+        input#social_media_post_facebook {
+          float: left;
+          margin-top: 5px;
+        }
+      }
+      #twitter-share {
+        float: left;
+        padding-left: 25px;
+
+        p.shares-value {
+          color: $evil-gray;
+          float: left;
+          font-size: 11px;
+          margin: 0;
+          padding-left: 7px;
+          padding-top: 3px;
+        }
+        p.link-twitter-account {
+          float: left;
+          font-size: 11px;
+          font-weight: bold;
+          margin: 0;
+          padding-left: 7px;
+          padding-top: 3px;
+
+          a {
+            @include red-links-hover;
+          }
+        }
+        img {
+          float: left;
+          padding: 0 3px 0 5px;
+        }
+        label {
+          float: left;
+          font-size: 11px;
+          font-weight: bold;
+          padding-top: 5px;
+        }
+        input#social_media_post_twitter {
+          float: left;
+          margin-top: 5px;
+        }
+      }
+    }
+    #share-btn-warning {
+      margin: 10px 0 0 15px;
+
+      input.orange-button {
+        float: left;
+        margin: 3px 10px 0 0;
+      }
+      p.review-message {
+        color: $evil-gray;
+        float: left;
+        font-size: 11px;
+        line-height: 14px;
+        margin-top: 7px;
+        width: 70%;
+      }
+    }
+    fieldset {
+      a {
+        @include red-links-hover;
+      }
+      &.inputs {
+        background: transparent;
+        border: none;
+        margin: 0;
+
+        li#share_post_message_input {
+          margin-top: 20px;
+        }
+      }
+      &.buttons {
+        margin: 1em 0 0;
+        padding: 0px;
+      }
+    }
+  }
+}
+div.sample-share-social-media, #social-media-post-head {
+  margin-bottom: 20px;
+  width: 370px;
+
+  form.formtastic {
+    background: none;
+    border: 1px solid #c4c4c4;
+    margin: 0;
+    padding: 0 0 20px 0;
+    @include rounded-corners(0px);
+    width: auto;
+
+    > h3 {
+      background: $lt-gray;
+      border: 1px solid white;
+      font-size: 1.4em;
+      font-weight: bold;
+      padding: 10px 15px;
+      text-align: center;
+      @include top-rounded-corners(15px);
+    }
+    #share-image {
+      margin-bottom: 20px;
+      padding: 15px 0 0 15px;
+
+      img.webshare-website-thumbnail {
+        margin: 0px;
+        width: 95%;
+      }
+    }
+    #share-online-message {
+      margin-left: 15px;
+      
+      h4 {
+        color: $evil-gray;
+        font-size: 11px;
+      }
+      textarea#social_media_post_message {
+        border: 1px solid $med-gray;
+        height: 50px;
+        width: 92%;
+      }
+    }
+  }
+}
+#social-media-post-head {
+  margin: 15px 0 10px;
+  padding-right: 10px;
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+#share-opportunity-btn {
+  float: right;
+
+    img {
+      float: left;
+      padding-right: 5px;
+    }
+    button#social-media-post-widget-button {
+      background: none repeat scroll 0 0 transparent;
+      border: medium none;
+      color: #f71a0b;
+      font: bold 12px "Houschka Pro","Helvetica Neue";
+      padding: 0;
+      text-decoration: none;
+      text-shadow: none;
+    }
+}

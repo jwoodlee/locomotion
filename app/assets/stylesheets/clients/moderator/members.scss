@@ -1,0 +1,125 @@
+#moderator-members-index, #moderator-screenable_actions-show {
+  table#search-results {
+    img {
+      margin: 0;
+      padding: 0; }
+
+    td input {
+      padding: 5px;
+      border: 1px solid #777;
+      border-radius: 2px;
+      background: #f2f2f2;
+      background: -moz-linear-gradient(top,  #f2f2f2 0%, #d3d3d3 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#d3d3d3));
+      background: -webkit-linear-gradient(top,  #f2f2f2 0%,#d3d3d3 100%);
+      background: -o-linear-gradient(top,  #f2f2f2 0%,#d3d3d3 100%);
+      background: -ms-linear-gradient(top,  #f2f2f2 0%,#d3d3d3 100%);
+      background: linear-gradient(top,  #f2f2f2 0%,#d3d3d3 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#d3d3d3',GradientType=0 );
+      width: auto; }
+
+    td input.marked {
+      padding: 3px;
+      border: 3px solid #555; }
+
+    form.moderator-verification {
+      margin: 0px;
+      padding: 0px;
+      width: auto; }
+
+    tr.even {
+      background-color: rgb(200,200,200); }
+
+    tr.odd {
+      background-color: rgb(225,225,225); }
+
+    td.response-error {
+      text-align:center;
+      background-repeat:no-repeat;
+      background-position:center;
+      background-image: url('/assets/clients/images/moderator/icons/error.png'); }
+
+    td, th {
+      padding: 5px; }
+
+    td.column-center {
+      text-align:center; }
+
+    td.column-left {
+      text-align:left; }
+
+    thead {
+      th {
+        background-position:center;        
+        background-repeat:no-repeat;        
+        color: #666;
+        font-weight: normal;
+        min-width:20px;
+        text-align:center;
+      }
+      th.select-all-container {
+        display: block;
+
+        p.select-all-text {
+          display: inline;
+          font-size: 11px;
+        }
+      }      
+
+      th#table-header-login {
+        background-image: url('/assets/clients/images/moderator/icons/door_in.png'); }
+
+      th#table-header-edit-member {
+        background-image: url('/assets/clients/images/moderator/icons/user_edit.png'); }
+
+      th#table-header-award-member {
+        background-image: url('/assets/clients/images/moderator/icons/award_add.png'); }
+
+      th#table-header-email {
+        background-image: url('/assets/clients/images/moderator/icons/email.png'); }
+
+      th#table-header-name {
+        background-image: url('/assets/clients/images/moderator/icons/user.png'); }
+
+      th#table-header-gender {
+        background-image: url('/assets/clients/images/moderator/icons/gender.png'); }
+
+      th#table-header-age {
+        background-image: url('/assets/clients/images/moderator/icons/cake.png'); }
+
+      th#table-header-phone {
+        background-image: url('/assets/clients/images/moderator/icons/phone.png'); }
+
+      th#table-header-points {
+        background-image: url('/assets/clients/images/moderator/icons/coins.png'); }
+
+      th#table-header-country {
+        background-image: url('/assets/clients/images/moderator/icons/flag.png'); }
+
+      th#table-header-ip {
+        background-image: url('/assets/clients/images/moderator/icons/computer.png'); }
+
+      th#table-header-facebook {
+        background-image: url('/assets/clients/images/moderator/icons/facebook.png'); }
+
+      th#table-header-star-power {
+        background-image: url('/assets/clients/images/moderator/icons/star.png'); }
+
+      th#table-header-star {
+        background-image: url('/assets/clients/images/moderator/icons/star.png'); }        
+
+      th#table-header-report {
+        background-image: url('/assets/clients/images/moderator/icons/report.png'); }
+
+      th#table-header-action {
+        background-image: url('/assets/clients/images/moderator/icons/action.png'); }
+
+      th#table-header-share {
+        background-image: url('/assets/clients/images/moderator/icons/share.png'); }
+
+      th#table-header-verified {
+        background-image: url('/assets/clients/images/moderator/icons/verified.png'); }
+
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "../_base";
+
+/* CLIENTS PUBLIC DISCUSSION PAGE VIEW */
+.responses-show #results div.brand-action {
+  border: 1px solid #ddd;
+  padding: 20px;
+  @include rounded-corners(10px);
+  width: 540px;
+
+  a.back-link {
+    color: black;
+    margin: -10px 0 0 0;
+  }
+  .inner {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #ddd;
+    padding: 25px 0 0;
+
+    h2 {
+      color: black;
+    }
+    #add-response-form {
+      #brand-image-thumb {
+        float: left;
+      }
+      #brand-info-container {
+        float: left;
+        width: 450px;
+
+        #brand-action-header {
+          margin: 0;
+        }
+      }
+    }
+  }
+  #responses-container {
+    margin: 25px 0 0 0;
+  }
+}
+
+/* CLIENT PUBLIC RESULTS FOR BRAND ACTIONS */
+body.clients-public-brand_actions, .clients-public-discussions, .clients-public-polls, .clients-public-feedback_questions, .clients-public-brand_challenges {
+  .primary-content {
+    border: none;
+  }
+  .action-summary {
+    margin-bottom: 20px;
+  }
+  #action-targeting-summary {
+    img {
+      float: left;
+    }
+    .client-homepage-header-name {
+      float: left;
+      padding: 10px 0 0 15px;
+      width: 500px;
+
+      p {
+        margin: 0;
+      }
+      a.action-type {
+        color: $cool-grey;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+      .action-name {
+        color: $evil-gray;
+        font-size: 1.8em;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
+

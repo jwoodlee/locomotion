@@ -1,0 +1,137 @@
+@import "../_base";
+
+.big-notification-modal-widget{
+  color: $almost-blk;
+  min-height: 275px;
+  padding: 8px;
+
+  .btn {
+    margin-top: 15px;
+    margin-left: 372px;
+
+    .level-award-template & {
+      display: block;
+      margin-left: 0;
+    }
+  }
+
+  h3 {
+    background: url("images/chisel-rule.png") bottom center repeat-x;
+    font: bold 31px "Houschka Pro Bold", sans-serif;
+    margin: 0;
+    padding: 13px 0;
+    text-align: center;
+  }
+
+  .big-notification-content {
+    @extend .clearfix;
+
+    p {
+      font: normal 16px "Helvetica Neue", helvetica, sans-serif;
+    }
+    &.burst {
+      background: url("images/blue-big-notification-burst.png") 0 0 no-repeat;
+      min-height: 240px;
+
+      .award {
+        height: 70%;
+        position: absolute;
+        width: 240px;
+      }
+      .first-star-award {
+        background: url("images/big-notification-star.png") 0 0 no-repeat;
+      }
+      .big-mission-award {
+        text-align: center;
+
+        img {
+          margin-top:75px;
+        }
+      }
+      .top-award {
+        background: url("images/big-notification-trophy.png") 0 0 no-repeat;
+      }
+      p {
+        margin: 0 0 0 250px;
+        padding: 10px;
+        width: 375px;
+
+        &:first-child {
+          padding-top: 10px;
+        }
+      }
+      a.orange-button-glossy {
+        margin: 30px 20px 20px 0;
+      }
+    }
+
+    &.level{
+      p {
+        margin: 0 0 0 20px;
+        padding: 120px 10px 0 10px;
+        width: 600px;
+      }
+      p:first-child {
+        padding-top: 130px;
+      }
+      a.orange-button-glossy {
+        float: none;
+        margin: 20px 20px 20px 150px;
+      }
+      .level-award {
+        height: 115px;
+        position: absolute;
+        width: 645px;
+
+        &.brick-level-award {
+          background: url("images/big-notification-brick-award.png") 24px 2px no-repeat;
+        }
+        &.slate-level-award {
+          background: url("images/big-notification-slate-award.png") 24px 2px no-repeat;
+        }
+        &.birch-level-award {
+          background: url("images/big-notification-birch-award.png") 24px 2px no-repeat;
+        }
+        &.oak-level-award {
+          background: url("images/big-notification-oak-award.png") 24px 2px no-repeat;
+        }
+        &.mahagony-level-award {
+          background: url("images/big-notification-mahogony-award.png") 24px 2px no-repeat;
+        }
+        &.glass-level-award {
+          background: url("images/big-notification-glass-award.png") 24px 2px no-repeat;
+        }
+        &.marble-level-award {
+          background: url("images/big-notification-marble-award.png") 24px 2px no-repeat;
+        }
+        &.copper-level-award {
+          background: url("images/big-notification-copper-award.png") 24px 2px no-repeat;
+        }
+        &.iron-level-award {
+          background: url("images/big-notification-iron-award.png") 24px 2px no-repeat;
+        }
+        &.steel-level-award {
+          background: url("images/big-notification-steel-award.png") 24px 2px no-repeat;
+        }
+        &.titanium-level-award {
+          background: url("images/big-notification-titanium-award.png") 24px 2px no-repeat;
+        }
+        &.bronze-level-award {
+          background: url("images/big-notification-bronze-award.png") 24px 2px no-repeat;
+        }
+        &.silver-level-award {
+          background: url("images/big-notification-silver-award.png") 24px 2px no-repeat;
+        }
+        &.gold-14k-level-award {
+          background: url("images/big-notification-14k-gold-award.png") 24px 2px no-repeat;
+        }
+        &.gold-24k-level-award {
+          background: url("images/big-notification-24k-gold-award.png") 24px 2px no-repeat;
+        }
+        &.platinum-level-award {
+          background: url("images/big-notification-platinum-award.png") 24px 2px no-repeat;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+@import "../_base";
+
+/* MODAL */
+.modal {
+  z-index: 2;
+}
+.expandable-in-modal {
+  cursor: pointer;
+}
+
+/* BRAND MODAL QUICKHITS */
+.current-participation .brand-modal-quick-hit {
+  h4 {
+    font-size: 100px;
+  }
+}
+.brand-modal-quick-hit.current-participation {
+  border: none;
+  background: #f5f4f6;
+
+  .poll {
+    #brand-header-text {
+      h2 {
+        float: left;
+        margin-bottom: 20px;
+        width: 640px;
+      }
+    }
+  }
+  .join-poll-results {
+    #brand-image-thumb {
+      float: left;
+    }
+    .brand-join-poll-form {
+      float: left;
+      width: 75%;
+
+      h2 {
+        font-size: 26px;
+        padding-left: 10px;
+      }
+      button.orange-button.join-poll-result {
+        @include rounded-corners(10px);
+        @include inset-box-shadow(0px, 0px, 1px, 1px, #ffa993);
+        @include top-down-gradient(#fd562c, #f71a0b);
+        border: 1px solid #c12700;
+        margin: 20px 0 0 10px;
+        padding: 15px 25px 15px 30px;
+        text-shadow: 1px 1px 3px 3px black;
+        width: 300px;
+
+        a {
+          font: 36px "Houschka Pro Medium", Helvetica, Arial, sans-serif;
+          background: url("go-arrow-big.png") center right no-repeat;
+          padding-right: 45px;
+          color: white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ONBOARDING MODAL */
+body.brands.new .onboarding-modal {
+  background: #f5f4f6;
+  border: none;
+  @include box-shadow(0px, 1px, 10px, 0, #000);
+  left: 83px;
+  padding: 0;
+  position: absolute;
+  @include rounded-corners(10px);
+  top: -40px;
+  width: 680px;
+
+  .poll.join-poll {
+    #brand-action-header {
+      #brand-image-thumb {
+        img {
+          height: 126px;
+          width: 126px;
+        }
+      }
+      .brand-join-poll-form {
+        float: left;
+        width: 75%;
+
+        #brand-header-text {
+          h2 {
+            color: $almost-blk;
+            font-size: 24px;
+            line-height: 30px;
+            padding-left: 10px;
+            width: 475px;
+          }
+          p {
+            clear: both;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 18px;
+            margin: 0;
+            padding: 15px 0 0 11px;
+            text-align: left;
+          }
+        }
+        .poll-options-wrapper {
+          float: left;
+          margin-left: 0;
+          margin-top: 20px;
+          width: 75%;
+
+          form.button_to {
+            font-size: 16px;
+            margin: 30px 0 0 0;
+          }
+          form {
+            margin-left: 0;
+
+            .poll-options {
+              ul.options li {
+                color: #f2f2f2;
+                font-size: 36px;
+
+                button {
+                  @include rounded-corners(10px);
+                  @include inset-box-shadow(0px, 0px, 1px, 1px, #ffa993);
+                  @include top-down-gradient(#fd562c, #f71a0b);
+                  border: 1px solid #c12700;
+                  margin-left: 10px;
+                  padding: 15px 0 15px 30px;
+                  text-shadow: 1px 1px 3px 3px black;
+                  width: 300px;
+
+                  a {
+                    font: 36px "Houschka Pro Medium", Helvetica, Arial, sans-serif;
+                    background: url("go-arrow-big.png") center right no-repeat;
+                    padding-right: 45px;
+                    color: white;
+
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* CONFIRM ADDRESS MODAL */
+#confirm_address {
+  fieldset {
+    width: 395px;
+  }
+  p {
+    margin-bottom: 19px;
+    margin-right: 57px;
+    margin-top: 6px;
+  }
+  .buttons li {
+    float: right;
+  }
+  input {
+    width: 326px;
+  }
+}

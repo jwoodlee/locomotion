@@ -1,0 +1,214 @@
+//  ...
+//  Navbar.scss
+//
+//  Navbar and inner element styles.
+//  ----------------------------------------
+
+.navbar {
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+  color: #fff;
+  margin-bottom: 20px;
+  overflow: visible;
+  
+  .navbar-inner {
+    background: $navbar-bg-color url($navbar-bg-image) 0 0 repeat-x;
+    height: $navbar-height;
+    padding-left: $column-margin;
+    padding-right: $column-margin;
+  }
+
+  .container {
+    color: $navbar-color;
+    padding: 0;
+  }
+
+  // Typically applied to <a>
+  .brand {
+    color: $navbar-color;
+    display: block;
+    float: left;
+    font-size: $navbar-brand-font-size;
+    line-height: 1;
+    margin-right: 10px;
+    // We can vertically align the text
+    padding: (($navbar-height - $navbar-brand-font-size)/2 - 2) 0 (($navbar-height - $navbar-brand-font-size)/2 + 2) 0;
+
+    &:hover, &:active, &.active {
+      color: $navbar-highlight-color;
+    }
+  }
+
+  .brand-logo {
+    padding: 0;
+
+    > img {
+      height: $navbar-height - 2*$navbar-brand-logo-margin;
+      margin: $navbar-brand-logo-margin 0;
+    }
+  }
+
+  .nav {
+    @extend .horizontal-nav;
+    float: left;
+    margin: 0 $column-margin 0 0;
+
+    > li {
+      float: left;
+      
+      > a {
+        color: $navbar-color;
+        display: block;
+        font-size: $navbar-nav-link-font-size;
+        line-height: 1;
+        outline: none;
+        padding: (($navbar-height - $navbar-nav-link-font-size)/2 - 1) 5px (($navbar-height - $navbar-nav-link-font-size)/2 + 1);
+        text-decoration: none;
+
+        &.brand {
+          font-size: $navbar-brand-font-size;
+          margin-right: 10px;
+          // We can vertically align the text
+          padding: (($navbar-height - $navbar-brand-font-size)/2 - 2) 0 (($navbar-height - $navbar-brand-font-size)/2 + 2) 0;
+        }
+
+        // Prepend images within nav links
+        > img {
+          float: left;
+          height: 24px;
+          margin: -4px 10px 0 0;
+
+          // Tiny profile images
+          &.mug {
+            border: 1px solid #fff;
+            box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+            height: 22px;
+          }
+        }
+      }
+
+      &:hover > a, &.active > a {
+        color: $navbar-highlight-color;
+      }
+
+      &.divider {
+        border-left: 1px solid darken($navbar-bg-color, 3%);
+        border-right: 1px solid lighten($navbar-bg-color, 3%);
+        height: $navbar-height;
+        margin: 0 10px;
+      }
+
+      // Add to a nav > li element if it has mixed content (aside from an <a>)
+      &.content {
+        color: $navbar-color;
+        cursor: default;
+        font-size: $navbar-nav-link-font-size;
+        line-height: 1;
+        padding: (($navbar-height - $navbar-nav-link-font-size)/2 - 1) 5px (($navbar-height - $navbar-nav-link-font-size)/2 + 1);
+
+        > a {
+          display: inline-block;
+          padding: 0;
+        }
+      }
+
+    }
+
+    //  Dropdowns
+    //  --------------------
+
+    > li.dropdown {
+      z-index: 100; // Make sure we can always click on our dd items
+
+      a {
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      > ul.dropdown-items {
+        background: $dd-bg-highlight;
+        left: -9999em; // Hide dd items
+        margin: 0;
+        min-width: $dd-items-min-width;
+        padding: 8px 0;
+        position: absolute;
+        @include rounded-corners($dd-corner-round-radius);
+        @include rounded-corner(top, left, 0);
+
+        li > a {
+          padding-top: 4px;
+          padding-bottom: 4px;
+        }
+
+        > li:hover {
+          background: $bright-blue;
+
+          a {
+            color: $dd-bg-highlight;
+          }
+        }
+      }
+      
+      &:hover {
+        background: $dd-bg-highlight;
+        margin-top: $dd-top-space;
+        @include rounded-corners-horizontal(top, 4px);
+
+        > a.dropdown-toggle {
+          color: #333;
+          padding-top: (($navbar-height - $navbar-nav-link-font-size)/2 - 1) - $dd-top-space;
+        }
+
+        > ul.dropdown-items {
+          box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
+          left: 0;
+        }
+      }
+
+    }
+
+    // Define styles for right-aligned dd navs
+    &.pull-right {
+      float: right;
+      margin-right: 0;
+      
+      > li.dropdown:hover > ul.dropdown-items {
+        left: auto;
+        right: 0;
+        @include rounded-corner(top, left, $dd-corner-round-radius);
+        @include rounded-corner(top, right, 0);
+      }
+    }
+  }
+}
+
+.cs-nav-tabs {
+  @extend .horizontal-nav;
+  margin-bottom: 0;
+
+  .row > & {
+    margin-left: $column-margin;
+  }
+
+  > li {
+    margin-right: 4px;
+
+    > a {
+      color: $nav-tabs-color;
+      display: block;
+      padding: ($base-font-size - 4) ($base-line-height - 4);
+      @include rounded-corners-horizontal(top, 4px);
+
+      &:hover {
+        color: $nav-tabs-highlight-color;
+        background-color: lighten($nav-tabs-highlight-bg, 7.5%);
+      }
+    }
+
+    &.active a, &.active a:hover {
+      background-color: $nav-tabs-highlight-bg;
+      color: $nav-tabs-highlight-color;
+      cursor: default;
+    }
+  }
+}

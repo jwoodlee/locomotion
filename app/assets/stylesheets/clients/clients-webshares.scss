@@ -1,0 +1,24 @@
+@import "../_base";
+
+/* Web Share */
+.brand_actions #action_info_setup.outer .inner  {
+  .webshare-website-thumbnail {
+    background-color: #CCC;
+    padding: 10px;
+  }
+  .twitter-message-help {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+  #brand_action_share_message_input {
+    label {
+      margin-bottom: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  label {
+    font-weight: bold;
+  }
+}

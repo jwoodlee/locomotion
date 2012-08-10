@@ -1,0 +1,58 @@
+@import "_base";
+
+body.pages {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+a {
+  color: $red;
+}
+
+.primary-content {
+  background: none repeat scroll 0 0 $slight-gray;
+  padding: 20px;
+  @include rounded-corners(15px);
+}
+
+header.primary .container {
+  background: rgba(0, 0, 0, 0.804);
+  height: 70px;
+  left: 0px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+
+  h1 {
+    padding: 0 0 0 30px;
+  }
+}
+
+.container {
+  margin: 100px auto 0;
+  width: 960px;
+}
+
+footer.primary {
+  background: none;
+  text-align: center;
+
+  ul {
+    margin-left: 0;
+
+    li {
+      display: inline;
+      list-style-type: none;
+      margin: 0.15em 0.75em;
+
+      a, a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

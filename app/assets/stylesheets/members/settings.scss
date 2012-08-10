@@ -1,0 +1,197 @@
+@import "../_base";
+
+.settings {
+  .gray-box {
+    background: #EBEBEB;
+    border: 1px solid #C4C4C4;
+    @include inset-box-shadow (0, 0, 0, 1px, #fff);
+    margin: 5em 0 1em;
+    padding: 15px;
+    position: relative;
+    width: 489px;
+
+    h2 {
+      color: $blue-header;
+      font-face: arial;
+      font-size: 1.7em;
+      font-weight: bold;
+      left: 0px;
+      margin-top: 35px;
+      position: absolute;
+      top: -3em;
+    }
+  }
+  a {
+    color: $red;
+    text-decoration: none;
+  }
+  #profile-verification, #phone-verification {
+    font-weight: bold;
+
+    #code-request, #code-verification {
+      margin: 0 0 20px 0;
+
+      h3 {
+        color: $almost-blk;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        padding-bottom: 10px;
+      }
+      p {
+        color: $evil-gray;
+        margin: 0;
+        padding: 0 0 5px 0;
+        width: 350px;
+      }
+      #verification_phone_number, #code {
+        margin-right: 10px;
+        padding: 0 50px 0 0;
+      }
+      .messages .success {
+        background: #339933;
+        border: 0;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 16px;
+        margin: 10px 0;
+        padding: 10px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        @include top-down-gradient(#33CC33, #339933);
+      }
+    }
+    .verified {
+      color: $cash-green;
+
+      img {
+        float: left;
+        padding: 0 8px 0 0;
+      }
+    }
+    .denied {
+      color: red;
+
+      img {
+        float: left;
+        padding: 0 8px 0 0;
+      }
+    }
+    .pending {
+      color: $med-gray;
+    }
+    a {
+      color: $red;
+      font-size: 11px;
+      display: block;
+      padding: 10px 0 0 0;
+    }
+  }
+  #social-media-information {
+    .social-media-add-remove-button {
+      float: right;
+    }
+    .social-media-information-row {
+      float: left;
+      padding-top: 10px;
+
+      img {
+        float: left;
+        margin: 0;
+        padding: 0 5px 0 0;
+      }
+      p.social-media-service-name {
+        color: $evil-gray;
+        float: left;
+        font-size: 16px;
+        padding: 1px 0 0 5px;
+        width: 150px;
+      }
+      p.social-media-username {
+        float: left;
+        padding: 0 0 0 50px;
+      }
+    }
+  }
+  #change-charity-form {
+    h3 {
+      color: $evil-gray;
+      float: left;
+      font-size: 16px;
+      margin: 5px 0 0 0;
+      padding: 0;
+    }
+    img {
+      color: gray;
+      float: left;
+      margin: 5px 0 0 10px;
+    }
+    li#member_charity_id_input {
+      float: right;
+      margin: 5px 0 0 0;
+    }
+  }
+}
+
+/*member settings*/
+.profile-completeness, #screener_progress, #report-progress {
+  .percent, .fill {
+    padding: 0.3em 0;
+  }
+  .bar {
+    border: 1px solid #ccc;
+    margin: 0;
+    position: relative;
+    @include rounded-corners(0.4em);
+    @include top-down-gradient(#ebebeb, #fff);
+    width: 100%;
+  }
+  .fill {
+    border: 1px solid #e6b206;
+    display: block;
+    padding: 0.6em 0;
+    @include rounded-corners(0.4em);
+    @include top-down-gradient(#ffe904, #ffc61a);
+  }
+  .percent {
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    right: 0.5em;
+    text-shadow: 0 1px 0 #ebebeb;
+    top: 4px;
+  }
+  .thumb-legend {
+    @include inline-block;
+    margin-right: 10px;
+    text-align: right;
+    width: 100px;
+  }
+  h3 {
+    color: $blue-header;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+  }
+  p {
+    line-height: 2.5em;
+    overflow: hidden;
+    padding-top: 5px;
+
+    a {
+      @include red-links-hover;
+    }
+    span {
+      background-color: #3470b6;
+      color: white;
+      display: block;
+      float: right;
+      font-weight: bold;
+      line-height: 1em;
+      padding: 10px 15px;
+      @include rounded-corners(0.5em);
+      text-shadow: rgba(0, 0, 0, 0.746) 0 1px 1px;
+      width: 105px;
+    }
+  }
+}
