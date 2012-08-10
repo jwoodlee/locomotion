@@ -128,16 +128,8 @@ button {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff481a), to(#c02e09));
 }
 
-.actionbutton {
-
-
-}
-
-.actionpanel {
-
-  width: 200px;
-  height: 200px
-  border: red
+.brand-header{
+  background: url('/assets/old_navy.png')
 }
 .btn {
  width: 280px !important;

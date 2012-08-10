@@ -1,6 +1,7 @@
 class ActionViewController < ApplicationController
 
   def index
+    @brand = Brand.find(params[:brand_id])
     @category = params["category"]
     case @category
     when "poll" then render 'poll'

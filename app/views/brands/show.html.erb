@@ -1,14 +1,11 @@
 <%= stylesheet_link_tag @brand.name.gsub(' ','_') %>
 <div class="brand-header">
-<%= @brand.name %>
 </div>
 
 <div class="award">
+  <p class="award-title">Welcome to <%=@brand.name.humanize%>!</p> Check out some of our exciting activities and deals exclusively offered to Crowdtappers so that they can earn points and spread the love.
 </div>
-
-
-<h2>Welcome to <%=@brand.name%>! Check out some of our exciting activities and deals exclusively offered to Crowdtappers so that they can earn points and spread the love.  </h2> 
 <% @brand.brand_actions.each do |brand_action| %>
-  <%=link_to brand_action.title, {:controller => 'action_view' , :action=> 'index', :category => brand_action.category} , :class=>"btn"%>
+  <%=link_to brand_action.title, {:controller => 'action_view' , :action=> 'index', :category => brand_action.category , :brand_id => @brand.id}  , :class=>"btn"%>
   <br>
 <% end %>
