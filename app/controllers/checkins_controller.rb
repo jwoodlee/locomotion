@@ -26,7 +26,6 @@ class CheckinsController < ApplicationController
       :url => response_url,
       :text => 'Awesome you checked! Tap here for a chance to win more points.' + response_url,
       :v => '20120801'
-    add_post(checkin_id, user, venue_name)
   end
 
   def add_post(checkin_id, user, venue_name)
