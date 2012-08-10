@@ -24,7 +24,7 @@ class CheckinsController < ApplicationController
       :CHECKIN_ID => checkin_id,
       :oauth_token => user.access_token ,
       :url => response_url,
-      :text => 'Awesome you checked in go here ' + response_url,
+      :text => 'Awesome you checked! Tap here for a chance to win more points.' + response_url,
       :v => '20120801'
     add_post(checkin_id, user, venue_name)
   end
