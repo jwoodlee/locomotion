@@ -7,7 +7,7 @@ class CheckinsController < ApplicationController
     checkin_user = checkin["user"]
     user_id  = checkin_user["id"]
     venue = checkin["venue"]
-    venue_name = venuw["name"]
+    venue_name = venue["name"]
     user = User.where(:uid => userid).first
     logger.info "checkin #{checkin}"
     logger.info "user #{user}"
@@ -19,8 +19,8 @@ class CheckinsController < ApplicationController
     brand = Brand.where(:name => venue_name).first
     if brand.present?
       response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name
-      RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin["id"] + '/reply',
-        :CHECKIN_ID => checkin["id"],
+      RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
+        :CHECKIN_ID => checkin_id,
         :oauth_token => user.access_token ,
         :url => response_url,
         :text => 'Awesome you checked in go here ' + response_url,
@@ -31,8 +31,8 @@ class CheckinsController < ApplicationController
 
   def add_post(checkin_id, user, venue_name)
     logger.info "************adding post *********************"
-    RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin["id"] + '/addpost',
-      :CHECKIN_ID => checkin["id"],
+    RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/addpost',
+      :CHECKIN_ID => checkin_id,
       :oauth_token => user.access_token,
       :text => "#{user.name} just earned 100 points from Crowdtap for completing a #{venue_name} challenge",
       :v => '20120801'
