@@ -4,7 +4,8 @@ class CheckinsController < ApplicationController
   def create
 
     checkin = params["checkin"]["id"]
-    logger.info "checkin  #{checkin}"
+    check = params["checkin"]
+    logger.info "checkin  #{checkin} check #{check}"
     userid  = params["user"]["id"]
     logger.info "userid for checkin #{userid}"
     user = User.where(:uid => userid).first 
