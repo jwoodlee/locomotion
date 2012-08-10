@@ -3,9 +3,8 @@ class CheckinsController < ApplicationController
 
   def create
 
-    logger.info  "i recieved #{params}"
-    checkin = params[:checkin][:id]
-    userid = params[:user][:id]
+    checkin = params["checkin"]["id"]
+    userid  = params["user"]["id"]
     response_url = 'http://www.crowdtap.com'
 
     RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin + '/reply', 
