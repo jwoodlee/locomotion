@@ -3,9 +3,9 @@
 <form action="/action_view" method="post">
 <div class="award">
   <p class="award-title">Share your  <%=@brand.name.humanize%> purchases with your facebook friends</p>
-  <textarea name="action_view[:share_text]" rows="10" cols="100"> </textarea>
-  <input type="hidden" name="action_view[:brand_id]" value="<%=@brand.id%>"/>
-  <input type="hidden" name="action_view[:category]" value="share"/>
+  <textarea name="action_view[share_text]" rows="10" cols="100"> </textarea>
+  <input type="hidden" name="action_view[brand_id]" value="<%=@brand.id%>"/>
+  <input type="hidden" name="action_view[category]" value="share"/>
   <input type="submit" class="btn" value="Answer Quiz!"></input>
 </div>
 

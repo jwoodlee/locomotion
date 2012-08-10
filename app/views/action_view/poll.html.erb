@@ -4,14 +4,14 @@
 <div class="award">
   <p class="award-title">Where did <%=@brand.name.humanize%> first open?</p>
   <ol>
-    <li><input type="radio" name="action_view[:choice]" value="Bentonville,Arkansas">Bentonville, Arkansas</li>
-    <li><input type="radio" name="action_view[:choice]" value="Pittsburgh, California">Pittsburgh, California</li>
-    <li><input type="radio" name="action_view[:choice]" value="Chicago,Illinois">Chicago, Illinois</li>
-    <li><input type="radio" name="action_view[:choice]" value="New York, New York">New York, New York</li>
-    <li><input type="radio" name="action_view[:choice]" value="Boston, Massachusetts">>Boston, Massachussetts</li>
+    <li><input type="radio" name="action_view[choice]" value="Bentonville,Arkansas">Bentonville, Arkansas</li>
+    <li><input type="radio" name="action_view[choice]" value="Pittsburgh, California">Pittsburgh, California</li>
+    <li><input type="radio" name="action_view[choice]" value="Chicago,Illinois">Chicago, Illinois</li>
+    <li><input type="radio" name="action_view[choice]" value="New York, New York">New York, New York</li>
+    <li><input type="radio" name="action_view[choice]" value="Boston, Massachusetts">>Boston, Massachussetts</li>
   </ol>
-  <input type="hidden" name="action_view[:brand_id]" value="<%=@brand.id%>"/>
-  <input type="hidden" name="action_view[:category]" value="poll"/>
+  <input type="hidden" name="action_view[brand_id]" value="<%=@brand.id%>"/>
+  <input type="hidden" name="action_view[category]" value="poll"/>
   <input type="submit" class="btn" value="Answer Quiz!"></input>
 </div>
 
