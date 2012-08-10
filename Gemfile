@@ -27,6 +27,7 @@ gem 'json'
 gem 'typhoeus'
 gem 'quimby'
 gem 'rest-client'
+gem 'therubyracer'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
