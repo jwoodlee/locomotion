@@ -22,7 +22,7 @@ class ActionViewController < ApplicationController
 
 
   def create
-
+     @brand = Brand.find(params[:brand_id])
      logger.info "current user => #{current_user}"
      logger.info "access token => #{session[:access_token]}"
      checkin = current_user.checkins.last
