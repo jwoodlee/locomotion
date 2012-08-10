@@ -1,11 +1,20 @@
-<h2> Authentication  New Session </h2>
-
-<div class='login'>
-  <% if current_user %>
-    <%= "Welcome #{current_user.name}"%>/<%= link_to 'logout' , "/logout"%>
-    <br>session information
-    <Br>access token:<%= session[:access_token] %>
-  <% else %>
-    <%=link_to image_tag("connect.png") , @authorize_url %>
-  <% end %>
-</div>
+<!DOCTYPE html>
+    <body>
+      <div class="action-bar"></div>
+      <div class="container">
+        <div class="primary-content new">
+          <div id="app">
+            <h2> Authentication  New Session </h2>
+            <button class="test-button"> Hello Button</button>
+            <div class='login'>
+              <% if current_user %>
+                <%= "Welcome #{current_user.name}"%>/<%= link_to 'logout' , "/logout"%>
+                <br>session information
+                <Br>access token:<%= session[:access_token] %>
+             <% else %>
+              <%=link_to image_tag("connect.png") , @authorize_url %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
