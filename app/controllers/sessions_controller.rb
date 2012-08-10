@@ -8,8 +8,10 @@ class SessionsController < ApplicationController
   def callback
     code = params[:code]
     @access_token = foursquare.access_token(code,CALLBACK_URL)
-    session[:access_token] = @access_token
+    user = foursquare.users.find("self")
+    User.create(:name => user.name , :access_token => @access_token,  :uid => user.id)
 
+    session[:access_token] = @access_token
     render :nothing => true, :status => 204
   end
  
