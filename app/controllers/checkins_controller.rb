@@ -3,11 +3,13 @@ class CheckinsController < ApplicationController
 
   def create
 
-    checkin = params["checkin"]["id"]
-    check = params["checkin"]
-    user = check["user"]
+    checkin=JSON.parse(params['checkin'])
 
-    logger.info "check #{check}"
+    #checkin = params["checkin"]["id"]
+    #check = params["checkin"]
+    user = checkin["user"]
+
+    logger.info "checkin #{checkin}"
     logger.info "user #{user}"
 
     logger.info "user id #{user['id']}"
