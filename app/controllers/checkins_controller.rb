@@ -17,16 +17,15 @@ class CheckinsController < ApplicationController
 
   def send_reply_to(checkin_id, user, venue_name)
     brand = Brand.where(:name => venue_name).first
-    if brand.present?
-      response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name
-      RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
-        :CHECKIN_ID => checkin_id,
-        :oauth_token => user.access_token ,
-        :url => response_url,
-        :text => 'Awesome you checked in go here ' + response_url,
-        :v => '20120801'
-      add_post(checkin_id, user, venue_name)
-    end
+    brand = Brand.where(:name => "crowdtap").first unless brand.present?
+    response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name
+    RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
+      :CHECKIN_ID => checkin_id,
+      :oauth_token => user.access_token ,
+      :url => response_url,
+      :text => 'Awesome you checked in go here ' + response_url,
+      :v => '20120801'
+    add_post(checkin_id, user, venue_name)
   end
 
   def add_post(checkin_id, user, venue_name)
