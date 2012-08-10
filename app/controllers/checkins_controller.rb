@@ -5,9 +5,12 @@ class CheckinsController < ApplicationController
 
     checkin = params["checkin"]["id"]
     check = params["checkin"]
-    logger.info "checkin  #{checkin} check #{check}"
-    mystuff = ActiveSupport::JSON.decode(check)
-    logger.info "mysterious id #{mystuff[:id]}"
+    user = check["user"]
+
+    logger.info "check #{check}"
+    logger.info "user #{user}"
+
+    logger.info "user id #{user['id']}"
 
     userid  = params["user"]["id"]
     logger.info "userid for checkin #{userid}"
