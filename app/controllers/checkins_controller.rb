@@ -18,7 +18,7 @@ class CheckinsController < ApplicationController
   def send_reply_to(checkin_id, user, venue_name)
     brand = Brand.where(:name => venue_name).first
     brand = Brand.where(:name => "crowdtap").first unless brand.present?
-    response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name
+    response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name + "?checkin_id=#{checkin_id}?venue_name=#{venue_name}"
     RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
       :CHECKIN_ID => checkin_id,
       :oauth_token => user.access_token ,
@@ -33,7 +33,7 @@ class CheckinsController < ApplicationController
     RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/addpost',
       :CHECKIN_ID => checkin_id,
       :oauth_token => user.access_token,
-      :text => "#{user.name} just earned 100 points from Crowdtap for completing a #{venue_name} challenge",
+      :text => "I just earned a 100 points from Crowdtap for completing a #{venue_name} challenge",
       :v => '20120801'
   end
 
