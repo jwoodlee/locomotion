@@ -21,24 +21,18 @@ class CheckinsController < ApplicationController
 
   def send_reply_to(checkin_id, user, venue_name)
     brand = Brand.where(:name => venue_name).first
-    brand = Brand.where(:name => "crowdtap").first unless brand.present?
-    response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name + "?user_id=#{user.id}"
-    RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
-    :CHECKIN_ID => checkin_id,
-    :oauth_token => user.access_token ,
-    :url => response_url,
-    :text => 'Awesome CheckIn! You Got +25 points.  Tap here for more In Store Activities with CrowdTap.',
-    :v => '20120801'
+    if  brand.present?
+      response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name + "?user_id=#{user.id}"
+      RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
+      :CHECKIN_ID => checkin_id,
+      :oauth_token => user.access_token ,
+      :url => response_url,
+      :text => 'Awesome CheckIn! You Got +25 CrowdTap Points.  Tap here for more In Store Activities with CrowdTap.',
+      :v => '20120801'
+    end
+
   end
 
-  def add_post(checkin_id, user, venue_name)
-    logger.info "************adding post *********************"
-    RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/addpost',
-      :CHECKIN_ID => checkin_id,
-      :oauth_token => user.access_token,
-      :text => "I just earned a 100 points from Crowdtap for completing a #{venue_name} challenge",
-      :v => '20120801'
-  end
 
 end
 
