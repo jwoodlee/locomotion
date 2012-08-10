@@ -37,6 +37,6 @@ class ActionViewController < ApplicationController
      logger.info "current user => #{current_user}"
      logger.info "access token => #{session[:access_token]}"
      checkin = current_user.checkins.last
-     add_post checkin.check_id, current_user, checkin.venu_name, params
+     add_post checkin.checkin_id, current_user, checkin.venu_name, params
   end
 end
