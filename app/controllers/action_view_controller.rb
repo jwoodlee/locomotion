@@ -11,12 +11,21 @@ class ActionViewController < ApplicationController
     end
   end
 
-  def add_post(checkin_id, user, venue_name)
+  def add_post(checkin_id, user, venue_name, options)
     logger.info "************adding post *********************"
+    challenge = "I just earned a 100 points on Crowdtap for "
+    case options[:action_view][:category]
+    when "poll"
+      challenge += "answering the - Where did the first #{venue_name} open? - Poll with #{options[:action_view][:choice]}"
+    when "share"
+      challenge += "saying - #{options[:action_view][:share_text]} - about their exprience at #{venu_name}"
+    when "hunt"
+      challenge += "finding their favourite item at #{venue_name} - #{options[:action_view][:share_text]}"
+    end
     RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/addpost',
       :CHECKIN_ID => checkin_id,
       :oauth_token => user.access_token,
-      :text => "I just earned a 100 points from Crowdtap for completing a #{venue_name} challenge",
+      :text => challenge,
       :v => '20120801'
   end
 
@@ -26,6 +35,6 @@ class ActionViewController < ApplicationController
      logger.info "current user => #{current_user}"
      logger.info "access token => #{session[:access_token]}"
      checkin = current_user.checkins.last
-     add_post checkin.checkin_id, current_user, checkin.venue_name
+     add_post checkin.check_id, current_user, checkin.venu_name, params
   end
 end
