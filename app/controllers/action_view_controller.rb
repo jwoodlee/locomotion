@@ -24,8 +24,7 @@ class ActionViewController < ApplicationController
   def create
 
      logger.info "current user => #{current_user}"
-     logger.info "access token => " + session[:access_token]
-     logger.info "user_id  => " + params[:user_id]
+     logger.info "access token => #{session[:access_token]}"
      checkin = current_user.checkins.last
      add_post checkin.check_id, current_user, checkin.venu_name
   end
