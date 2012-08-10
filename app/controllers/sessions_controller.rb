@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     code = params[:code]
     foursquare = Foursquare::Base.new(CLIENT_ID, CLIENT_SECRET)
     @access_token = foursquare.access_token(code,CALLBACK_URL)
+    foursquare = Foursquare::Base.new(@access_token)
     user = foursquare.users.find("self")
     User.create(:name => user.name , :access_token => @access_token,  :uid => user.id)
 
