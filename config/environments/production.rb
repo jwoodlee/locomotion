@@ -1,6 +1,5 @@
 Locomotion::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  assets.precompile += %w( jquery.min.js, application.css )
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -47,7 +46,7 @@ Locomotion::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-
+config.assets.precompile += %w( jquery.min.js application.js application.css  )
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
