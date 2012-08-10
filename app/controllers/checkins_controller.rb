@@ -8,7 +8,7 @@ class CheckinsController < ApplicationController
     user_id  = checkin_user["id"]
     venue = checkin["venue"]
     venue_name = venue["name"]
-    user = User.where(:uid => userid).first
+    user = User.where(:uid => user_id).first
     logger.info "checkin #{checkin}"
     logger.info "user #{user}"
     logger.info "db user is  " + user.to_json
