@@ -4,13 +4,10 @@
 </div>
 
 <div class="award">
-  <div class="title">You have Recieved 100 points for your checkin</div>
 </div>
 
 
-<h2>Today you can earn more points and discounts by completing some of the following activities</h2>
-
-
+<h2>Welcome to <%=@brand.name%>! Check out some of our exciting activities and deals exclusively offered to Crowdtappers so that they can earn points and spread the love.  </h2> 
 <% @brand.brand_actions.each do |brand_action| %>
   <%=link_to brand_action.title, {:controller => 'action_view' , :action=> 'index', :category => brand_action.category} , :class=>"btn"%>
   <br>
