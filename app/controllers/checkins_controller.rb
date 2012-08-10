@@ -27,7 +27,7 @@ class CheckinsController < ApplicationController
     :CHECKIN_ID => checkin_id,
     :oauth_token => user.access_token ,
     :url => response_url,
-    :text => 'Awesome you checked! Tap here for a chance to win more points.' + response_url,
+    :text => 'Awesome CheckIn! You Got +25 points.  Tap here for more In Store Activities with CrowdTap.',
     :v => '20120801'
   end
 
