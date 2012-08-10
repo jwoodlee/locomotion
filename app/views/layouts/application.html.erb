@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Locomotion</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "jquery.min.js" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <link rel='stylesheet' href='http://cdn2.crowdtap.com/assets/members/members-1.css' type='text/css' charset='utf-8'/>
-  <link rel='stylesheet' href='http://cdn2.crowdtap.com/assets/members/members-2.css' type='text/css' charset='utf-8'/>
-  <link rel='stylesheet' href='application.css' type='text/css' charset='utf-8' media='screen'/>
-</head>
-<body>
-
-<%= yield %>
+  <head>
+    <title>Locomotion</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "jquery.min.js" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <link rel='stylesheet' href='http://cdn2.crowdtap.com/assets/crowdstrap/crowdstrap.css' type='text/css' charset='utf-8'/>
+    <link rel='stylesheet' href='application.css' type='text/css' charset='utf-8' media='screen'/>
+    <link rel='stylesheet' href='http://cdn2.crowdtap.com/assets/members/members-1.css' type='text/css' charset='utf-8'/>
+    <link rel='stylesheet' href='http://cdn2.crowdtap.com/assets/members/members-2.css' type='text/css' charset='utf-8'/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="primary-content">
+        <div id="app">
+          <div class="navbar">
+            <div class="navbar-inner logoed">
+              <img src="/assets/member-logo-new.png"/>
+          </div></div>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

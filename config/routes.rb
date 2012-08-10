@@ -63,5 +63,6 @@ match 'success' => 'sessions#success'
 root :to => "sessions#new"
 resources :brands
 resource :brand_activies
+resources :action_view
 
 end
