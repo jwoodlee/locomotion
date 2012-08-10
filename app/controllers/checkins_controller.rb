@@ -12,7 +12,7 @@ class CheckinsController < ApplicationController
 
     logger.info "user id #{user['id']}"
 
-    userid  = params["user"]["id"]
+    userid  = user["id"]
     logger.info "userid for checkin #{userid}"
     user = User.where(:uid => userid).first 
     logger.info "user is  " + user.to_json
