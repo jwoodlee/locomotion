@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if session[:access_token]
-      User.where(:access_token => session[:access_token])
+      User.where(:access_token => session[:access_token]).first
     else
       nil
     end
