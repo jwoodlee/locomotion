@@ -1,9 +1,12 @@
 <%= stylesheet_link_tag @brand.name.gsub(' ','_') %>
-
+<form action="/action_view" method="post">
 <div class="award">
   <p class="award-title">Share your Favorite Product in a Photo</p>
   Find your favorite item and take a picture, upload it for extra CrowdTap points and it will also be shared on FaceBook.
-  <button>Take A Photo</button>
+  Add A Description:
+  <textarea name="action_view[:share_text]" rows="10" cols="100"> </textarea>
+  <input type="hidden" name="action_view[:category]" value="share"/>
+  <input type="submit" class="btn" value="Upload Photo"></input>
 </div>
 
 
