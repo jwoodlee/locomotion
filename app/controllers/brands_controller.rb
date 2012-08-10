@@ -2,7 +2,8 @@ class BrandsController < ApplicationController
   
 
 def show
- @brand=Brand.where(:name => params[:name]).first
+  u=current_user
+  @brand=Brand.where(:name => params[:name]).first
 end
 
 end
