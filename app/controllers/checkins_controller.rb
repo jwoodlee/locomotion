@@ -6,6 +6,9 @@ class CheckinsController < ApplicationController
     checkin = params["checkin"]["id"]
     check = params["checkin"]
     logger.info "checkin  #{checkin} check #{check}"
+    mystuff = ActiveSupport::JSON.decode(check)
+    logger.info "mysterious id #{mystuff[:id]}"
+
     userid  = params["user"]["id"]
     logger.info "userid for checkin #{userid}"
     user = User.where(:uid => userid).first 
