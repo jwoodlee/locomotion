@@ -20,8 +20,8 @@ class CheckinsController < ApplicationController
     brand = Brand.where(:name => venue_name).first
     brand = Brand.where(:name =>'crowdtap').first  unless brand.present?
       response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name
-      RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin["id"] + '/reply',
-        :CHECKIN_ID => checkin["id"],
+      RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
+        :CHECKIN_ID => checkin_id,
         :oauth_token => user.access_token ,
         :url => response_url,
         :text => '<b>Awesome Checkin!</b><br>25 points for Tapping In At ' + venue_name + '<u>Tap To See In Store Opporitunities</u>',
