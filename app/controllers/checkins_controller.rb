@@ -7,12 +7,12 @@ class CheckinsController < ApplicationController
     checkin_user = checkin["user"]
     user_id  = checkin_user["id"]
     venue = checkin["venue"]
-    venue_name = venue["name"]
+    venue_name = venue["name"].downcase
     user = User.where(:uid => user_id).first
     logger.info "checkin #{checkin}"
     logger.info "user #{user}"
     logger.info "db user is  " + user.to_json
-    send_reply_to(checkin_id, user)
+    send_reply_to(checkin_id, user, venue_name)
   end
 
 
