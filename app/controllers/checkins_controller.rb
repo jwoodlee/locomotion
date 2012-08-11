@@ -30,7 +30,7 @@ class CheckinsController < ApplicationController
       :url => response_url,
       :text => 'Awesome CheckIn! You Got +25 CrowdTap Points.  Tap here for more In Store Activities with CrowdTap.',
       :v => '20120801'
-    elsif venue_name =="Walmart"
+    elsif venue_name =="walmart"
        response_url = "http://thawing-headland-3901.herokuapp.com/pages/walmart.html?user_id=#{user.id}"
       RestClient.post 'https://api.foursquare.com/v2/checkins/' + checkin_id + '/reply',
       :CHECKIN_ID => checkin_id,
