@@ -30,6 +30,8 @@ class CheckinsController < ApplicationController
       :url => response_url,
       :text => 'Awesome CheckIn! You Got +25 CrowdTap Points.  Tap here for more In Store Activities with CrowdTap.',
       :v => '20120801'
+    else 
+      logger.info "VENUE NOT FOUND ==> #{venue_name}"
     end
 
   end
