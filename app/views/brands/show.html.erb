@@ -1,6 +1,5 @@
 <%= stylesheet_link_tag @brand.name.gsub(' ','_') %>
 <div class="brand-header">
-</br>
 </div>
 
 <div class="award">
@@ -8,10 +7,5 @@
 </div>
 <% @brand.brand_actions.each do |brand_action| %>
   <%=link_to brand_action.title, {:controller => 'action_view' , :action=> 'index', :category => brand_action.category , :brand_id => @brand.id}  , :class=>"btn"%>
-
+  <br>
 <% end %>
-<br><br>
-  <div class="unlock">
-    <a href="/pages/unlock">Unlock Exclusive  <%=@brand.name.humanize%> Offers</a>
-  </div>
-
