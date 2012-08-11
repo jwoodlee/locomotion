@@ -129,7 +129,11 @@ button {
 }
 
 .brand-header{
-  background: url('/assets/old_navy.png')
+  width: 320px;
+  height: 40px;
+  background-image: url('/assets/old-navy-banner.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .btn {
  width: 280px !important;

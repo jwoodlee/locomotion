@@ -25,6 +25,7 @@ Locomotion::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
+  config.assets.precompile += %w(jquery.min.js application.js application.css old_navy.css crowdtap.css)
 
   # Expands the lines which load the assets
   config.assets.debug = true

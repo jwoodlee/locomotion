@@ -1,5 +1,4 @@
 class BrandsController < ApplicationController
-  
 
 def show
   u=current_user
