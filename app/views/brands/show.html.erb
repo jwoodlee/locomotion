@@ -9,3 +9,8 @@
   <%=link_to brand_action.title, {:controller => 'action_view' , :action=> 'index', :category => brand_action.category , :brand_id => @brand.id}  , :class=>"btn"%>
   <br>
 <% end %>
+
+  <div class="btn btn-generic">
+    <a href="/pages/unlock">Unlock Exclusive <%=@brand.name.humanize%> Offers</a>        
+  </div>
+
