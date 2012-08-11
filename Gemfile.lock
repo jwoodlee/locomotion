@@ -54,6 +54,7 @@ GEM
       rubyzip
     heroku-api (0.3.2)
       excon (~> 0.15.5)
+    high_voltage (1.1.1)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -141,6 +142,7 @@ DEPENDENCIES
   bson_ext
   coffee-rails (~> 3.2.1)
   heroku
+  high_voltage
   jquery-rails
   json
   mongoid

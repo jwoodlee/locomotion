@@ -64,4 +64,6 @@ root :to => "sessions#new"
 resource :brand_activies
 resources :action_view
 
+
 end
+

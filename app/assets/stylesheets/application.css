@@ -138,3 +138,12 @@ button {
  font-size: 2em;
  font-weight: bolder;
 }
+
+.unlock {
+  
+  padding: 20px;
+  margin: 20px;
+  background: silver;
+  text-align: center;
+  font-weight: bold;
+}
