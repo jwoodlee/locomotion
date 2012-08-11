@@ -20,6 +20,7 @@ class CheckinsController < ApplicationController
   end
 
   def send_reply_to(checkin_id, user, venue_name)
+    venue_name=venue_name.gsub(' ','').downcase
     brand = Brand.where(:name => venue_name).first
     if  brand.present?
       response_url = 'http://thawing-headland-3901.herokuapp.com/brands/' + brand.name + "?user_id=#{user.id}"
